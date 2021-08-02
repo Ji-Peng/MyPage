@@ -9,6 +9,7 @@ theme: minimal
 day_night: false
 font: ''
 font_size: L
+# gravatar: true
 
 # SEO
 
