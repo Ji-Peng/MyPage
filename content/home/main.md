@@ -11,4 +11,4 @@ design:
   columns: '1'
 ---
 
-An Efficient and Scalable Sparse Polynomial Multiplication Accelerator for LAC on FPGA. ICPADS2020. [\[Paper\]](/uploads/icpads2020_paper.pdf). [\[Slide\]](/uploads/icpads2020_slide.pdf). [\[Video\]](/uploads/icpads2020_video.mp4).
+An Efficient and Scalable Sparse Polynomial Multiplication Accelerator for LAC on FPGA. ICPADS2020. [\[Paper\]](/uploads/icpads2020_paper.pdf). [\[Slide\]](/uploads/icpads2020_slide.pdf).
