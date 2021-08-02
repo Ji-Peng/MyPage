@@ -30,7 +30,9 @@ education:
   - course: BSc
     institution: Nanjing University of Aeronautics and Astronautics (NUAA)
     year: 2016-2020
-
+  - course: Intern
+    institution: Tencent, Shenzhen, China; Optimize SM2 (Chinese ECC Commercial Standard) on ARMv8-A Linux Server
+    year: 2021.07-2021.09
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
