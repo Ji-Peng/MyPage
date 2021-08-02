@@ -1,9 +1,10 @@
 ---
 widget: hero
+active: true
 headless: true
-weight: 10
+weight: 20
 title: Project Docs Template
-hero_media: book.svg
+# hero_media: book.svg
 design:
   background:
     gradient_start: '#4bb4e3'
