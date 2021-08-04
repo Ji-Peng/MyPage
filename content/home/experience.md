@@ -23,7 +23,7 @@ experience:
     company_url: 'https://www.huawei.com/en/'
     date_start: '2020-08-01'
     date_end: '2020-12-30'
-    description: Reduce the ROM occupancy of Curve25519 from 70KB+ (OpenSSL) to less than 10KB for IoT devices.
+    description: Reduce the ROM occupancy of Curve25519 (X25519+Ed25519) from 70KB+ (OpenSSL) to less than 10KB for IoT devices.
   - title: 'Intern (2021 Rhino-Bird Research Elite Training Program)'
     company: 'CDG, Tencent'
     company_logo: tencent-icon
