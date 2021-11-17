@@ -12,7 +12,7 @@ design:
 ---
 ### Academic Papers
 
-An Efficient and Scalable Sparse Polynomial Multiplication Accelerator for LAC on FPGA. ICPADS2020. [\[Paper\]](/uploads/icpads2020/paper.pdf). [\[Slide\]](/uploads/icpads2020/slide.pdf).
+An Efficient and Scalable Sparse Polynomial Multiplication Accelerator for LAC on FPGA. ICPADS2020. [Paper](/uploads/icpads2020/paper.pdf). [Slide](/uploads/icpads2020/slide.pdf). [Code](https://github.com/Ji-Peng/LAC_SPM_Code).
 
 ### Contributions for Open Source Software
 
