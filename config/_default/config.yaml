@@ -72,3 +72,10 @@ related:
       weight: 100
     - name: categories
       weight: 70
+
+# for compatible with newest version of hugo on windows
+security:
+  funcs:
+    getenv:
+      - ^HUGO_
+      - ^WC_
