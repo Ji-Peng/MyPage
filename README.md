@@ -21,10 +21,9 @@ To help us develop this template and software sustainably under the MIT license,
 
 ### [❤️ Click here to unlock rewards with sponsorship](https://wowchemy.com/plans/)
 
-<!--
-[![Screenshot]()](https://github.com/wowchemy/starter-book)
--->
+## [配置教程](https://wowchemy.com/docs/getting-started/customization/)
 
-<!--
-[![](https://ga-beacon.appspot.com/UA-78646709-2/starter-book/readme?pixel)](https://github.com/igrigorik/ga-beacon)
--->
+website icon可在直接修改`assets/media/icon.png`
+
+外观配置文件为`config/_default/params.yaml`, 相关参数及解释见文件
+
