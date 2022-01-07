@@ -124,10 +124,13 @@ search:
   #   api_key: ''
   #   index_name: ''
   #   show_logo: false
+# SEO, search engine optimization
 marketing:
   google_analytics: ''
   google_tag_manager: ''
-  google_site_verification: 'z2N4KLMxijpr8CtgVNUUoaW1rdOs3j8teDpkciykCdo'
+  google_site_verification: 'M-UdF2AKIRZ9gTw9pGO_7vuT7xURRTV_xeWHjNZQfro'
+  bing_site_verification: '5AF29DE0415F81B1C36201B2E5A0DD39'
+  baidu_site_verification: 'code-BuWT4BDGPF'
 
 cms:
   branch: main
