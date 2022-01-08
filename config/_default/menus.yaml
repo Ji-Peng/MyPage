@@ -2,7 +2,9 @@
 #   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
 #     desired widget in your `content/home/` folder.
 #   The weight parameter defines the order that the links will appear in.
-
+# 主页顶部菜单栏
+# 如果在content/home下创建了msection.md，那么下面的url设为/#msection
+# 如果content下创建了doc文件夹，并组织了个文档界面，那么url就设为doc/
 main:
   - name: Home
     url: /

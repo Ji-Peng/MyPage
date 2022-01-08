@@ -1,6 +1,7 @@
 ---
 widget: experience
-headless: true  # This file represents a page section.
+# This file represents a page section.
+headless: true 
 active: true
 weight: 20
 # ... Put Your Section Options Here (title etc.) ...
@@ -8,7 +9,9 @@ title: Experience
 # Date format
 #   Refer to https://wowchemy.com/docs/customization/#date-format
 date_format: Jan 2006
-
+design:
+  # 1/2 columns
+  columns: "1"
 # Experiences.
 #   Add/remove as many `experience` blocks below as you like.
 #   Required fields are `title`, `company`, and `date_start`.
