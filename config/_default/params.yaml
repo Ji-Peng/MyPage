@@ -26,7 +26,7 @@ local_business_type: ''
 # Defaults to the site title set in config.yaml
 org_name: ''
 # a description for social sharing and search engines
-description: 'Jipeng Zhang Homepage'
+description: 'Jipeng Zhang Homepage including biography, publication and experience'
 twitter: ''
 
 # Site header
