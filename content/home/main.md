@@ -19,7 +19,7 @@ design:
 
 ### 2021
 
-- Time-memory Trade-offs for Saber+ on Memory-constrained RISC-V. Submitted to [IEEE TC](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=12) (Under Review).
+- Time-memory Trade-offs for Saber+ on Memory-constrained RISC-V. [IEEE Trans. on Computers](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=12).
 
     [PDF](https://eprint.iacr.org/2021/1552.pdf). [Code](https://github.com/Ji-Peng/Saber_RV32).
 
@@ -46,7 +46,7 @@ design:
 
 ### Curve25519 Optimization University & Enterprise Project
 
-- Company: Shield Lab & CBG from Huawei & NUAA
+- Company: Shield Lab & CBG, Huawei
 - Date: 2020-08-01 to 2020-12-30
 - Description: Reduce the ROM occupancy of Curve25519 (X25519+Ed25519) from **70KB+** (OpenSSL) to less than **15KB** for IoT devices (Cortex-M3 and RISC-V).
 

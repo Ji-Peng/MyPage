@@ -167,7 +167,7 @@ Security: 包括内容安全政策, 权限政策, 兼容性等
 - projects
 - events/talks
 
-#### Page Features
+### Page Features
 
 核心配置:
 
