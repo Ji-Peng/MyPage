@@ -23,6 +23,8 @@ To help us develop this template and software sustainably under the MIT license,
 
 ## [配置教程](https://wowchemy.com/docs/getting-started/customization/)
 
+[示例网站](https://academic-demo.netlify.app/)
+
 ### 1. Create a site
 
 选择不同的模版，默认是使用Netlify生成网站，并且会给生成一个随机URL，也可以在Netlify下定义子域名，随后在CMS里用可视化界面编辑网站。
@@ -118,7 +120,7 @@ Security: 包括内容安全政策, 权限政策, 兼容性等
 
 可自定义主题, 前面已经看过啦
 
-布局选择:
+布局选择, [各个案例](https://github.com/wowchemy/starter-hugo-academic/tree/master/exampleSite):
 
 - Pages: 展示普通内容
 - Widget Pages: 比如homepage, 由多个不同的widgets组成
