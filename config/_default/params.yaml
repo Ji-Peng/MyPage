@@ -11,7 +11,7 @@ theme: Ocean
 day_night: true
 # No value = inherit font from color theme pack
 # including Minimal (modern), Classic (original Academic v1 style), Rose (traditional serif), Mr Robot (futuristic), Native: use device fonts for maximum performance
-font: Classic
+font: Minimal
 # including xs, s, m, l, xl
 font_size: L
 # gravatar: true

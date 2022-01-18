@@ -23,7 +23,7 @@ To help us develop this template and software sustainably under the MIT license,
 
 ## [配置教程](https://wowchemy.com/docs/getting-started/customization/)
 
-[示例网站](https://academic-demo.netlify.app/)
+[示例网站](https://academic-demo.netlify.app/), [对应源码](https://github.com/wowchemy/starter-hugo-academic/tree/master/exampleSite)
 
 ### 1. Create a site
 
