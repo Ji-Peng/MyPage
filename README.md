@@ -249,3 +249,10 @@ _build:
   render: always
   list: never
 ```
+
+```bash
+# for preview
+hugo server
+# for building
+hugo
+```
