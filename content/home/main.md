@@ -21,7 +21,7 @@ design:
 
 - Junhao Huang, Jipeng Zhang, et al. Improved Plantard arithmetic for lattice-based cryptography. [IACR Trans. on Cryptographic Hardware and Embedded Systems](https://tches.iacr.org/). Volume 2022, Issue 4.
 
-    [PDF](/uploads/tches2022/paper.pdf). [Code](https://github.com/UIC-ESLAS/ImprovedPlantardArithmetic).
+    [PDF](/uploads/tches2022/paper.pdf). [Code](https://github.com/UIC-ESLAS/ImprovedPlantardArithmetic). [Link](https://artifacts.iacr.org/tches/2022/a16/index.html).
 
 ### 2021
 
