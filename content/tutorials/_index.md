@@ -1,7 +1,6 @@
 ---
 title: Tutorial
 type: page
-
 # View.
 #   1 = List
 #   2 = Compact

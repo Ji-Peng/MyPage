@@ -9,6 +9,6 @@ main:
   - name: Home
     url: /
     weight: 10
-  - name: Tutorial
-    url: tutorials/
-    weight: 20
+  # - name: Tutorial
+  #   url: tutorials/
+  #   weight: 20

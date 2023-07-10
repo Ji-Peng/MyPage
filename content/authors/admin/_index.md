@@ -69,7 +69,7 @@ email: "jp-zhang@outlook.com"
 # Highlight the author in author lists? (true/false)
 highlight_name: false
 ---
-I'm a PhD student of [Zhe Liu](https://scholar.google.com/citations?hl=en&user=Em0jNiUAAAAJ&view_op=list_works&citft=1&citft=2&citft=3&email_for_op=jipengnuaa%40gmail.com&gmla=AJsN-F4F_VXYWlPJAPDsOAxT4S6iaq2eanYrZ0S8_1_oD2OlUDCG9OuC9P7dyedWHJDKoVbqi0qnwrVD_2XPnQilRiQDTzYZ3Wr5clevRdvgDe4ic_FhQate9oBMq-FucajSC6C4LIttXvDSLjtSGCt_nHmiElKoIUphZu-P7OTXnUiw3nDKE-GR6z05mKRPl7wuMJl-ChAMrqLppcu9ZcgRNfIDGjBsUOGZh2rtr5KQdIe60JEMRulzCpCDVNdGJkQ324Q98orx) at Nanjing University of Aeronautics and Astronautics (NUAA) in Nanjing, China.
+I'm a PhD student supervised by [Çetin Kaya Koç](https://koclab.net/koc.html) at Nanjing University of Aeronautics and Astronautics (NUAA) in Nanjing, China.
 
 My research interests mainly involve post-quantum cryptography, elliptic curve cryptography and TLS protocol.
 
