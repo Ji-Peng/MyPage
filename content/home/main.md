@@ -17,6 +17,16 @@ design:
 <h2 align="center"> Publication </h2>
 <!-- ## Publication -->
 
+### 2024
+
+- Jipeng Zhang, Junhao Huang, et al. ENG25519: Faster TLS 1.3 handshake using optimized X25519 and Ed25519. [Usenix Security 2024](https://www.usenix.org/conference/usenixsecurity24/).
+
+    [PDF](/uploads/usenix_security2024/paper.pdf). [Code](https://github.com/Ji-Peng/eng25519_artifact).
+
+- Junhao Huang, Alexandre Adomnicăi, Jipeng Zhang, et al. Revisiting Keccak and Dilithium Implementations on ARMv7-M. [IACR Transactions on Cryptographic Hardware and Embedded Systems](https://tches.iacr.org/). Volume 2024, Issue 2.
+
+    [PDF](https://junhaohuang.github.io/assets/paper/TCHES2024_2.pdf). [Code](https://github.com/UIC-ESLAS/Dilithium-Multi-Moduli).
+
 ### 2022
 
 - Junhao Huang, Jipeng Zhang, et al. Improved Plantard arithmetic for lattice-based cryptography. [IACR Trans. on Cryptographic Hardware and Embedded Systems](https://tches.iacr.org/). Volume 2022, Issue 4.

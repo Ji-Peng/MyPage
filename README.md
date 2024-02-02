@@ -256,3 +256,19 @@ hugo server
 # for building
 hugo
 ```
+
+在mac上出现了一次public submodule未初始化的问题，使用如下命令：
+```bash
+# 先删除已有的public文件夹
+rm -rf public/
+# 初始化submodule
+git submodule update --init
+# rebuild
+hugo
+# 因为现在的submodule不在某个分支下，因此：
+git push origin HEAD:main
+# 后续还是解决这个问题吧：
+git checkout main
+git pull
+# 这样就切换到main分支啦
+```
