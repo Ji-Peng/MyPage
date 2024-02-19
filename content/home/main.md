@@ -27,6 +27,12 @@ design:
 
     [PDF](https://junhaohuang.github.io/assets/paper/TCHES2024_2.pdf). [Code](https://github.com/UIC-ESLAS/Dilithium-Multi-Moduli).
 
+### 2023
+
+- Jipeng Zhang, Junhao Huang, et al. Research on Efficient Implementation of SM2 for Mobile Devices. [Acta Electronica Sinica](https://www.ejournal.org.cn/EN/home).
+
+    [PDF](https://www.ejournal.org.cn/CN/10.12263/DZXB.20221419). [Code](https://github.com/Ji-Peng/openssl_SM2_ARMv8-A).
+
 ### 2022
 
 - Junhao Huang, Jipeng Zhang, et al. Improved Plantard arithmetic for lattice-based cryptography. [IACR Trans. on Cryptographic Hardware and Embedded Systems](https://tches.iacr.org/). Volume 2022, Issue 4.
