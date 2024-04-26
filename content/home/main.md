@@ -27,6 +27,10 @@ design:
 
     [PDF](https://junhaohuang.github.io/assets/paper/TCHES2024_2.pdf). [Code](https://github.com/UIC-ESLAS/Dilithium-Multi-Moduli).
 
+- Junhao Huang, Haosong Zhao, Jipeng Zhang, Wangchen Dai, Lu Zhou, Ray CC Cheung, Cetin Kaya Koc, Donglong Chen*. Yet another Improvement of Plantard Arithmetic for Faster Kyber on Low-end 32-bit IoT Devices. [IEEE Transactions on Information Forensics & Security](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206), 2024
+
+    [PDF](https://ieeexplore.ieee.org/document/10453274/). [Code](https://github.com/UIC-ESLAS/Kyber_RV_M3).
+
 ### 2023
 
 - Jipeng Zhang, Junhao Huang, et al. Research on Efficient Implementation of SM2 for Mobile Devices. [Acta Electronica Sinica](https://www.ejournal.org.cn/EN/home).
