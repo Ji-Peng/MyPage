@@ -21,7 +21,7 @@ design:
 
 - Jipeng Zhang, Junhao Huang, et al. ENG25519: Faster TLS 1.3 handshake using optimized X25519 and Ed25519. [Usenix Security 2024](https://www.usenix.org/conference/usenixsecurity24/).
 
-    [PDF](/uploads/usenix_security2024/paper.pdf). [Code](https://github.com/Ji-Peng/eng25519_artifact).
+    [PDF](/uploads/usenix_security2024/paper.pdf). [Code](https://github.com/Ji-Peng/eng25519_artifact). [Slide](/uploads/usenix_security2024/slide.pdf).
 
 - Junhao Huang, Alexandre Adomnicăi, Jipeng Zhang, et al. Revisiting Keccak and Dilithium Implementations on ARMv7-M. [IACR Transactions on Cryptographic Hardware and Embedded Systems](https://tches.iacr.org/). Volume 2024, Issue 2.
 

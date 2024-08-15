@@ -250,6 +250,17 @@ _build:
   list: never
 ```
 
+## 相关命令
+
+更换电脑时：`sudo apt install hugo`，并按照`go`语言
+
+```bash
+git clone https://github.com/Ji-Peng/MyPage
+rm -rf public
+git submodule update --init
+hugo
+```
+
 ```bash
 # for preview
 hugo server
