@@ -19,7 +19,7 @@ design:
 
 ### 2024
 
-- Jipeng Zhang, Junhao Huang, et al. ENG25519: Faster TLS 1.3 handshake using optimized X25519 and Ed25519. [Usenix Security 2024](https://www.usenix.org/conference/usenixsecurity24/).
+- Jipeng Zhang, Junhao Huang, et al. ENG25519: Faster TLS 1.3 handshake using optimized X25519 and Ed25519. [Usenix Security 2024](https://www.usenix.org/conference/usenixsecurity24/). [Distinguished Paper Award Winner](https://www.usenix.org/conference/usenixsecurity24/presentation/zhang-jipeng). [Acceptance Rate 19.1%; Distinguished Award Rate 5%](https://www.usenix.org/sites/default/files/sec24_message.pdf).
 
     [PDF](/uploads/usenix_security2024/paper.pdf). [Code](https://github.com/Ji-Peng/eng25519_artifact). [Slide](/uploads/usenix_security2024/slide.pdf).
 
