@@ -19,6 +19,10 @@ design:
 
 ### 2024
 
+- Jipeng Zhang, et al. Optimized Software Implementation of Keccak, Kyber, and Dilithium on RV{32,64}IM{B}{V}. [IACR Transactions on Cryptographic Hardware and Embedded Systems](https://tches.iacr.org/). Volume 2025, Issue 1.
+
+    [PDF](/uploads/tches2025/paper.pdf). [Code](https://github.com/Ji-Peng/PQRV/tree/ches2025).
+
 - Jipeng Zhang, Junhao Huang, et al. ENG25519: Faster TLS 1.3 handshake using optimized X25519 and Ed25519. [Usenix Security 2024](https://www.usenix.org/conference/usenixsecurity24/). [Distinguished Paper Award Winner](https://www.usenix.org/conference/usenixsecurity24/presentation/zhang-jipeng). [Acceptance Rate 19.1%; Distinguished Award Rate 5%](https://www.usenix.org/sites/default/files/sec24_message.pdf).
 
     [PDF](/uploads/usenix_security2024/paper.pdf). [Code](https://github.com/Ji-Peng/eng25519_artifact). [Slide](/uploads/usenix_security2024/slide.pdf). [Award](/uploads/usenix_security2024/Distinguished_Award.pdf).
