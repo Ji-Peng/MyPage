@@ -120,7 +120,7 @@ Security: 包括内容安全政策, 权限政策, 兼容性等
 
 可自定义主题, 前面已经看过啦
 
-布局选择, [各个案例](https://github.com/wowchemy/starter-hugo-academic/tree/master/exampleSite):
+布局选择, [各个案例](https://github.com/HugoBlox/theme-academic-cv/tree/main):
 
 - Pages: 展示普通内容
 - Widget Pages: 比如homepage, 由多个不同的widgets组成
@@ -252,7 +252,7 @@ _build:
 
 ## 相关命令
 
-更换电脑时：`sudo apt install hugo`，并按照`go`语言
+更换电脑时：`sudo apt install hugo`，并安装`go`语言
 
 ```bash
 git clone https://github.com/Ji-Peng/MyPage

@@ -1,5 +1,5 @@
 ---
-title: Tutorial
+title: Software
 type: page
 # View.
 #   1 = List
@@ -11,4 +11,3 @@ header:
   image: ""
 ---
 
-Some content is described in Chinese.

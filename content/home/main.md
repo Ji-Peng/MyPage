@@ -17,11 +17,13 @@ design:
 <h2 align="center"> Publication </h2>
 <!-- ## Publication -->
 
-### 2024
+### 2025
 
 - Jipeng Zhang, Yuxing Yan, Junhao Huang, Çetin Kaya Koç. Optimized Software Implementation of Keccak, Kyber, and Dilithium on RV{32,64}IM{B}{V}. [IACR Transactions on Cryptographic Hardware and Embedded Systems](https://tches.iacr.org/). Volume 2025, Issue 1.
 
     [PDF](/uploads/tches2025/paper.pdf). [Code](https://github.com/Ji-Peng/PQRV/tree/ches2025).
+
+### 2024
 
 - Xuan Yu, Jipeng Zhang, Junhao Huang, Donglong Chen, Lu Zhou. Multi-way High-throughput Implementation of Kyber. [ISC 2024](https://isc24.cs.gmu.edu/).
 
@@ -33,37 +35,37 @@ design:
 
 - Junhao Huang, Alexandre Adomnicăi, Jipeng Zhang, Wangchen Dai, Yao Liu, Ray C. C. Cheung, Çetin Kaya Koç, Donglong Chen. Revisiting Keccak and Dilithium Implementations on ARMv7-M. [IACR Transactions on Cryptographic Hardware and Embedded Systems](https://tches.iacr.org/). Volume 2024, Issue 2.
 
-    [PDF](https://junhaohuang.github.io/assets/paper/TCHES2024_2.pdf). [Code](https://github.com/UIC-ESLAS/Dilithium-Multi-Moduli).
+    [PDF](/uploads/tches2024_2/paper.pdf). [Code](https://github.com/UIC-ESLAS/Dilithium-Multi-Moduli).
 
 - Junhao Huang, Haosong Zhao, Jipeng Zhang, Wangchen Dai, Lu Zhou, Ray C. C. Cheung, Cetin Kaya Koc, Donglong Chen. Yet another Improvement of Plantard Arithmetic for Faster Kyber on Low-end 32-bit IoT Devices. [IEEE Transactions on Information Forensics & Security](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206), 2024
 
-    [PDF](https://ieeexplore.ieee.org/document/10453274/). [Code](https://github.com/UIC-ESLAS/Kyber_RV_M3).
+    [PDF](/uploads/tifs2024/paper.pdf). [Code](https://github.com/UIC-ESLAS/Kyber_RV_M3).
 
 ### 2023
 
 - Jipeng Zhang, Junhao Huang, Xuan Yu, Zhe Liu. Research on Efficient Implementation of SM2 for Mobile Devices. [Acta Electronica Sinica](https://www.ejournal.org.cn/EN/home).
 
-    [PDF](https://www.ejournal.org.cn/CN/10.12263/DZXB.20221419). [Code](https://github.com/Ji-Peng/openssl_SM2_ARMv8-A).
+    [PDF](/uploads/ejournal/sm2_paper.pdf). [Code](https://github.com/Ji-Peng/openssl_SM2_ARMv8-A). [Link](https://www.ejournal.org.cn/CN/10.12263/DZXB.20221419).
 
 ### 2022
 
-- Junhao Huang, Jipeng Zhang, Haosong Zhao, Zhe Liu, Ray C. C. Cheung, Cetin Kaya Koc, Donglong Chen. Improved Plantard arithmetic for lattice-based cryptography. [IACR Trans. on Cryptographic Hardware and Embedded Systems](https://tches.iacr.org/). Volume 2022, Issue 4.
+- Jipeng Zhang, Junhao Huang, Zhe Liu, Sujoy Sinha Roy. Time-memory Trade-offs for Saber+ on Memory-constrained RISC-V. [IEEE Trans. on Computers](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=12).
+
+    [PDF](/uploads/tc2022/paper.pdf). [Code](https://github.com/Ji-Peng/Saber_RV32). [Link](https://ieeexplore.ieee.org/document/9682594).
+
+- Junhao Huang, Jipeng Zhang, Haosong Zhao, Zhe Liu, Ray C. C. Cheung, Cetin Kaya Koc, Donglong Chen. Improved Plantard arithmetic for lattice-based cryptography. [IACR Transactions on Cryptographic Hardware and Embedded Systems](https://tches.iacr.org/). Volume 2022, Issue 4.
 
     [PDF](/uploads/tches2022/paper.pdf). [Code](https://github.com/UIC-ESLAS/ImprovedPlantardArithmetic). [Link](https://artifacts.iacr.org/tches/2022/a16/index.html).
 
 ### 2021
 
-- Jipeng Zhang, Junhao Huang, Zhe Liu, Sujoy Sinha Roy. Time-memory Trade-offs for Saber+ on Memory-constrained RISC-V. [IEEE Trans. on Computers](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=12).
-
-    [PDF](https://eprint.iacr.org/2021/1552.pdf). [Code](https://github.com/Ji-Peng/Saber_RV32).
-
 - Lirui Zhao, Jipeng Zhang, Junhao Huang, Zhe Liu, Gerhard Hancke. Efficient Implementation of Kyber on Mobile Devices. ICPADS2021.
 
-    [PDF](/uploads/icpads2021/paper.pdf). [Slide](/uploads/icpads2021/slide.pdf).
+    [PDF](/uploads/icpads2021/paper.pdf). [Slide](/uploads/icpads2021/slide.pdf). [Code](https://github.com/Ji-Peng/Kyber_NEON).
 
 - Weibin Wu, Zhe Liu, Hao Yang, Jipeng Zhang. Survey of Side-channel Attacks and Countermeasures on Post-quantum Cryptography. [Journal of Software](https://www.jos.org.cn/jos/home).
 
-    [PDF](https://www.jos.org.cn/jos/article/pdf/6165).
+    [PDF](/uploads/jos/paper_2021.pdf). [Link](https://www.jos.org.cn/jos/article/abstract/6165).
 
 ### 2020
 
