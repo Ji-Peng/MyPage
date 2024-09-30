@@ -21,7 +21,7 @@ design:
 
 - Jipeng Zhang, Yuxing Yan, Junhao Huang, Çetin Kaya Koç. Optimized Software Implementation of Keccak, Kyber, and Dilithium on RV{32,64}IM{B}{V}. [IACR Transactions on Cryptographic Hardware and Embedded Systems](https://tches.iacr.org/). Volume 2025, Issue 1.
 
-    [PDF](/uploads/tches2025/paper.pdf). [Code](https://github.com/Ji-Peng/PQRV/tree/ches2025).
+    [PDF](/uploads/tches2025/paper.pdf). [eprint](https://eprint.iacr.org/2024/1515). [Code](https://github.com/Ji-Peng/PQRV/tree/ches2025).
 
 ### 2024
 
