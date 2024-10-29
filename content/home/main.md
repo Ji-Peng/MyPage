@@ -35,7 +35,7 @@ design:
 
 - Junhao Huang, Alexandre Adomnicăi, Jipeng Zhang, Wangchen Dai, Yao Liu, Ray C. C. Cheung, Çetin Kaya Koç, Donglong Chen. Revisiting Keccak and Dilithium Implementations on ARMv7-M. [IACR Transactions on Cryptographic Hardware and Embedded Systems](https://tches.iacr.org/). Volume 2024, Issue 2.
 
-    [PDF](/uploads/tches2024_2/paper.pdf). [Code](https://github.com/UIC-ESLAS/Dilithium-Multi-Moduli).
+    [PDF](/uploads/tches2024/paper.pdf). [Code](https://github.com/UIC-ESLAS/Dilithium-Multi-Moduli).
 
 - Junhao Huang, Haosong Zhao, Jipeng Zhang, Wangchen Dai, Lu Zhou, Ray C. C. Cheung, Cetin Kaya Koc, Donglong Chen. Yet another Improvement of Plantard Arithmetic for Faster Kyber on Low-end 32-bit IoT Devices. [IEEE Transactions on Information Forensics & Security](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206), 2024
 
