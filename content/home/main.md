@@ -73,6 +73,14 @@ design:
 
     [PDF](/uploads/icpads2020/paper.pdf). [Slide](/uploads/icpads2020/slide.pdf). [Code](https://github.com/Ji-Peng/LAC_SPM_Code). [Video](https://www.youtube.com/watch?v=1W24-h_kvEo).
 
+<!-- ## Talks -->
+
+<h2 align="center"> Talks </h2>
+
+- 2024/10/23. The 9th QiLu Youth Forum At ShanDong University, School of Cyber Science And Technology, QingDao. Optimized Software Implementation of Keccak, Kyber, and Dilithium on RV{32,64}IM{B}{V} & ENG25519: Faster TLS 1.3 handshake using optimized X25519 and Ed25519.
+
+    [Slide](/uploads/talks/SDU_20241023.pdf). [Pictures-0](/uploads/talks/SDU_20241023_pic0.png). [Pictures-1](/uploads/talks/SDU_20241023_pic1.png). [Link](https://cst.qd.sdu.edu.cn/info/1037/3369.htm).
+
 <!-- ## Software -->
 
 <h2 align="center"> Software </h2>
