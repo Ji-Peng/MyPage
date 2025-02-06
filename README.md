@@ -258,6 +258,8 @@ _build:
 git clone https://github.com/Ji-Peng/MyPage
 rm -rf public
 git submodule update --init
+cd public
+git checkout main
 hugo
 ```
 
