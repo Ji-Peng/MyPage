@@ -252,9 +252,11 @@ _build:
 
 ## 相关命令
 
-更换电脑时：`sudo apt install hugo`，并安装`go`语言
+更换电脑时，直接安装下述版本的hugo，不然可能有兼容性问题：
 
 ```bash
+wget https://github.com/gohugoio/hugo/releases/download/v0.83.1/hugo_extended_0.83.1_Linux-64bit.deb
+sudo dpkg -i hugo_extended_0.83.1_Linux-64bit.deb
 git clone https://github.com/Ji-Peng/MyPage
 rm -rf public
 git submodule update --init

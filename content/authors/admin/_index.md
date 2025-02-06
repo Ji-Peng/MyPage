@@ -69,7 +69,7 @@ email: "jp-zhang@outlook.com"
 # Highlight the author in author lists? (true/false)
 highlight_name: false
 ---
-I'm a PhD student supervised by [Çetin Kaya Koç](https://koclab.net/koc.html) at Nanjing University of Aeronautics and Astronautics (NUAA) in Nanjing, China. My PhD thesis is available at [Research on Optimized Implementation of Public-key Cryptography Algorithms](/uploads/phd/thesis.pdf).
+I'm a PhD student supervised by [Çetin Kaya Koç](https://koclab.net/koc.html) at Nanjing University of Aeronautics and Astronautics (NUAA) in Nanjing, China. My PhD thesis, titled "Research on Optimized Implementation of Public-key Cryptography Algorithms", is available at [thesis](/uploads/phd/thesis.pdf).
 
 My research interests mainly involve post-quantum cryptography, elliptic curve cryptography and TLS protocol.
 
