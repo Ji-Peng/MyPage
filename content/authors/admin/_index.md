@@ -55,6 +55,18 @@ social:
 - icon: google scholar
   icon_pack: fab
   link: https://scholar.google.com/citations?hl=en&user=dL1IM-M9ltIC
+- icon: orcid
+  icon_pack: fab
+  link: https://orcid.org/0000-0002-0679-7212
+- icon: envelope
+  icon_pack: fas
+  link: mailto:jp-zhang@outlook.com
+- icon: dailymotion
+  icon_pack: fab
+  link: https://dblp.org/search/publ?q=author%3AJipeng_Zhang%3A%20author%3AJunhao_Huang_0001%3A
+# dblp不显示
+# - icon: "custom/dblp"
+#   link: https://dblp.org/search/publ?q=author%3AJipeng_Zhang%3A%20author%3AJunhao_Huang_0001%3A
 
 # Link to a PDF of your resume/CV.
 # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.toml`, 
