@@ -39,6 +39,7 @@ education:
 # For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "/#contact" for contact widget.
+# Icon pack "ai" includes the following academic network icons https://jpswalsh.github.io/academicons/
 social:
 # - icon: envelope
 #   icon_pack: fas
@@ -61,19 +62,15 @@ social:
 - icon: envelope
   icon_pack: fas
   link: mailto:jp-zhang@outlook.com
-- icon: dailymotion
-  icon_pack: fab
+- icon: dblp
+  icon_pack: ai
   link: https://dblp.org/search/publ?q=author%3AJipeng_Zhang%3A%20author%3AJunhao_Huang_0001%3A
-# dblp不显示
-# - icon: "custom/dblp"
-#   link: https://dblp.org/search/publ?q=author%3AJipeng_Zhang%3A%20author%3AJunhao_Huang_0001%3A
-
 # Link to a PDF of your resume/CV.
 # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.toml`, 
 # and uncomment the lines below.
 # - icon: cv
 #   icon_pack: ai
-#   link: uploads/resume.pdf
+#   link: uploads/phd/thesis.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: "jp-zhang@outlook.com"
