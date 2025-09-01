@@ -6,11 +6,11 @@ title: Jipeng Zhang
 superuser: true
 
 # Role/position/tagline
-role: PhD
+role: Postdoctoral Research Fellow
 
 # Organizations/Affiliations to show in About widget
 organizations:
-- name: Nanjing University of Aeronautics and Astronautics (NUAA)
+- name: National University of Singapore (NUS)
   url: http://www.nuaa.edu.cn/main.htm
 
 # Short bio (displayed in user profile at end of posts)
@@ -69,9 +69,9 @@ email: "jp-zhang@outlook.com"
 # Highlight the author in author lists? (true/false)
 highlight_name: false
 ---
-I'm a PhD student supervised by [Çetin Kaya Koç](https://koclab.net/koc.html) at Nanjing University of Aeronautics and Astronautics (NUAA) in Nanjing, China. My PhD thesis, titled "Research on Optimized Implementation of Public-key Cryptography Algorithms", is available at [thesis](/uploads/phd/thesis.pdf).
+I am currently a Postdoctoral Research Fellow at the National University of Singapore (NUS), working with [Prof. Jiaheng Zhang](https://zjhzjh123.github.io/). I received my Ph.D. under the supervision of [Prof. Çetin Kaya Koç](https://koclab.net/koc.html) at Nanjing University of Aeronautics and Astronautics (NUAA), China.
 
-My research interests mainly involve post-quantum cryptography, elliptic curve cryptography and TLS protocol.
+My research interests mainly involve zero-knowledge proofs, post-quantum cryptography, elliptic curve cryptography and TLS protocol.
 
 Email: jp-zhang@outlook.com
 
