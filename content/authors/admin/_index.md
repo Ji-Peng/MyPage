@@ -19,9 +19,9 @@ bio: My research interests include lattice-based cryptography and ECC.
 # Interests to show in About widget
 interests:
 - Cryptography Engineering
+- Zero-Knowledge Proofs
 - Lattice-based Cryptography
 - Elliptic Curve Cryptography
-- TLS Protocol
 
 # Education to show in About widget
 education:
@@ -80,7 +80,7 @@ highlight_name: false
 ---
 I am currently a Postdoctoral Research Fellow at the National University of Singapore (NUS), working with [Prof. Jiaheng Zhang](https://zjhzjh123.github.io/). I received my Ph.D. under the supervision of [Prof. Çetin Kaya Koç](https://koclab.net/koc.html) at Nanjing University of Aeronautics and Astronautics (NUAA), China.
 
-My research interests mainly involve zero-knowledge proofs, post-quantum cryptography, elliptic curve cryptography and TLS protocol.
+My research interests mainly involve zero-knowledge proofs, post-quantum cryptography, and elliptic curve cryptography.
 
 Email: jp-zhang@outlook.com
 
