@@ -21,7 +21,7 @@ design:
 
 - Jipeng Zhang, Jiaheng Zhang. Vectorized Falcon-Sign Implementations using SSE2, AVX2, AVX-512F, NEON, and RVV. [IACR Transactions on Cryptographic Hardware and Embedded Systems](https://tches.iacr.org/). Volume 2026, Issue 1.
 
-    [eprint](https://eprint.iacr.org/2025/1867). [Code](https://github.com/Ji-Peng/VecFalcon).
+    [eprint](https://eprint.iacr.org/2025/1867). [Code](https://github.com/Ji-Peng/VecFalcon). [Slide](/uploads/tches2026/VecFalcon_slides.pdf).
 
 ### 2025
 
@@ -82,6 +82,10 @@ design:
 - Jipeng Zhang, Zhe Liu, Hao Yang, Weibin Wu. An Efficient and Scalable Sparse Polynomial Multiplication Accelerator for LAC on FPGA. ICPADS2020.
 
     [PDF](/uploads/icpads2020/paper.pdf). [Slide](/uploads/icpads2020/slide.pdf). [Code](https://github.com/Ji-Peng/LAC_SPM_Code). [Video](https://www.youtube.com/watch?v=1W24-h_kvEo).
+
+<h2 align="center"> Program Committee </h2>
+
+- SAC'26
 
 <!-- ## Talks -->
 
