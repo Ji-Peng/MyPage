@@ -19,6 +19,10 @@ design:
 
 ### 2026
 
+- Ganqin Liu, Hao Cheng, Georgios Fotiadis, Jipeng Zhang, Johann Großschädl. Efficient SIMD Implementation of the BLS Signature Scheme Using Intel AVX-512. [IACR Transactions on Cryptographic Hardware and Embedded Systems](https://tches.iacr.org/). Volume 2026, Issue 3.
+
+    [Code](https://github.com/ganqin-liu/avxbls-sig).
+
 - Jipeng Zhang, Jiaheng Zhang. Vectorized Falcon-Sign Implementations using SSE2, AVX2, AVX-512F, NEON, and RVV. [IACR Transactions on Cryptographic Hardware and Embedded Systems](https://tches.iacr.org/). Volume 2026, Issue 1.
 
     [eprint](https://eprint.iacr.org/2025/1867). [Code](https://github.com/Ji-Peng/VecFalcon). [Slide](/uploads/tches2026/VecFalcon_slides.pdf).
