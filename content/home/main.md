@@ -89,7 +89,7 @@ design:
 
 <h2 align="center"> Program Committee </h2>
 
-- SAC'26, CHES'27
+- SAC'26, CHES'27, Usenix Security'27
 
 <!-- ## Talks -->
 
