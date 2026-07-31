@@ -19,6 +19,16 @@ design:
 
 ### 2026
 
+- Jipeng Zhang, Hao Cheng, Tao Lu, Jiaheng Zhang. VAXEN: A Versatile AVX Extension for Zero-Knowledge Proof and Post-Quantum Cryptography. [MICRO 2026](https://microarch.org/micro59/).
+
+    [PDF](/uploads/micro2026/paper.pdf). [Code](https://github.com/Ji-Peng/VAXEN_Artifact).
+
+- Jipeng Zhang, Yanpei Guo, Tao Lu, Hao Cheng, Jiaheng Zhang. MamaBearZKP: A Holistic Co-design of Prime Fields and Proving Stacks for High-Throughput ZKP on Modern CPUs. [CCS 2026](https://www.sigsac.org/ccs/CCS2026/).
+
+- Tao Lu, Jipeng Zhang,. TensorZKP: Repurposing GPU Tensor Cores for High-Performance Zero-Knowledge Proofs. [Usenix Security 2026](https://www.usenix.org/conference/usenixsecurity26/).
+
+    [PDF](https://eprint.iacr.org/2026/1250). [Code](https://doi.org/10.5281/zenodo.20337923).
+ 
 - Ganqin Liu, Hao Cheng, Georgios Fotiadis, Jipeng Zhang, Johann Großschädl. Efficient SIMD Implementation of the BLS Signature Scheme Using Intel AVX-512. [IACR Transactions on Cryptographic Hardware and Embedded Systems](https://tches.iacr.org/). Volume 2026, Issue 3.
 
     [eprint](https://eprint.iacr.org/2026/947). [Code](https://github.com/ganqin-liu/avxbls-sig).
