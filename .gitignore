@@ -1,0 +1,14 @@
+# IDEs
+.idea/
+
+# Hugo
+resources/
+jsconfig.json
+
+.hugo_build.lock
+
+.DS_Store
+config/.DS_Store
+content/.DS_Store
+static/.DS_Store
+static/uploads/.DS_Store
