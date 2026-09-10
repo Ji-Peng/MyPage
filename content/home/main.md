@@ -21,9 +21,11 @@ design:
 
 - Jipeng Zhang, Hao Cheng, Tao Lu, Jiaheng Zhang. VAXEN: A Versatile AVX Extension for Zero-Knowledge Proof and Post-Quantum Cryptography. [MICRO 2026](https://microarch.org/micro59/).
 
-    [PDF](/uploads/micro2026/paper.pdf). [Code](https://github.com/Ji-Peng/VAXEN_Artifact).
+    [PDF](/uploads/micro2026/paper.pdf). [Code-Zenodo](https://doi.org/10.5281/zenodo.21543181). [Code-Github](https://github.com/Ji-Peng/VAXEN_Artifact).
 
 - Jipeng Zhang, Yanpei Guo, Tao Lu, Hao Cheng, Jiaheng Zhang. MamaBearZKP: A Holistic Co-design of Prime Fields and Proving Stacks for High-Throughput ZKP on Modern CPUs. [CCS 2026](https://www.sigsac.org/ccs/CCS2026/).
+
+    [eprint](https://eprint.iacr.org/2026/1698). [Code-Zenodo](https://zenodo.org/records/21731753). [Code-Github](https://github.com/Ji-Peng/MamaBearZKP-Artifact).
 
 - Tao Lu, Jipeng Zhang,. TensorZKP: Repurposing GPU Tensor Cores for High-Performance Zero-Knowledge Proofs. [Usenix Security 2026](https://www.usenix.org/conference/usenixsecurity26/).
 
