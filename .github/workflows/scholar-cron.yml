@@ -1,0 +1,45 @@
+name: Google Scholar Weekly Sync
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-scholar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.11+
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Scholar sync script
+        run: python scripts/fetch_scholar.py
+
+      - name: Check for scholar data changes
+        id: check_changes
+        run: |
+          if git diff --quiet src/data/scholar.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No changes detected in src/data/scholar.json"
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "Changes detected in src/data/scholar.json"
+          fi
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.changed == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore(scholar): update Google Scholar citation count [skip ci]'
+          file_pattern: 'src/data/scholar.json'
+          commit_user_name: 'github-actions[bot]'
+          commit_user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_author: 'github-actions[bot] <github-actions[bot]@users.noreply.github.com>'

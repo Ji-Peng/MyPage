@@ -1,0 +1,135 @@
+{
+  "userId": "dL1IM-M9ltIC",
+  "profileUrl": "https://scholar.google.com/citations?user=dL1IM-M9ltIC&hl=en",
+  "updatedAt": "2026-09-12T02:24:56.873397+00:00",
+  "totalCitations": 234,
+  "hIndex": 7,
+  "i10Index": 7,
+  "stats": {
+    "citations": {
+      "all": 234,
+      "recent": 234
+    },
+    "hIndex": {
+      "all": 7,
+      "recent": 7
+    },
+    "i10Index": {
+      "all": 7,
+      "recent": 7
+    }
+  },
+  "citationsPerYear": [
+    {
+      "year": 2021,
+      "citations": 1
+    },
+    {
+      "year": 2022,
+      "citations": 5
+    },
+    {
+      "year": 2023,
+      "citations": 16
+    },
+    {
+      "year": 2024,
+      "citations": 53
+    },
+    {
+      "year": 2025,
+      "citations": 93
+    },
+    {
+      "year": 2026,
+      "citations": 65
+    }
+  ],
+  "publications": [
+    {
+      "title": "Improved plantard arithmetic for lattice-based cryptography",
+      "citations": 77,
+      "year": 2022
+    },
+    {
+      "title": "Yet another improvement of Plantard arithmetic for faster Kyber on low-end 32-bit IoT devices",
+      "citations": 41,
+      "year": 2024
+    },
+    {
+      "title": "Revisiting keccak and dilithium implementations on armv7-m",
+      "citations": 28,
+      "year": 2024
+    },
+    {
+      "title": "Optimized Software Implementation of Keccak, Kyber, and Dilithium on RV{32,64}IM{B}{V}",
+      "citations": 23,
+      "year": 2024
+    },
+    {
+      "title": "ENG25519: Faster TLS 1.3 handshake using optimized X25519 and Ed25519",
+      "citations": 19,
+      "year": 2024
+    },
+    {
+      "title": "Efficient implementation of kyber on mobile devices",
+      "citations": 18,
+      "year": 2021
+    },
+    {
+      "title": "Time-memory Trade-offs for Saber+ on Memory-constrained RISC-V Platform",
+      "citations": 17,
+      "year": 2022
+    },
+    {
+      "title": "Multi-way high-throughput implementation of Kyber",
+      "citations": 4,
+      "year": 2024
+    },
+    {
+      "title": "后量子密码算法的侧信道攻击与防御综述",
+      "citations": 3,
+      "year": 2021
+    },
+    {
+      "title": "Vectorized Falcon-Sign Implementations using SSE2, AVX2, AVX-512F, NEON, and RVV",
+      "citations": 2,
+      "year": 2025
+    },
+    {
+      "title": "An Efficient and Scalable Sparse Polynomial Multiplication Accelerator for LAC on FPGA",
+      "citations": 2,
+      "year": 2020
+    },
+    {
+      "title": "Efficient SIMD Implementation of the BLS Signature Scheme Using Intel AVX-512",
+      "citations": 0,
+      "year": 2026
+    },
+    {
+      "title": "Lithium: Making Iterative Rejection Sampling Practical for Compact Lattice Signatures",
+      "citations": 0,
+      "year": 2026
+    },
+    {
+      "title": "MamaBearZKP: A Holistic Co-design of Prime Fields and Proving Stacks for High-Throughput ZKP on Modern CPUs",
+      "citations": 0,
+      "year": 2026
+    },
+    {
+      "title": "TensorZKP: Repurposing GPU Tensor Cores for High-Performance Zero-Knowledge Proofs",
+      "citations": 0,
+      "year": 2026
+    },
+    {
+      "title": "面向移动设备的国密 SM2 高效实现研究",
+      "citations": 0,
+      "year": 2023
+    },
+    {
+      "title": "VAXEN: A Versatile AVX Extension for Zero-Knowledge Proof and Post-Quantum Cryptography",
+      "citations": 0,
+      "year": null
+    }
+  ]
+}

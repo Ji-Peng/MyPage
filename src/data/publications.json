@@ -1,0 +1,408 @@
+[
+  {
+    "id": "micro2026-vaxen",
+    "title": "VAXEN: A Versatile AVX Extension for Zero-Knowledge Proof and Post-Quantum Cryptography",
+    "authors": ["Jipeng Zhang", "Hao Cheng", "Tao Lu", "Jiaheng Zhang"],
+    "venue": "IEEE/ACM International Symposium on Microarchitecture (MICRO 2026)",
+    "venueShort": "MICRO 2026",
+    "year": 2026,
+    "award": null,
+    "selected": true,
+    "links": {
+      "pdf": "/uploads/micro2026/paper.pdf",
+      "zenodo": "https://doi.org/10.5281/zenodo.21543181",
+      "code": "https://github.com/Ji-Peng/VAXEN_Artifact",
+      "venue": "https://microarch.org/micro59/"
+    },
+    "artifactBadges": [
+      {
+        "type": "available",
+        "label": "Artifact Available",
+        "url": "https://doi.org/10.5281/zenodo.21543181"
+      },
+      {
+        "type": "functional",
+        "label": "Artifact Functional",
+        "url": "https://doi.org/10.5281/zenodo.21543181"
+      },
+      {
+        "type": "reproduced",
+        "label": "Results Reproduced",
+        "url": "https://doi.org/10.5281/zenodo.21543181"
+      }
+    ],
+    "bibtex": "@inproceedings{zhang2026vaxen,\n  author    = {Zhang, Jipeng and Cheng, Hao and Lu, Tao and Zhang, Jiaheng},\n  title     = {VAXEN: A Versatile AVX Extension for Zero-Knowledge Proof and Post-Quantum Cryptography},\n  booktitle = {IEEE/ACM International Symposium on Microarchitecture (MICRO)},\n  year      = {2026}\n}",
+    "citations": 0
+  },
+  {
+    "id": "ccs2026-mamabearzkp",
+    "title": "MamaBearZKP: A Holistic Co-design of Prime Fields and Proving Stacks for High-Throughput ZKP on Modern CPUs",
+    "authors": ["Jipeng Zhang", "Yanpei Guo", "Tao Lu", "Hao Cheng", "Jiaheng Zhang"],
+    "venue": "ACM Conference on Computer and Communications Security (CCS 2026)",
+    "venueShort": "CCS 2026",
+    "year": 2026,
+    "award": null,
+    "selected": true,
+    "links": {
+      "eprint": "https://eprint.iacr.org/2026/1698",
+      "zenodo": "https://zenodo.org/records/21731753",
+      "code": "https://github.com/Ji-Peng/MamaBearZKP-Artifact",
+      "venue": "https://www.sigsac.org/ccs/CCS2026/"
+    },
+    "artifactBadges": [
+      {
+        "type": "available",
+        "label": "Artifact Available",
+        "url": "https://zenodo.org/records/21731753"
+      }
+    ],
+    "bibtex": "@inproceedings{zhang2026mamabearzkp,\n  author    = {Zhang, Jipeng and Guo, Yanpei and Lu, Tao and Cheng, Hao and Zhang, Jiaheng},\n  title     = {MamaBearZKP: A Holistic Co-design of Prime Fields and Proving Stacks for High-Throughput ZKP on Modern CPUs},\n  booktitle = {ACM Conference on Computer and Communications Security (CCS)},\n  year      = {2026}\n}",
+    "citations": 0
+  },
+  {
+    "id": "sec2026-tensorzkp",
+    "title": "TensorZKP: Repurposing GPU Tensor Cores for High-Performance Zero-Knowledge Proofs",
+    "authors": [
+      "Tao Lu",
+      "Jipeng Zhang",
+      "Yanpei Guo",
+      "Xuanming Liu",
+      "Wenjie Qu",
+      "Zonghui Wang",
+      "Wenzhi Chen",
+      "Jiaheng Zhang"
+    ],
+    "venue": "35th USENIX Security Symposium (USENIX Security 2026)",
+    "venueShort": "USENIX Sec 2026",
+    "year": 2026,
+    "award": null,
+    "selected": false,
+    "links": {
+      "pdf": "https://eprint.iacr.org/2026/1250",
+      "eprint": "https://eprint.iacr.org/2026/1250",
+      "zenodo": "https://doi.org/10.5281/zenodo.20337923",
+      "code": "https://doi.org/10.5281/zenodo.20337923",
+      "venue": "https://www.usenix.org/conference/usenixsecurity26/"
+    },
+    "artifactBadges": [
+      {
+        "type": "available",
+        "label": "Artifact Available",
+        "url": "https://doi.org/10.5281/zenodo.20337923"
+      }
+    ],
+    "bibtex": "@inproceedings{lu2026tensorzkp,\n  author    = {Lu, Tao and Zhang, Jipeng and Guo, Yanpei and Liu, Xuanming and Qu, Wenjie and Wang, Zonghui and Chen, Wenzhi and Zhang, Jiaheng},\n  title     = {TensorZKP: Repurposing GPU Tensor Cores for High-Performance Zero-Knowledge Proofs},\n  booktitle = {USENIX Security Symposium (USENIX Security)},\n  year      = {2026}\n}",
+    "citations": 0
+  },
+  {
+    "id": "tches2026-bls-simd",
+    "title": "Efficient SIMD Implementation of the BLS Signature Scheme Using Intel AVX-512",
+    "authors": ["Ganqin Liu", "Hao Cheng", "Georgios Fotiadis", "Jipeng Zhang", "Johann Großschädl"],
+    "venue": "IACR Transactions on Cryptographic Hardware and Embedded Systems (TCHES), Volume 2026, Issue 3",
+    "venueShort": "TCHES 2026",
+    "year": 2026,
+    "award": null,
+    "selected": false,
+    "links": {
+      "eprint": "https://eprint.iacr.org/2026/947",
+      "code": "https://github.com/ganqin-liu/avxbls-sig",
+      "venue": "https://tches.iacr.org/"
+    },
+    "artifactBadges": [],
+    "bibtex": "@article{liu2026efficient,\n  author    = {Liu, Ganqin and Cheng, Hao and Fotiadis, Georgios and Zhang, Jipeng and Gro{\\ss}sch{\\\"a}dl, Johann},\n  title     = {Efficient SIMD Implementation of the BLS Signature Scheme Using Intel AVX-512},\n  journal   = {IACR Transactions on Cryptographic Hardware and Embedded Systems},\n  volume    = {2026},\n  number    = {3},\n  year      = {2026}\n}",
+    "citations": 0
+  },
+  {
+    "id": "tches2026-vecfalcon",
+    "title": "Vectorized Falcon-Sign Implementations using SSE2, AVX2, AVX-512F, NEON, and RVV",
+    "authors": ["Jipeng Zhang", "Jiaheng Zhang"],
+    "venue": "IACR Transactions on Cryptographic Hardware and Embedded Systems (TCHES), Volume 2026, Issue 1",
+    "venueShort": "TCHES 2026",
+    "year": 2026,
+    "award": null,
+    "selected": true,
+    "links": {
+      "venue": "https://tches.iacr.org/index.php/TCHES/article/view/12678",
+      "artifact": "https://artifacts.iacr.org/tches/2026/a1/",
+      "eprint": "https://eprint.iacr.org/2025/1867",
+      "code": "https://github.com/Ji-Peng/VecFalcon",
+      "slides": "/uploads/tches2026/VecFalcon_slides.pdf"
+    },
+    "artifactBadges": [
+      {
+        "type": "functional",
+        "label": "IACR CHES Artifacts Functional",
+        "url": "https://artifacts.iacr.org/tches/2026/a1/"
+      }
+    ],
+    "bibtex": "@article{zhang2026vectorized,\n  author    = {Zhang, Jipeng and Zhang, Jiaheng},\n  title     = {Vectorized Falcon-Sign Implementations using SSE2, AVX2, AVX-512F, NEON, and RVV},\n  journal   = {IACR Transactions on Cryptographic Hardware and Embedded Systems},\n  volume    = {2026},\n  number    = {1},\n  year      = {2026}\n}",
+    "citations": 2
+  },
+  {
+    "id": "phdthesis2025-zhang",
+    "title": "PhD thesis: Research on Optimized Implementation of Public-key Cryptography Algorithms",
+    "authors": ["Jipeng Zhang"],
+    "venue": "PhD Thesis, Nanjing University of Aeronautics and Astronautics (NUAA)",
+    "venueShort": "PhD Thesis 2025",
+    "year": 2025,
+    "award": null,
+    "selected": false,
+    "links": {
+      "pdf": "/uploads/phd/thesis.pdf"
+    },
+    "artifactBadges": [],
+    "bibtex": "@phdthesis{zhang2025thesis,\n  author    = {Zhang, Jipeng},\n  title     = {Research on Optimized Implementation of Public-key Cryptography Algorithms},\n  school    = {Nanjing University of Aeronautics and Astronautics},\n  year      = {2025}\n}",
+    "citations": 0
+  },
+  {
+    "id": "tches2025-pqrv",
+    "title": "Optimized Software Implementation of Keccak, Kyber, and Dilithium on RV{32,64}IM{B}{V}",
+    "authors": ["Jipeng Zhang", "Yuxing Yan", "Junhao Huang", "Çetin Kaya Koç"],
+    "venue": "IACR Transactions on Cryptographic Hardware and Embedded Systems (TCHES), Volume 2025, Issue 1",
+    "venueShort": "TCHES 2025",
+    "year": 2025,
+    "award": null,
+    "selected": true,
+    "links": {
+      "pdf": "/uploads/tches2025/paper.pdf",
+      "venue": "https://tches.iacr.org/index.php/TCHES/article/view/11941",
+      "artifact": "https://artifacts.iacr.org/tches/2025/a4/index.html",
+      "eprint": "https://eprint.iacr.org/2024/1515",
+      "code": "https://github.com/Ji-Peng/PQRV/tree/ches2025"
+    },
+    "artifactBadges": [
+      {
+        "type": "functional",
+        "label": "IACR CHES Artifacts Functional",
+        "url": "https://artifacts.iacr.org/tches/2025/a4/index.html"
+      }
+    ],
+    "bibtex": "@article{zhang2025optimized,\n  author    = {Zhang, Jipeng and Yan, Yuxing and Huang, Junhao and Ko{\\c{c}}, {\\c{C}}etin Kaya},\n  title     = {Optimized Software Implementation of Keccak, Kyber, and Dilithium on RV\\{32,64\\}IM\\{B\\}\\{V\\}},\n  journal   = {IACR Transactions on Cryptographic Hardware and Embedded Systems},\n  volume    = {2025},\n  number    = {1},\n  pages     = {423--452},\n  year      = {2025}\n}",
+    "citations": 23
+  },
+  {
+    "id": "isc2024-kyber-multiway",
+    "title": "Multi-way High-throughput Implementation of Kyber",
+    "authors": ["Xuan Yu", "Jipeng Zhang", "Junhao Huang", "Donglong Chen", "Lu Zhou"],
+    "venue": "27th Information Security Conference (ISC 2024)",
+    "venueShort": "ISC 2024",
+    "year": 2024,
+    "award": null,
+    "selected": false,
+    "links": {
+      "pdf": "/uploads/isc2024/paper.pdf",
+      "code": "https://github.com/cccccosine/Kyber_AVX2_16w",
+      "codeAvx2": "https://github.com/cccccosine/Kyber_AVX2_16w",
+      "codeAvx512": "https://github.com/cccccosine/Kyber_AVX512_32w",
+      "venue": "https://isc24.cs.gmu.edu/"
+    },
+    "artifactBadges": [],
+    "bibtex": "@inproceedings{yu2024multiway,\n  author    = {Yu, Xuan and Zhang, Jipeng and Huang, Junhao and Chen, Donglong and Zhou, Lu},\n  title     = {Multi-way High-throughput Implementation of Kyber},\n  booktitle = {Information Security Conference (ISC)},\n  pages     = {352--371},\n  year      = {2024}\n}",
+    "citations": 4
+  },
+  {
+    "id": "sec2024-eng25519",
+    "title": "ENG25519: Faster TLS 1.3 handshake using optimized X25519 and Ed25519",
+    "authors": ["Jipeng Zhang", "Junhao Huang", "Lirui Zhao", "Donglong Chen", "Çetin Kaya Koç"],
+    "venue": "33rd USENIX Security Symposium (USENIX Security 2024)",
+    "venueShort": "USENIX Sec 2024",
+    "year": 2024,
+    "award": "Distinguished Paper Award Winner (Acceptance Rate 19.1%; Distinguished Award Rate 5%)",
+    "selected": true,
+    "links": {
+      "pdf": "/uploads/usenix_security2024/paper.pdf",
+      "code": "https://github.com/Ji-Peng/eng25519_artifact",
+      "slides": "/uploads/usenix_security2024/slide.pdf",
+      "award": "/uploads/usenix_security2024/Distinguished_Award.pdf",
+      "awardLink": "https://www.usenix.org/conference/usenixsecurity24/presentation/zhang-jipeng",
+      "statsLink": "https://www.usenix.org/sites/default/files/sec24_message.pdf",
+      "venue": "https://www.usenix.org/conference/usenixsecurity24/"
+    },
+    "artifactBadges": [
+      {
+        "type": "available",
+        "label": "Artifact Available",
+        "url": "https://github.com/Ji-Peng/eng25519_artifact"
+      },
+      {
+        "type": "functional",
+        "label": "Artifact Functional",
+        "url": "https://github.com/Ji-Peng/eng25519_artifact"
+      },
+      {
+        "type": "reproduced",
+        "label": "Results Reproduced",
+        "url": "https://github.com/Ji-Peng/eng25519_artifact"
+      }
+    ],
+    "bibtex": "@inproceedings{zhang2024eng25519,\n  author    = {Zhang, Jipeng and Huang, Junhao and Zhao, Lirui and Chen, Donglong and Ko{\\c{c}}, {\\c{C}}etin Kaya},\n  title     = {ENG25519: Faster TLS 1.3 handshake using optimized X25519 and Ed25519},\n  booktitle = {33rd USENIX Security Symposium (USENIX Security 24)},\n  pages     = {4273--4290},\n  year      = {2024},\n  note      = {Distinguished Paper Award}\n}",
+    "citations": 19
+  },
+  {
+    "id": "tches2024-dilithium-armv7m",
+    "title": "Revisiting Keccak and Dilithium Implementations on ARMv7-M",
+    "authors": ["Junhao Huang", "Alexandre Adomnicăi", "Jipeng Zhang", "Wangchen Dai", "Yao Liu", "Ray C. C. Cheung", "Çetin Kaya Koç", "Donglong Chen"],
+    "venue": "IACR Transactions on Cryptographic Hardware and Embedded Systems (TCHES), Volume 2024, Issue 2",
+    "venueShort": "TCHES 2024",
+    "year": 2024,
+    "award": null,
+    "selected": false,
+    "links": {
+      "pdf": "/uploads/tches2024/paper.pdf",
+      "venue": "https://tches.iacr.org/index.php/TCHES/article/view/11419",
+      "artifact": "https://artifacts.iacr.org/tches/2024/a8/",
+      "code": "https://github.com/UIC-ESLAS/Dilithium-Multi-Moduli"
+    },
+    "artifactBadges": [
+      {
+        "type": "reproduced",
+        "label": "IACR CHES Results Reproduced",
+        "url": "https://artifacts.iacr.org/tches/2024/a8/"
+      }
+    ],
+    "bibtex": "@article{huang2024revisiting,\n  author    = {Huang, Junhao and Adomnic{\\u{a}}i, Alexandre and Zhang, Jipeng and Dai, Wangchen and Liu, Yao and Cheung, Ray C. C. and Ko{\\c{c}}, {\\c{C}}etin Kaya and Chen, Donglong},\n  title     = {Revisiting Keccak and Dilithium Implementations on ARMv7-M},\n  journal   = {IACR Transactions on Cryptographic Hardware and Embedded Systems},\n  volume    = {2024},\n  number    = {2},\n  pages     = {515--545},\n  year      = {2024}\n}",
+    "citations": 28
+  },
+  {
+    "id": "tifs2024-kyber-rv-m3",
+    "title": "Yet another Improvement of Plantard Arithmetic for Faster Kyber on Low-end 32-bit IoT Devices",
+    "authors": ["Junhao Huang", "Haosong Zhao", "Jipeng Zhang", "Wangchen Dai", "Lu Zhou", "Ray C. C. Cheung", "Cetin Kaya Koc", "Donglong Chen"],
+    "venue": "IEEE Transactions on Information Forensics and Security (TIFS), 2024",
+    "venueShort": "IEEE TIFS 2024",
+    "year": 2024,
+    "award": null,
+    "selected": false,
+    "links": {
+      "pdf": "/uploads/tifs2024/paper.pdf",
+      "code": "https://github.com/UIC-ESLAS/Kyber_RV_M3",
+      "venue": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206"
+    },
+    "artifactBadges": [
+      {
+        "type": "available",
+        "label": "Artifact Available",
+        "url": "https://github.com/UIC-ESLAS/Kyber_RV_M3"
+      }
+    ],
+    "bibtex": "@article{huang2024yet,\n  author    = {Huang, Junhao and Zhao, Haosong and Zhang, Jipeng and Dai, Wangchen and Zhou, Lu and Cheung, Ray C. C. and Ko{\\c{c}}, {\\c{C}}etin Kaya and Chen, Donglong},\n  title     = {Yet another Improvement of Plantard Arithmetic for Faster Kyber on Low-end 32-bit IoT Devices},\n  journal   = {IEEE Transactions on Information Forensics and Security},\n  volume    = {19},\n  pages     = {6432--6445},\n  year      = {2024}\n}",
+    "citations": 41
+  },
+  {
+    "id": "ejournal2023-sm2",
+    "title": "Research on Efficient Implementation of SM2 for Mobile Devices",
+    "authors": ["Jipeng Zhang", "Junhao Huang", "Xuan Yu", "Zhe Liu"],
+    "venue": "Acta Electronica Sinica (电子学报), Volume 51, Issue 11",
+    "venueShort": "Acta Electronica Sinica 2023",
+    "year": 2023,
+    "award": null,
+    "selected": false,
+    "links": {
+      "pdf": "/uploads/ejournal/sm2_paper.pdf",
+      "code": "https://github.com/Ji-Peng/openssl_SM2_ARMv8-A",
+      "link": "https://www.ejournal.org.cn/CN/10.12263/DZXB.20221419",
+      "venue": "https://www.ejournal.org.cn/EN/home"
+    },
+    "artifactBadges": [],
+    "bibtex": "@article{zhang2023sm2,\n  author    = {Zhang, Jipeng and Huang, Junhao and Yu, Xuan and Liu, Zhe},\n  title     = {Research on Efficient Implementation of SM2 for Mobile Devices},\n  journal   = {Acta Electronica Sinica},\n  volume    = {51},\n  number    = {11},\n  pages     = {3214--3224},\n  year      = {2023}\n}",
+    "citations": 0
+  },
+  {
+    "id": "tc2022-saber-riscv",
+    "title": "Time-memory Trade-offs for Saber+ on Memory-constrained RISC-V",
+    "authors": ["Jipeng Zhang", "Junhao Huang", "Zhe Liu", "Sujoy Sinha Roy"],
+    "venue": "IEEE Transactions on Computers (TC), Volume 71, Issue 11",
+    "venueShort": "IEEE TC 2022",
+    "year": 2022,
+    "award": null,
+    "selected": false,
+    "links": {
+      "pdf": "/uploads/tc2022/paper.pdf",
+      "code": "https://github.com/Ji-Peng/Saber_RV32",
+      "link": "https://ieeexplore.ieee.org/document/9682594",
+      "venue": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=12"
+    },
+    "artifactBadges": [],
+    "bibtex": "@article{zhang2022time,\n  author    = {Zhang, Jipeng and Huang, Junhao and Liu, Zhe and Roy, Sujoy Sinha},\n  title     = {Time-Memory Trade-Offs for Saber+ on Memory-Constrained RISC-V Platform},\n  journal   = {IEEE Transactions on Computers},\n  volume    = {71},\n  number    = {11},\n  pages     = {2739--2750},\n  year      = {2022}\n}",
+    "citations": 17
+  },
+  {
+    "id": "tches2022-plantard-arithmetic",
+    "title": "Improved Plantard arithmetic for lattice-based cryptography",
+    "authors": ["Junhao Huang", "Jipeng Zhang", "Haosong Zhao", "Zhe Liu", "Ray C. C. Cheung", "Cetin Kaya Koc", "Donglong Chen"],
+    "venue": "IACR Transactions on Cryptographic Hardware and Embedded Systems (TCHES), Volume 2022, Issue 4",
+    "venueShort": "TCHES 2022",
+    "year": 2022,
+    "award": null,
+    "selected": false,
+    "links": {
+      "pdf": "/uploads/tches2022/paper.pdf",
+      "venue": "https://tches.iacr.org/index.php/TCHES/article/view/9833",
+      "artifact": "https://artifacts.iacr.org/tches/2022/a16/",
+      "code": "https://github.com/UIC-ESLAS/ImprovedPlantardArithmetic"
+    },
+    "artifactBadges": [
+      {
+        "type": "available",
+        "label": "IACR CHES Artifacts Available",
+        "url": "https://artifacts.iacr.org/tches/2022/a16/"
+      }
+    ],
+    "bibtex": "@article{huang2022improved,\n  author    = {Huang, Junhao and Zhang, Jipeng and Zhao, Haosong and Liu, Zhe and Cheung, Ray C. C. and Ko{\\c{c}}, {\\c{C}}etin Kaya and Chen, Donglong},\n  title     = {Improved Plantard arithmetic for lattice-based cryptography},\n  journal   = {IACR Transactions on Cryptographic Hardware and Embedded Systems},\n  volume    = {2022},\n  number    = {4},\n  pages     = {614--631},\n  year      = {2022}\n}",
+    "citations": 77
+  },
+  {
+    "id": "icpads2021-kyber-neon",
+    "title": "Efficient Implementation of Kyber on Mobile Devices",
+    "authors": ["Lirui Zhao", "Jipeng Zhang", "Junhao Huang", "Zhe Liu", "Gerhard Hancke"],
+    "venue": "2021 IEEE 27th International Conference on Parallel and Distributed Systems (ICPADS 2021)",
+    "venueShort": "ICPADS 2021",
+    "year": 2021,
+    "award": null,
+    "selected": false,
+    "links": {
+      "pdf": "/uploads/icpads2021/paper.pdf",
+      "slides": "/uploads/icpads2021/slide.pdf",
+      "code": "https://github.com/Ji-Peng/Kyber_NEON"
+    },
+    "artifactBadges": [],
+    "bibtex": "@inproceedings{zhao2021efficient,\n  author    = {Zhao, Lirui and Zhang, Jipeng and Huang, Junhao and Liu, Zhe and Hancke, Gerhard},\n  title     = {Efficient Implementation of Kyber on Mobile Devices},\n  booktitle = {IEEE 27th International Conference on Parallel and Distributed Systems (ICPADS)},\n  pages     = {245--252},\n  year      = {2021}\n}",
+    "citations": 18
+  },
+  {
+    "id": "jos2021-pqc-side-channel",
+    "title": "Survey of Side-channel Attacks and Countermeasures on Post-quantum Cryptography",
+    "authors": ["Weibin Wu", "Zhe Liu", "Hao Yang", "Jipeng Zhang"],
+    "venue": "Journal of Software (软件学报), Volume 32, Issue 4",
+    "venueShort": "Journal of Software 2021",
+    "year": 2021,
+    "award": null,
+    "selected": false,
+    "links": {
+      "pdf": "/uploads/jos/paper_2021.pdf",
+      "link": "https://www.jos.org.cn/jos/article/abstract/6165",
+      "venue": "https://www.jos.org.cn/jos/home"
+    },
+    "artifactBadges": [],
+    "bibtex": "@article{wu2021survey,\n  author    = {Wu, Weibin and Liu, Zhe and Yang, Hao and Zhang, Jipeng},\n  title     = {Survey of Side-channel Attacks and Countermeasures on Post-quantum Cryptography},\n  journal   = {Journal of Software},\n  volume    = {32},\n  number    = {4},\n  pages     = {951--975},\n  year      = {2021}\n}",
+    "citations": 3
+  },
+  {
+    "id": "icpads2020-lac-spm",
+    "title": "An Efficient and Scalable Sparse Polynomial Multiplication Accelerator for LAC on FPGA",
+    "authors": ["Jipeng Zhang", "Zhe Liu", "Hao Yang", "Weibin Wu"],
+    "venue": "2020 IEEE 26th International Conference on Parallel and Distributed Systems (ICPADS 2020)",
+    "venueShort": "ICPADS 2020",
+    "year": 2020,
+    "award": null,
+    "selected": false,
+    "links": {
+      "pdf": "/uploads/icpads2020/paper.pdf",
+      "slides": "/uploads/icpads2020/slide.pdf",
+      "code": "https://github.com/Ji-Peng/LAC_SPM_Code",
+      "video": "https://www.youtube.com/watch?v=1W24-h_kvEo"
+    },
+    "artifactBadges": [],
+    "bibtex": "@inproceedings{zhang2020efficient,\n  author    = {Zhang, Jipeng and Liu, Zhe and Yang, Hao and Wu, Weibin},\n  title     = {An Efficient and Scalable Sparse Polynomial Multiplication Accelerator for LAC on FPGA},\n  booktitle = {IEEE 26th International Conference on Parallel and Distributed Systems (ICPADS)},\n  pages     = {278--285},\n  year      = {2020}\n}",
+    "citations": 2
+  }
+]

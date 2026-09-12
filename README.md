@@ -1,289 +1,195 @@
-<!--<p align="center"><a href="https://wowchemy.com" target="_blank" rel="noopener"><img src="https://sourcethemes.com/academic/img/logo_200px.png" alt="Wowchemy Website Builder"></a></p>-->
-
-# Book Template for [Wowchemy Website Builder](https://wowchemy.com)
-
-The **Book Template** empowers you to create **product documentation**, **digital books**, **personal notes**, and **knowledge bases**.
-
-[Check out the latest demo](https://book-starter.netlify.app/) of what you'll get in less than 10 minutes, or [view the showcase](https://wowchemy.com/user-stories/).
-
-[**Wowchemy**](https://github.com/wowchemy/wowchemy-hugo-modules) makes it easy to create a beautiful website for free using Markdown, Jupyter, or RStudio. Customize anything on your site with widgets, themes, and language packs.
-
-- 👉 [**Get Started**](https://wowchemy.com/templates/)
-- 📚 [View the **documentation**](https://wowchemy.com/docs/)
-- 💬 [Chat with the **Wowchemy community**](https://discord.gg/z8wNYzb) or [**Hugo community**](https://discourse.gohugo.io)
-- 🐦 Twitter: [@wowchemy](https://twitter.com/wowchemy) [@GeorgeCushen](https://twitter.com/GeorgeCushen) [#MadeWithWowchemy](https://twitter.com/search?q=(%23MadeWithWowchemy%20OR%20%23MadeWithAcademic)&src=typed_query)
-- 💡 [Request a **feature** or report a **bug** for _Wowchemy_](https://github.com/wowchemy/wowchemy-hugo-modules/issues)
-- ⬆️ **Updating Wowchemy?** View the [Update Guide](https://wowchemy.com/docs/update/) and [Release Notes](https://wowchemy.com/updates/)
-
-## Crowd-funded open-source software
-
-To help us develop this template and software sustainably under the MIT license, we ask all individuals and businesses that use it to help support its ongoing maintenance and development via sponsorship.
-
-### [❤️ Click here to unlock rewards with sponsorship](https://wowchemy.com/plans/)
-
-## [配置教程](https://wowchemy.com/docs/getting-started/customization/)
-
-[示例网站](https://academic-demo.netlify.app/), [对应源码](https://github.com/wowchemy/starter-hugo-academic/tree/master/exampleSite)
-
-### 1. Create a site
-
-选择不同的模版，默认是使用Netlify生成网站，并且会给生成一个随机URL，也可以在Netlify下定义子域名，随后在CMS里用可视化界面编辑网站。
-
-### 2. Build your homepage
-
-`content/home/index.md`里的`type: "widget_page"`表明, homepage是由各个widgets组成的, 所以下文介绍widgets
-
-Wowchemy提供了好用的widget，包括：
-
-- Blank：可添加任意元素，比如图片集
-- Hero：比如祈求访问者给github点个star
-- About me：图片+Biography+Interests+Education
-- Skills/Features：技能展示
-- Experience&Education：用时间线的形式展示个人经历和教育
-- Accomplishments：列出成就（包括证书）和参加过的课程
-- Content Feed：列出近期published内容，有PDF、Slide等按钮，我没有用，觉得较为复杂，字节文字编辑加链接就好得很呢
-- Featured content：和上面Content Feed的区别就在于可以贴一张大图～
-- Contact：给出自己的联系方式，包括电话、地址、推特、微信等，偏商务性质的吧
-- Protfolio：过滤内容，比如选择AI可过滤部分项目、选择Crypto可过滤部分项目
-- Tag Cloud：显示我们的主流topic，同时在每个page中添加tag，某个tag被用的越多，Tag Cloud就会对其显示越大
-- Team Members：介绍团队成员，可展示多个成员的信息
-- Slider：类似IOS的叠放组件啦
-
-`content/home`中包含各种widgets，可删除或将其`active`设为`false`
-
-`config/_default/menus.yaml`是用来管理主页顶部菜单栏的，具体配置方法见文件注释
-
-定制widget：
-
-- 大多数组件都支持title和subtitle
-- 大多数组件可设置design.columns为1 or 2, 的确可以，将experience设为1-column啦
-- View：可用于选择展示多少内容，内置内容包括List, Compact, Card, Citation, Showcase, Masonry, 也可创建自己的
-
-修改Icon：
-
-- 内部包中包含一些icon，比如推特、微信、微博、github、google-scholar、表情等
-- `assets/media/icons`下可以放自己的custom SVG icon，在icon域引用其名字即可（不用加svg后缀）
-- website icon可直接修改`assets/media/icon.png`
-
-Background：
-
-- design.background可修改颜色、渐变色、背景图片等
-
-Spacing: design.spacing可指定section上下左右的边距
-
-Style：可自定义CSS的哦
-
-### 3. Personalize
-
-域名:
-
-- 配置在`config/_default/config.yaml`的baseurl字段里
-- Github部署如果买了域名也是可以修改的, 需要修改`static`文件里的CNAME
-
-如何隐藏底部的Wowchemy? 需要资助他们才行哦
-
-Website Icon: 直接修改`assets/media/icon.png`, 图片大小是512x512
-
-外观配置文件为`config/_default/params.yaml`, 相关参数及解释见文件, 可调节的内容包括:
-
-- 主题, 暗黑模式
-- 字体, 字号
-- 也可以自定义主题和字体
-
-Header: 自定义网站header和导航栏, 见`main_menu`字段
-
-也可以增加网站底部的Footer信息, 比如copyright
-
-可更改时间/日期/地址格式
-
-SEO搜索引擎优化, 可以在配置中添加一些字段, 然后在google, bing, baidu等搜索引擎中验证, 让他们的爬虫来爬我们的网站
-
-Commenting: 可让用户来添加评论
-
-Analytics: 可允许Google, Bing, Baidu分析我们网站的流量信息
-
-可配置代码高亮, Latex数学公式, Markdown图
-
-隐私: 可显示cookie消息, 并且可以让Google分析看不到访问者IP
-
-访问者可编辑页面: 可帮助改进页面
-
-推荐: 推荐内容
-
-Search: 搜索功能, 试了下, 感觉略微鸡肋啊
-
-Security: 包括内容安全政策, 权限政策, 兼容性等
-
-地图: Contact Widget中可添加一个地图来显示当前位置, 需要设置地图提供商和当前坐标
-
-### Edit your site
-
-可自定义主题, 前面已经看过啦
-
-布局选择, [各个案例](https://github.com/HugoBlox/theme-academic-cv/tree/main):
-
-- Pages: 展示普通内容
-- Widget Pages: 比如homepage, 由多个不同的widgets组成
-- Posts: 博客 或 新闻
-- Publications: 可从BibTex格式中导入
-- Online Courses: 分享知识的
-- Projects: 项目发布
-- Notes: 笔记
-- Software Documentation: 文档 或 软件项目
-- Talks/Events: 像Patrick的那样
-- Slides: 可以用markdown写slides
-
-可设置Contact widget, 组织或项目信息/图标等, 和富文本选项, 比如代码高亮等
-
-个人介绍相关:
-
-- 默认为admin用户, 对应`content/authors/admin/_index.md`文件, 该文件夹下还包含了个人照片
-- 超级用户的用户名可通过修改`content/authors/admin`其中的`admin`来改变, 那么`content/home/about.md`中的引用也要改
-
-目录:
-
-- 对应`config/_default/menu.yaml`
-- 可创建子目录的, 父目录下添加`identifier=xxx`, 子目录下添加`parent=xxx`
-
-网站相关配置:
-
-- `config/_default/config.yaml`下的title和baseurl是常用配置
-
-### Edit on your PC
-
-讲了各个系统下的Hugo安装配置方法
-
-### Create content
-
-都可以创建如下内容:
-
-- landing pages (aka widget pages)
-- blog posts
-- publications
-- online courses
-- podcasts
-- videos
-- Markdown slides
-- notebooks
-- documentation
-- projects
-- events/talks
-
-### Page Features
-
-核心配置:
-
-- title
-- summary: 会在homepage显示, 也能帮助优化搜索引擎
-- data: 可配置未来发布
-- authors: 可链接至某用户
-- tags: 给page打上标签
-
-流行配置:
-
-- subtitle
-- featured: 设为true, 可使用Featured widget进行展示, 可贴图
-- categories: 和tag有点类似
-- lastmod: 一般不需要设置, 会自动添加的
-- publishDate: 如果您希望设置将来的日期但现在发布页面, 您只需要指定此选项, 例如发布将出现在期刊中的期刊文章等
-- draft: 只能本地看时自己看到
-- show_date: 是否显示日期
-- private: 搜索结果中隐藏页面
-
-#### Featured image
-
-每个页面可添加一个featured image, 直接将featured.jpg/png放到对应文件夹里即可, 可为image在front matter中添加一些配置, 比如caption
-
-```yaml
-# Featured image
-# To use, place an image named `featured.jpg/png` in your page's folder.
-# Placement options: 1 = Full column width, 2 = Out-set, 3 = Screen-width
-# Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
-# Set `preview_only` to `true` to just use the image for thumbnails.
-image:
-  placement: 1
-  caption: "Photo by [Geo](https://github.com/gcushen/)"
-  focal_point: "Center"
-  preview_only: false
-  alt_text: An optional description of the image for screen readers.
+# Dr. Jipeng Zhang (张吉鹏) - Academic Homepage
+
+[![Astro](https://img.shields.io/badge/Astro-5.x-BC52EE?style=flat&logo=astro&logoColor=white)](https://astro.build)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.x-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Website](https://img.shields.io/badge/Live-ji--peng.com-4F46E5?style=flat)](https://ji-peng.com)
+
+本仓库是 [张吉鹏（Jipeng Zhang）博士](https://ji-peng.com) 的个人学术主页源码仓库。该网站已由历史遗留的 Hugo / Wowchemy 架构彻底重构为现代化的 **Astro v5 + Tailwind CSS + TypeScript** 全新工程体系，专为密码学与计算机系统安全领域打造，具有极致轻量、信息高密度（High Information Density）、优雅排版与全自动化运维特性。
+
+---
+
+## 🌟 核心设计与特性
+
+- **⚡️ 极致轻量与瞬时加载**：采用 Astro 纯静态生成（SSG）技术，全站首屏零冗余 JavaScript 水合负担，单页构建仅需约 1.7 秒，页面毫秒级秒开。
+- **📄 学术信息高密度（High Information Density）**：专为学术同行与顶会评审（PC Reviewer）设计，杜绝臃肿的卡片留白。支持全部论文与代表作一键切换（All 17 vs. Selected 5）、一键展开并复制 BibTeX、论文获奖高亮（USENIX Security Distinguished Paper Award）及自建 PDF / 官方出版界面双通道直达。
+- **🏷️ 官方评测徽章系统（Artifact Badges）**：严格匹配安全四大与 IACR 官方标准，提供规范化的评测徽章（如 `IACR CHES Artifacts Functional`、`IACR CHES Results Reproduced`、`Artifacts Available`、`Artifact Evaluated`），并附带直达评测页面外链。
+- **🔗 自动化合作者网络关联**：内置集中式合作者数据引擎，在论文列表中自动将主要合作导师及学者（如 Hao Cheng、Tao Lu、Jiaheng Zhang、Yanpei Guo、Wenjie Qu、Çetin Kaya Koç、Ray C. C. Cheung 等）链接至其个人主页或权威学术档案（DBLP / Google Scholar）。
+- **🎨 顶尖学术字体排版**：全面采用本地自托管原版 Inter（正文）与 JetBrains Mono（代码/标识）字体，字符渲染平滑自然，针对学术数字、公式标签及技术术语进行了精细化字偶间距调校。
+- **🌓 零闪烁暗黑模式（Dark / Light Theme）**：采用全局内联原生防抖脚本与单例事件系统，毫秒级切换且完全持久化存储于本地，杜绝页面加载闪烁与双重触发冲突。
+- **🤖 Google Scholar 自动化周期同步**：通过 GitHub Actions 周期性运行 Python 爬虫，自动定时拉取最新的 Google Scholar 引用量（Citations）、h-index 与 i10-index，并在数据发生变更时自动提交更新主页。
+- **📱 移动端自适应与打印就绪（Print-ready CV）**：全断点响应式适配，同时内置专业学术打印样式表（`@media print`），支持在浏览器使用 `Ctrl + P` 直接导出纯净无杂质的学术简历 PDF。
+- **🔍 深度学术搜索引擎优化（SEO & JSON-LD）**：不仅完整支持 Open Graph 与 Twitter Card 元标签，还在页面注入了 Schema.org `Person` 结构化数据，大幅提升 Google Scholar、Google Search 与学术知识图谱的抓取索引精度。
+
+---
+
+## 📂 项目工程结构
+
+```text
+MyPage/
+├── .github/workflows/
+│   ├── deploy.yml            # GitHub Pages 自动化静态构建与部署流水线
+│   └── scholar-cron.yml      # 每周日定时同步 Google Scholar 引用数的 CI 工作流
+├── public/                   # 线上生产部署目录（Git Submodule 指向 Ji-Peng.github.io）
+├── scripts/
+│   └── fetch_scholar.py     # Google Scholar 学术指标自动化采集脚本
+├── src/
+│   ├── components/
+│   │   ├── Activities.astro  # 学术服务（PC 委员）、受邀报告、开源贡献与企业合作项目
+│   │   ├── ArtifactBadge.astro # 官方 Artifact 评测徽章渲染组件（带状态样式与外链）
+│   │   ├── Header.astro      # 个人简介、NUS 博士后信息、总引用数徽章、学术外链与研究方向
+│   │   ├── News.astro        # 顶会录用、获奖动态与置顶重大新闻列表
+│   │   └── Publications.astro# 论文展示、作者高亮与链接、BibTeX 代码抽屉与年份分组
+│   ├── data/
+│   │   ├── activities.json   # PC 服务、学术报告、开源代码与产学研合作数据源
+│   │   ├── coauthors.ts      # 合作者姓名与个人学术主页 / DBLP 映射表
+│   │   ├── news.json         # 近期动态与置顶新闻数据源
+│   │   ├── profile.json      # 个人基本资料、教育背景、研究兴趣与社交外链数据源
+│   │   ├── publications.json # 全部 17 篇代表作结构化元数据（标题、作者、论文链接、徽章、BibTeX）
+│   │   ├── scholar.json      # Google Scholar 实时抓取数据（Citations, h-index, i10-index）
+│   │   └── types.ts          # 全站 TypeScript 强类型定义
+│   ├── layouts/
+│   │   └── Layout.astro      # HTML 骨架、全局导航栏、主题切换器、SEO 与 JSON-LD
+│   ├── pages/
+│   │   └── index.astro       # 主页入口聚合页面
+│   └── styles/
+│       └── global.css        # 自托管字体导入、Tailwind 规则、滚动条定制与打印样式
+├── static/                   # 静态媒体资产目录（论文 PDF、幻灯片、获奖证书、照片、CNAME 等）
+├── astro.config.mjs          # Astro 工程核心配置文件
+├── tailwind.config.mjs       # Tailwind CSS 调色板与排版插件配置
+├── tsconfig.json             # TypeScript 编译器配置
+├── package.json              # 项目依赖及运行脚本配置
+├── deploy.sh                 # 本地一键构建并将静态产物同步到 public/ 的脚本
+└── view.sh                   # 本地一键启动开发预览服务器脚本
 ```
 
-#### Page resources
+---
 
-可以在page header中添加按钮, 比如twitter, medium按钮
+## 🚀 快速上手与本地开发
 
-也可以配置PDF按钮
+### 环境要求
 
-#### Page features
+- **Node.js**: `>= 20.0.0`
+- **npm**: `>= 9.0.0`
+- **Python**: `>= 3.10`（仅在手动执行学术引用数据同步脚本时需要）
 
-```yaml
-reading_time: false  # Show estimated reading time?
-share: false  # Show social sharing links?
-profile: false  # Show author profile?
-commentable: false  # Allow visitors to comment? Supported by the Page, Post, and Docs content types.
-editable: true  # Allow visitors to edit the page? Supported by the Page, Post, and Docs content types.
+### 安装依赖与启动服务
+
+1. **克隆仓库（包含子模块）**：
+   ```bash
+   git clone --recursive git@github.com:Ji-Peng/MyPage.git
+   cd MyPage
+   ```
+
+2. **安装 Node.js 项目依赖**：
+   ```bash
+   npm install
+   ```
+
+3. **启动本地开发预览服务器**：
+   ```bash
+   ./view.sh
+   # 或者直接运行：
+   # npm run dev -- --port 1316 --host
+   ```
+   打开浏览器访问 `http://localhost:1316` 即可实时预览页面并享受毫秒级热重载（HMR）。
+
+---
+
+## 📝 内容日常维护指南
+
+所有展示内容均采用数据与表现分离的原则存放于 `src/data/` 目录，无需修改复杂的 HTML 或 Astro 模板即可轻松更新：
+
+### 1. 添加或更新学术论文 (`src/data/publications.json`)
+
+在 `src/data/publications.json` 中添加或修改对应的 JSON 节点：
+
+```json
+{
+  "id": "venue2026-papername",
+  "title": "Your Paper Title",
+  "authors": ["Jipeng Zhang", "Tao Lu", "Jiaheng Zhang"],
+  "venue": "Full Conference Name (ACRONYM 2026)",
+  "venueShort": "ACRONYM 2026",
+  "year": 2026,
+  "award": null,
+  "selected": true,
+  "links": {
+    "pdf": "/uploads/venue2026/paper.pdf",
+    "venue": "https://official-venue-url.org",
+    "artifact": "https://artifacts-url.org",
+    "code": "https://github.com/Ji-Peng/repo"
+  },
+  "artifactBadges": [
+    {
+      "type": "functional",
+      "label": "IACR CHES Artifacts Functional",
+      "url": "https://artifacts-url.org"
+    }
+  ],
+  "bibtex": "@inproceedings{zhang2026paper,\n  author = {Zhang, Jipeng and Lu, Tao and Zhang, Jiaheng},\n  title = {Your Paper Title},\n  booktitle = {ACRONYM},\n  year = {2026}\n}"
+}
 ```
 
-#### Header image
+- 若设置 `"selected": true`，论文将同时出现在精选代表作（Selected）分类标签中。
+- 若有本地 PDF 文件，将其直接放入 `static/uploads/` 并在 `links.pdf` 中以 `/uploads/...` 引用。
 
-路径为`assets/media/`文件夹
+### 2. 更新合作者主页外链 (`src/data/coauthors.ts`)
 
-```yaml
-header:
-  image: "header.png"
-  caption: "Image credit: [**Geo**](https://github.com/gcushen/)"
+当论文作者中出现新的合作学者或合作者更新个人主页时，直接在 `src/data/coauthors.ts` 的字典中配置对应的名字与主页链接，论文列表中的作者姓名将自动渲染为可点击超链接：
+
+```typescript
+export const coauthorLinks: Record<string, string> = {
+  'Tao Lu': 'https://tao-lu-123.github.io/',
+  'Yanpei Guo': 'https://paulguoyanpei.github.io/',
+  'Ray C. C. Cheung': 'https://cityuhk-calas.github.io/author/prof.-ray-c.c.-cheung/',
+  // ... 更多合作者主页映射
+};
 ```
 
-#### Removing content
+### 3. 发布最新动态与置顶要闻 (`src/data/news.json`)
 
-永久移除可直接删除文件夹
+在 `src/data/news.json` 数组中添加新闻。若设置 `"pinned": true`，该条要闻将永远置顶显示（带有黄金奖牌徽章）：
 
-暂时移除可设置draft: true
-
-#### Private pages
-
-阻止该页面出现在任何集合里, 仅仅能让只能URL的人访问, 比如我去除了`content/authors/_index.md`中的_build字段后发现, sitemap.xml中出现了单独的author URL.
-
-```yaml
-_build:
-  render: always
-  list: never
+```json
+{
+  "id": "news-2026-sample",
+  "date": "2026-09",
+  "title": "Paper accepted to Top Venue!",
+  "content": "Our paper has been accepted to ...",
+  "type": "paper",
+  "pinned": false
+}
 ```
 
-## 相关命令
+### 4. 同步 Google Scholar 引用数据
 
-更换电脑时，直接安装下述版本的hugo，不然可能有兼容性问题：
+- **自动同步**：项目已配置 GitHub Actions 定时任务（每周日午夜自动运行并提交最新引用指标）。
+- **手动立即同步**：在本地终端运行：
+  ```bash
+  npm run fetch:scholar
+  ```
+  该命令会自动联网抓取最新的引用次数、h 指数和 i10 指数并覆盖更新 `src/data/scholar.json`。
+
+---
+
+## 🚢 网站编译与部署流程
+
+### 方式一：本地一键全自动编译与双仓库推送（极力推荐）
+
+项目根目录提供了全自动一键发布脚本 `deploy.sh`。执行该脚本将自动完成 Astro 静态编译、同步产物到 `public/`、自动提交并推送 `public` 线上仓库（commit 信息固定为 "update"），随后自动提交并推送当前源码主仓库：
 
 ```bash
-wget https://github.com/gohugoio/hugo/releases/download/v0.83.1/hugo_extended_0.83.1_Linux-64bit.deb
-sudo dpkg -i hugo_extended_0.83.1_Linux-64bit.deb
-git clone https://github.com/Ji-Peng/MyPage
-rm -rf public
-git submodule update --init
-cd public
-git checkout main
-hugo
+./deploy.sh
 ```
 
-```bash
-# for preview
-hugo server
-# for building
-hugo
-```
+### 方式二：GitHub Actions 云端全自动部署
 
-在mac上出现了一次public submodule未初始化的问题，使用如下命令：
-```bash
-# 先删除已有的public文件夹
-rm -rf public/
-# 初始化submodule
-git submodule update --init
-# rebuild
-hugo
-# 因为现在的submodule不在某个分支下，因此：
-git push origin HEAD:main
-# 后续还是解决这个问题吧：
-git checkout main
-git pull
-# 这样就切换到main分支啦
-```
+代码推送到 `main` 分支后，`.github/workflows/deploy.yml` 会自动触发云端静态构建与部署流水线，全自动发布到 GitHub Pages。
+
+---
+
+## 📄 开源许可证
+
+本项目基于 [MIT License](https://opensource.org/licenses/MIT) 开源许可协议发布。
