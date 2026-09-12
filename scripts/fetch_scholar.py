@@ -123,6 +123,10 @@ def main():
         sys.exit(1)
 
     output_path = os.path.abspath(args.output)
+    if data['stats']['citations']['all'] == 0 and os.path.exists(output_path):
+        print(f"Warning: Parsed 0 citations (likely temporary Google CAPTCHA). Keeping existing data at: {output_path}", file=sys.stderr)
+        sys.exit(0)
+
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
