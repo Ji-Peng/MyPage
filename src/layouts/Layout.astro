@@ -20,7 +20,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://ji-peng.
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
@@ -212,6 +212,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://ji-peng.
             <!-- Sun icon (shown in dark mode) -->
             <svg
               id="sun-icon"
+              width="16"
+              height="16"
               class="w-4 h-4 text-amber-400 pointer-events-none"
               style="display: none;"
               fill="none"
@@ -225,6 +227,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://ji-peng.
             <!-- Moon icon (shown in light mode) -->
             <svg
               id="moon-icon"
+              width="16"
+              height="16"
               class="w-4 h-4 text-slate-700 pointer-events-none"
               style="display: none;"
               fill="none"
