@@ -188,16 +188,28 @@ const selectedCount = selectedPublications.length;
                             </svg>
                             🏆 {pub.award}
                           </span>
-                          {pub.links.awardLink && (
-                            <a
-                              href={pub.links.awardLink}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              class="underline font-medium hover:text-amber-950 dark:hover:text-amber-100 text-[11px] ml-auto"
-                            >
-                              Presentation Session →
-                            </a>
-                          )}
+                          <div class="flex items-center gap-2 ml-auto text-[11px]">
+                            {pub.links.statsLink && (
+                              <a
+                                href={pub.links.statsLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="underline font-medium hover:text-amber-950 dark:hover:text-amber-100"
+                              >
+                                [Stats]
+                              </a>
+                            )}
+                            {pub.links.awardLink && (
+                              <a
+                                href={pub.links.awardLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="underline font-medium hover:text-amber-950 dark:hover:text-amber-100"
+                              >
+                                Presentation Session →
+                              </a>
+                            )}
+                          </div>
                         </div>
                       )}
 
