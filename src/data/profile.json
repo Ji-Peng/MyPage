@@ -1,0 +1,105 @@
+{
+  "name": "Jipeng Zhang",
+  "chineseName": "张吉鹏",
+  "title": "Postdoctoral Research Fellow",
+  "affiliation": {
+    "name": "National University of Singapore",
+    "shortName": "NUS",
+    "url": "https://www.nus.edu.sg",
+    "department": "School of Computing"
+  },
+  "advisor": {
+    "name": "Prof. Jiaheng Zhang",
+    "url": "https://zjhzjh123.github.io/",
+    "institution": "National University of Singapore"
+  },
+  "phd": {
+    "degree": "Ph.D.",
+    "institution": "Nanjing University of Aeronautics and Astronautics (NUAA)",
+    "institutionUrl": "http://www.nuaa.edu.cn/main.htm",
+    "period": "2020 - 2025",
+    "yearStart": 2020,
+    "yearEnd": 2025,
+    "advisor": "Prof. Çetin Kaya Koç",
+    "advisorUrl": "https://koclab.net/koc.html",
+    "thesisTitle": "Research on Optimized Implementation of Public-key Cryptography Algorithms",
+    "thesisPdf": "/uploads/phd/thesis.pdf"
+  },
+  "bsc": {
+    "degree": "B.Sc.",
+    "institution": "Nanjing University of Aeronautics and Astronautics (NUAA)",
+    "institutionUrl": "http://www.nuaa.edu.cn/main.htm",
+    "period": "2016 - 2020",
+    "yearStart": 2016,
+    "yearEnd": 2020
+  },
+  "education": [
+    {
+      "degree": "Ph.D.",
+      "institution": "Nanjing University of Aeronautics and Astronautics (NUAA)",
+      "institutionUrl": "http://www.nuaa.edu.cn/main.htm",
+      "period": "2020 - 2025",
+      "yearStart": 2020,
+      "yearEnd": 2025,
+      "advisor": "Prof. Çetin Kaya Koç",
+      "advisorUrl": "https://koclab.net/koc.html",
+      "thesisTitle": "Research on Optimized Implementation of Public-key Cryptography Algorithms",
+      "thesisPdf": "/uploads/phd/thesis.pdf"
+    },
+    {
+      "degree": "B.Sc.",
+      "institution": "Nanjing University of Aeronautics and Astronautics (NUAA)",
+      "institutionUrl": "http://www.nuaa.edu.cn/main.htm",
+      "period": "2016 - 2020",
+      "yearStart": 2016,
+      "yearEnd": 2020
+    }
+  ],
+  "email": "jp-zhang@outlook.com",
+  "avatar": "/authors/admin/avatar.jpg",
+  "shortBio": "Postdoctoral Research Fellow at NUS working on zero-knowledge proofs, post-quantum cryptography, elliptic curve cryptography, and hardware-software co-design.",
+  "bio": "I am currently a Postdoctoral Research Fellow at the National University of Singapore (NUS), working with Prof. Jiaheng Zhang. I received my Ph.D. in 2025 under the supervision of Prof. Çetin Kaya Koç at Nanjing University of Aeronautics and Astronautics (NUAA), China, where I also obtained my B.Sc. in 2020. My research primarily focuses on cryptographic engineering, zero-knowledge proofs (ZKP), post-quantum cryptography (PQC), elliptic curve cryptography (ECC), and hardware-software co-design across modern CPUs (AVX-512, RVV, NEON), GPUs, and custom hardware accelerators.",
+  "interests": [
+    "Cryptographic Engineering",
+    "Zero-Knowledge Proofs",
+    "Post-Quantum Cryptography"
+  ],
+  "socials": [
+    {
+      "name": "Google Scholar",
+      "icon": "google-scholar",
+      "url": "https://scholar.google.com/citations?hl=en&user=dL1IM-M9ltIC",
+      "label": "Google Scholar"
+    },
+    {
+      "name": "DBLP",
+      "icon": "dblp",
+      "url": "https://dblp.org/pid/245/3547-1.html",
+      "label": "DBLP"
+    },
+    {
+      "name": "GitHub",
+      "icon": "github",
+      "url": "https://github.com/Ji-Peng",
+      "label": "GitHub"
+    },
+    {
+      "name": "ORCID",
+      "icon": "orcid",
+      "url": "https://orcid.org/0000-0002-0679-7212",
+      "label": "0000-0002-0679-7212"
+    },
+    {
+      "name": "Email",
+      "icon": "envelope",
+      "url": "mailto:jp-zhang@outlook.com",
+      "label": "jp-zhang@outlook.com"
+    },
+    {
+      "name": "PhD Thesis",
+      "icon": "file-pdf",
+      "url": "/uploads/phd/thesis.pdf",
+      "label": "PhD Thesis PDF"
+    }
+  ]
+}

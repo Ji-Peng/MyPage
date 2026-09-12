@@ -1,0 +1,69 @@
+{
+  "programCommittee": [
+    {
+      "venue": "USENIX Security",
+      "year": "2027",
+      "role": "Program Committee Member"
+    },
+    {
+      "venue": "CHES",
+      "year": "2027",
+      "role": "Program Committee Member"
+    },
+    {
+      "venue": "SAC",
+      "year": "2026",
+      "role": "Program Committee Member"
+    }
+  ],
+  "talks": [
+    {
+      "date": "2024-10-23",
+      "title": "Optimized Software Implementation of Keccak, Kyber, and Dilithium on RV{32,64}IM{B}{V} & ENG25519: Faster TLS 1.3 handshake using optimized X25519 and Ed25519",
+      "event": "The 9th QiLu Youth Forum",
+      "location": "School of Cyber Science and Technology, Shandong University (SDU), Qingdao, China",
+      "slides": "/uploads/talks/SDU_20241023.pdf",
+      "pictures": [
+        "/uploads/talks/SDU_20241023_pic0.png",
+        "/uploads/talks/SDU_20241023_pic1.png"
+      ],
+      "link": "https://cst.qd.sdu.edu.cn/info/1037/3369.htm"
+    }
+  ],
+  "software": [
+    {
+      "title": "ST-Link patch for STM32G0/G1 series",
+      "repo": "stlink-org/stlink",
+      "repoUrl": "https://github.com/stlink-org/stlink",
+      "prNumber": 1140,
+      "prUrl": "https://github.com/stlink-org/stlink/pull/1140",
+      "status": "merged",
+      "description": "A patch for ST-Link to support STM32G0B0/G0B1/G0C1/G050/G051/G061 microcontrollers."
+    }
+  ],
+  "projects": [
+    {
+      "title": "Curve25519 Optimization University & Enterprise Project",
+      "company": "Shield Lab & CBG, Huawei",
+      "companyUrl": "https://www.huawei.com/en/",
+      "companyLogo": "huawei-icon",
+      "period": "2020.08 - 2020.12",
+      "dateStart": "2020-08-01",
+      "dateEnd": "2020-12-30",
+      "role": "University & Enterprise Collaboration Researcher",
+      "description": "Reduced the ROM occupancy of Curve25519 (X25519+Ed25519) from 70KB+ (OpenSSL) to less than 15KB (and under 10KB on target devices) for resource-constrained IoT devices (Cortex-M3 and RISC-V)."
+    },
+    {
+      "title": "SM2 Optimization Internship Project",
+      "company": "CDG, Tencent",
+      "companyUrl": "https://www.tencent.com/en-us/",
+      "companyLogo": "tencent-icon",
+      "location": "Shenzhen, China",
+      "period": "2021.07 - 2021.09",
+      "dateStart": "2021-07-01",
+      "dateEnd": "2021-09-30",
+      "role": "Intern (2021 Rhino-Bird Research Elite Training Program)",
+      "description": "Optimized the performance of SM2 (Chinese ECC Commercial Standard) on ARMv8-A Linux servers. Compared to OpenSSL, the performance of sign/verify was improved by 8.7X/3.5X on HUAWEI Cloud Kunpeng 920 platform."
+    }
+  ]
+}

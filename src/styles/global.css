@@ -1,0 +1,142 @@
+/* Self-hosted genuine Inter & JetBrains Mono fonts */
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/500.css';
+@import '@fontsource/jetbrains-mono/600.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #f8fafc;
+    --color-text-primary: #0f172a;
+    --color-text-secondary: #475569;
+    --color-text-muted: #64748b;
+    --color-border: #e2e8f0;
+    --color-accent: #4f46e5;
+  }
+
+  html.dark {
+    --color-bg-primary: #0b0f19;
+    --color-bg-secondary: #111827;
+    --color-text-primary: #f8fafc;
+    --color-text-secondary: #cbd5e1;
+    --color-text-muted: #94a3b8;
+    --color-border: #1e293b;
+    --color-accent: #6366f1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased dark:bg-[#0b0f19] dark:text-slate-100 min-h-screen transition-colors duration-200;
+  }
+
+  /* Academic headings */
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight font-semibold text-slate-900 dark:text-slate-100;
+  }
+
+  /* Selection styling */
+  ::selection {
+    @apply bg-indigo-500/20 text-indigo-900 dark:bg-indigo-400/30 dark:text-indigo-200;
+  }
+
+  /* Code block typography */
+  code {
+    @apply font-mono text-sm px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-indigo-600 dark:text-indigo-400;
+  }
+
+  pre code {
+    @apply p-0 bg-transparent text-inherit;
+  }
+}
+
+@layer components {
+  /* Academic Card styling */
+  .academic-card {
+    @apply bg-white dark:bg-slate-900/80 rounded-xl border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md transition-all duration-200;
+  }
+
+  /* Academic Badge */
+  .academic-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  /* Academic Pill */
+  .academic-pill {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300;
+  }
+
+  /* Links with smooth underline accent */
+  .academic-link {
+    @apply text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 underline underline-offset-4 decoration-indigo-300/60 dark:decoration-indigo-700/60 hover:decoration-indigo-500 transition-colors;
+  }
+}
+
+@layer utilities {
+  /* Custom modern scrollbars */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 dark:bg-slate-700 rounded-full hover:bg-slate-400 dark:hover:bg-slate-600;
+  }
+
+  /* Firefox scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(148, 163, 184, 0.5) transparent;
+  }
+}
+
+/* Academic Print Stylesheet (Ctrl + P / PDF export) */
+@media print {
+  header.sticky,
+  #theme-toggle-btn,
+  .tab-btn,
+  .bibtex-toggle-btn,
+  .copy-bibtex-btn,
+  .bibtex-panel,
+  footer {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+  }
+
+  main {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .pub-item, .academic-card {
+    break-inside: avoid;
+    box-shadow: none !important;
+    border-color: #e2e8f0 !important;
+  }
+
+  a {
+    text-decoration: underline !important;
+    color: #000000 !important;
+  }
+}
