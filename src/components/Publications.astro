@@ -29,19 +29,19 @@ const selectedCount = selectedPublications.length;
     <div class="inline-flex p-1 rounded-lg bg-slate-100 dark:bg-slate-800/90 border border-slate-200/80 dark:border-slate-700/80 self-start sm:self-auto text-xs font-mono">
       <button
         type="button"
-        id="tab-all"
-        class="tab-btn px-3 py-1 rounded-md transition-all font-semibold bg-white dark:bg-slate-900 text-indigo-600 dark:text-indigo-400 shadow-2xs"
-        data-filter="all"
-      >
-        All ({totalCount})
-      </button>
-      <button
-        type="button"
         id="tab-selected"
-        class="tab-btn px-3 py-1 rounded-md transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200"
+        class="tab-btn px-3 py-1 rounded-md transition-all font-semibold bg-white dark:bg-slate-900 text-indigo-600 dark:text-indigo-400 shadow-2xs"
         data-filter="selected"
       >
         Selected ({selectedCount})
+      </button>
+      <button
+        type="button"
+        id="tab-all"
+        class="tab-btn px-3 py-1 rounded-md transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200"
+        data-filter="all"
+      >
+        All ({totalCount})
       </button>
     </div>
   </div>
@@ -51,8 +51,13 @@ const selectedCount = selectedPublications.length;
     {
       years.map((year) => {
         const yearPubs = publications.filter((p) => p.year === year);
+        const hasSelectedPubs = yearPubs.some((p) => p.selected);
         return (
-          <div class="year-group space-y-3" data-year={year}>
+          <div
+            class="year-group space-y-3"
+            data-year={year}
+            style={hasSelectedPubs ? '' : 'display: none;'}
+          >
             <!-- Year Header Marker -->
             <div class="flex items-center gap-3">
               <span class="font-mono text-sm font-bold text-slate-900 dark:text-slate-100 px-2.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/70">
@@ -74,6 +79,7 @@ const selectedCount = selectedPublications.length;
                     }`}
                     data-selected={pub.selected ? 'true' : 'false'}
                     data-id={pub.id}
+                    style={pub.selected ? '' : 'display: none;'}
                   >
                     <div class="space-y-2">
                       <!-- Title and Badges Row -->
