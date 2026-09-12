@@ -32,6 +32,13 @@
     --color-accent: #6366f1;
   }
 
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
+  }
+
   html,
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -46,7 +53,26 @@
   }
 
   body {
-    @apply bg-slate-50 text-slate-800 antialiased dark:bg-[#0b0f19] dark:text-slate-100 min-h-screen transition-colors duration-200;
+    @apply bg-slate-50 text-slate-800 antialiased dark:bg-[#0b0f19] dark:text-slate-100 min-h-screen min-h-[100dvh] transition-colors duration-200;
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
+  }
+
+  /* Universal SVG fallback protection across all browsers */
+  svg:not([width]) {
+    max-width: 100%;
+  }
+
+  /* Button touch reset for iOS Safari */
+  button {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  /* Momentum smooth scrolling on iOS WebKit */
+  pre, .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
   }
 
   /* Academic headings */
