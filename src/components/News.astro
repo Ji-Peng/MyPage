@@ -24,7 +24,7 @@ const sortedNews = [...news].sort((a, b) => {
   </div>
 
   <!-- Scrollable container sized for 5 items capacity -->
-  <div class="max-h-[460px] sm:max-h-[450px] overflow-y-auto space-y-2 pr-1 sm:pr-1.5 overscroll-contain">
+  <div class="max-h-[460px] sm:max-h-[450px] overflow-y-auto space-y-2 pr-1 sm:pr-1.5 overscroll-y-auto">
     {
       sortedNews.map((item) => (
         <div

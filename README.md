@@ -30,7 +30,7 @@
 MyPage/
 ├── .github/workflows/
 │   ├── deploy.yml            # GitHub Pages 自动化静态构建与部署流水线
-│   └── scholar-cron.yml      # 每周日定时同步 Google Scholar 引用数的 CI 工作流
+│   └── scholar-cron.yml      # 每 3 天定时同步 Google Scholar 引用数的 CI 工作流
 ├── public/                   # 线上生产部署目录（Git Submodule 指向 Ji-Peng.github.io）
 ├── scripts/
 │   └── fetch_scholar.py     # Google Scholar 学术指标自动化采集脚本
