@@ -17,6 +17,20 @@
     ]
   },
   {
+    "id": "news-pc-appointments",
+    "date": "2026-2027",
+    "year": "2026-2027",
+    "pinned": true,
+    "title": "Appointed to Program Committee for USENIX Security '27, CHES '27, and SAC '26",
+    "description": "Honored to serve on the Program Committees of the 36th USENIX Security Symposium (2027), IACR CHES 2027, and Selected Areas in Cryptography (SAC 2026).",
+    "category": "service",
+    "highlight": false,
+    "links": [
+      { "label": "USENIX Security", "url": "https://www.usenix.org/conferences" },
+      { "label": "CHES", "url": "https://ches.iacr.org/" }
+    ]
+  },
+  {
     "id": "news-shuttle-asiacrypt2026",
     "date": "2026",
     "year": "2026",
@@ -86,19 +100,6 @@
     "authorRole": "both",
     "links": [
       { "label": "TCHES", "url": "https://tches.iacr.org/" }
-    ]
-  },
-  {
-    "id": "news-pc-appointments",
-    "date": "2026-2027",
-    "year": "2026-2027",
-    "title": "Appointed to Program Committee for USENIX Security '27, CHES '27, and SAC '26",
-    "description": "Honored to serve on the Program Committees of the 36th USENIX Security Symposium (2027), IACR CHES 2027, and Selected Areas in Cryptography (SAC 2026).",
-    "category": "service",
-    "highlight": false,
-    "links": [
-      { "label": "USENIX Security", "url": "https://www.usenix.org/conferences" },
-      { "label": "CHES", "url": "https://ches.iacr.org/" }
     ]
   }
 ]

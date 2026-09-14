@@ -1,8 +1,15 @@
 ---
 import news from '../data/news';
 
-// Guarantee pinned news items are permanently pinned at the top
-const sortedNews = [...news].sort((a, b) => (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0));
+// Guarantee pinned news items are permanently pinned at the top, with ENG25519 first
+const sortedNews = [...news].sort((a, b) => {
+  if (a.pinned && b.pinned) {
+    if (a.id === 'news-eng25519-award') return -1;
+    if (b.id === 'news-eng25519-award') return 1;
+    return 0;
+  }
+  return (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0);
+});
 ---
 
 <section id="news" class="scroll-mt-20 space-y-3 pt-6">
