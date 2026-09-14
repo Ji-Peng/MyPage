@@ -24,7 +24,7 @@ export const coauthorLinks: Record<string, string> = {
   'Georgios Fotiadis': 'https://dblp.org/pid/75/5361.html',
   'Johann Großschädl': 'https://dblp.org/pid/g/JohannGrossschaedl.html',
   'Johann Grossschädl': 'https://dblp.org/pid/g/JohannGrossschaedl.html',
-  'Donglong Chen': 'https://dblp.org/pid/70/1220-1.html',
+  'Donglong Chen': 'https://staff.bnbu.edu.cn/donglongchen/en',
   'Sujoy Sinha Roy': 'https://dblp.org/pid/143/9796.html',
   'Zhe Liu': 'https://dblp.org/pid/29/4962-1.html',
   'Wenzhi Chen': 'https://dblp.org/pid/70/4180.html',
