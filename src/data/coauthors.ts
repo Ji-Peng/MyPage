@@ -10,6 +10,7 @@ export const coauthorLinks: Record<string, string> = {
   'Yanpei Guo': 'https://paulguoyanpei.github.io/',
   'Wenjie Qu': 'https://quwenjie.github.io/',
   'Junhao Huang': 'https://junhaohuang.github.io/',
+  'Guofeng Tang': 'https://victoriatang.github.io/',
   'Çetin Kaya Koç': 'https://koclab.net/koc.html',
   'Cetin Kaya Koc': 'https://koclab.net/koc.html',
   'Ray C. C. Cheung': 'https://cityuhk-calas.github.io/author/prof.-ray-c.c.-cheung/',
@@ -18,6 +19,8 @@ export const coauthorLinks: Record<string, string> = {
   'Xuan Yu': 'https://github.com/cccccosine',
 
   // Verified DBLP / Academic Profiles for faculty & co-authors
+  'Long Chen': 'https://people.ucas.edu.cn/~chenlong?language=en',
+  'Cong Zhang': 'https://scholar.google.com/citations?user=Aa7WCBkAAAAJ',
   'Georgios Fotiadis': 'https://dblp.org/pid/75/5361.html',
   'Johann Großschädl': 'https://dblp.org/pid/g/JohannGrossschaedl.html',
   'Johann Grossschädl': 'https://dblp.org/pid/g/JohannGrossschaedl.html',

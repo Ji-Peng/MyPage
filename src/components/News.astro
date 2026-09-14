@@ -16,7 +16,8 @@ const sortedNews = [...news].sort((a, b) => (b.pinned ? 1 : 0) - (a.pinned ? 1 :
     <span class="text-xs font-mono text-slate-500 dark:text-slate-400">2024 – 2027</span>
   </div>
 
-  <div class="space-y-2">
+  <!-- Scrollable container sized for 5 items capacity -->
+  <div class="max-h-[460px] sm:max-h-[450px] overflow-y-auto space-y-2 pr-1 sm:pr-1.5 overscroll-contain">
     {
       sortedNews.map((item) => (
         <div
@@ -27,7 +28,7 @@ const sortedNews = [...news].sort((a, b) => (b.pinned ? 1 : 0) - (a.pinned ? 1 :
           }`}
         >
           <!-- Date / Category column -->
-          <div class="flex items-center gap-1.5 flex-shrink-0 sm:w-32 pt-0.5">
+          <div class="flex flex-wrap items-center gap-1.5 flex-shrink-0 sm:w-44 pt-0.5">
             <span
               class={`font-mono text-xs px-2 py-0.5 rounded font-medium ${
                 item.award
@@ -41,6 +42,26 @@ const sortedNews = [...news].sort((a, b) => (b.pinned ? 1 : 0) - (a.pinned ? 1 :
               <span class="inline-flex items-center gap-0.5 text-[10px] font-mono font-semibold uppercase px-1.5 py-0.5 rounded bg-amber-200/80 text-amber-900 dark:bg-amber-900/60 dark:text-amber-200 border border-amber-300 dark:border-amber-700/80 leading-none">
                 Pinned
               </span>
+            )}
+            {item.authorRole === 'first' && (
+              <span class="inline-flex items-center gap-0.5 text-[10px] font-mono font-semibold uppercase px-1.5 py-0.5 rounded bg-blue-50 text-blue-700 dark:bg-blue-950/60 dark:text-blue-300 border border-blue-200/80 dark:border-blue-800/80 leading-none">
+                First Author
+              </span>
+            )}
+            {item.authorRole === 'co-author' && (
+              <span class="inline-flex items-center gap-0.5 text-[10px] font-mono font-semibold uppercase px-1.5 py-0.5 rounded bg-purple-50 text-purple-700 dark:bg-purple-950/60 dark:text-purple-300 border border-purple-200/80 dark:border-purple-800/80 leading-none">
+                Co-Author
+              </span>
+            )}
+            {item.authorRole === 'both' && (
+              <>
+                <span class="inline-flex items-center gap-0.5 text-[10px] font-mono font-semibold uppercase px-1.5 py-0.5 rounded bg-blue-50 text-blue-700 dark:bg-blue-950/60 dark:text-blue-300 border border-blue-200/80 dark:border-blue-800/80 leading-none">
+                  First Author
+                </span>
+                <span class="inline-flex items-center gap-0.5 text-[10px] font-mono font-semibold uppercase px-1.5 py-0.5 rounded bg-purple-50 text-purple-700 dark:bg-purple-950/60 dark:text-purple-300 border border-purple-200/80 dark:border-purple-800/80 leading-none">
+                  Co-Author
+                </span>
+              </>
             )}
             {item.award && !item.pinned && (
               <span class="inline-flex items-center gap-0.5 text-[11px] font-semibold text-amber-700 dark:text-amber-300">
@@ -82,6 +103,21 @@ const sortedNews = [...news].sort((a, b) => (b.pinned ? 1 : 0) - (a.pinned ? 1 :
             <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
               {item.description}
             </p>
+
+            {item.links && item.links.length > 0 && (
+              <div class="flex flex-wrap items-center gap-2 pt-0.5">
+                {item.links.map((link) => (
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="font-mono text-[11px] text-indigo-600 dark:text-indigo-400 hover:underline"
+                  >
+                    [{link.label}]
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       ))

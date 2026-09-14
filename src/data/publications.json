@@ -95,6 +95,34 @@
     "citations": 0
   },
   {
+    "id": "asiacrypt2026-shuttle",
+    "title": "Towards Practical Iterative Rejection Sampling: A Compact and Efficient Signature over Module Lattices",
+    "authors": [
+      "Yifan Ming",
+      "Jipeng Zhang",
+      "Zihan Liu",
+      "Guofeng Tang",
+      "Pengfei Chen",
+      "Yutao Sun",
+      "Si Gao",
+      "Cong Zhang",
+      "Long Chen"
+    ],
+    "venue": "International Conference on the Theory and Application of Cryptology and Information Security (ASIACRYPT 2026)",
+    "venueShort": "ASIACRYPT 2026",
+    "year": 2026,
+    "award": null,
+    "selected": false,
+    "links": {
+      "pdf": "https://eprint.iacr.org/2026/1991.pdf",
+      "eprint": "https://eprint.iacr.org/2026/1991",
+      "code": "https://github.com/Ji-Peng/SHUTTLE-NIST"
+    },
+    "artifactBadges": [],
+    "bibtex": "@inproceedings{ming2026towards,\n  author    = {Ming, Yifan and Zhang, Jipeng and Liu, Zihan and Tang, Guofeng and Chen, Pengfei and Sun, Yutao and Gao, Si and Zhang, Cong and Chen, Long},\n  title     = {Towards Practical Iterative Rejection Sampling: A Compact and Efficient Signature over Module Lattices},\n  booktitle = {International Conference on the Theory and Application of Cryptology and Information Security (ASIACRYPT)},\n  year      = {2026}\n}",
+    "citations": 0
+  },
+  {
     "id": "tches2026-bls-simd",
     "title": "Efficient SIMD Implementation of the BLS Signature Scheme Using Intel AVX-512",
     "authors": ["Ganqin Liu", "Hao Cheng", "Georgios Fotiadis", "Jipeng Zhang", "Johann Großschädl"],

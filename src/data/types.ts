@@ -187,6 +187,7 @@ export interface NewsItem {
   highlight?: boolean;
   award?: boolean;
   pinned?: boolean;
+  authorRole?: 'first' | 'co-author' | 'both';
   links?: NewsLink[];
 }
 

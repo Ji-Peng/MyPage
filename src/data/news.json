@@ -9,10 +9,25 @@
     "category": "award",
     "highlight": true,
     "award": true,
+    "authorRole": "first",
     "links": [
       { "label": "Distinguished Award PDF", "url": "/uploads/usenix_security2024/Distinguished_Award.pdf" },
       { "label": "Presentation", "url": "https://www.usenix.org/conference/usenixsecurity24/presentation/zhang-jipeng" },
       { "label": "Code", "url": "https://github.com/Ji-Peng/eng25519_artifact" }
+    ]
+  },
+  {
+    "id": "news-shuttle-asiacrypt2026",
+    "date": "2026",
+    "year": "2026",
+    "title": "SHUTTLE accepted to ASIACRYPT 2026",
+    "description": "Our paper \"Towards Practical Iterative Rejection Sampling: A Compact and Efficient Signature over Module Lattices\" has been accepted to ASIACRYPT 2026.",
+    "category": "paper",
+    "highlight": true,
+    "authorRole": "co-author",
+    "links": [
+      { "label": "ePrint", "url": "https://eprint.iacr.org/2026/1991" },
+      { "label": "Code", "url": "https://github.com/Ji-Peng/SHUTTLE-NIST" }
     ]
   },
   {
@@ -23,6 +38,7 @@
     "description": "Our paper \"VAXEN: A Versatile AVX Extension for Zero-Knowledge Proof and Post-Quantum Cryptography\" has been accepted to the 59th IEEE/ACM International Symposium on Microarchitecture (MICRO 2026).",
     "category": "paper",
     "highlight": true,
+    "authorRole": "first",
     "links": [
       { "label": "MICRO 2026", "url": "https://microarch.org/micro59/" },
       { "label": "PDF", "url": "/uploads/micro2026/paper.pdf" },
@@ -37,6 +53,7 @@
     "description": "Our paper \"MamaBearZKP: A Holistic Co-design of Prime Fields and Proving Stacks for High-Throughput ZKP on Modern CPUs\" has been accepted to ACM CCS 2026.",
     "category": "paper",
     "highlight": true,
+    "authorRole": "first",
     "links": [
       { "label": "ACM CCS 2026", "url": "https://www.sigsac.org/ccs/CCS2026/" },
       { "label": "ePrint", "url": "https://eprint.iacr.org/2026/1698" },
@@ -51,6 +68,7 @@
     "description": "Our paper \"TensorZKP: Repurposing GPU Tensor Cores for High-Performance Zero-Knowledge Proofs\" has been accepted to the 35th USENIX Security Symposium (USENIX Security 2026).",
     "category": "paper",
     "highlight": true,
+    "authorRole": "co-author",
     "links": [
       { "label": "USENIX Security '26", "url": "https://www.usenix.org/conference/usenixsecurity26/" },
       { "label": "ePrint", "url": "https://eprint.iacr.org/2026/1250" },
@@ -65,6 +83,7 @@
     "description": "Two papers accepted to IACR Transactions on Cryptographic Hardware and Embedded Systems (TCHES 2026): AVX-512 SIMD BLS signatures (Issue 3) and Vectorized Falcon-Sign on SSE2/AVX2/AVX-512/NEON/RVV (Issue 1).",
     "category": "paper",
     "highlight": false,
+    "authorRole": "both",
     "links": [
       { "label": "TCHES", "url": "https://tches.iacr.org/" }
     ]
