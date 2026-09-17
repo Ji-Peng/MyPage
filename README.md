@@ -30,7 +30,7 @@
 MyPage/
 ├── .github/workflows/
 │   ├── deploy.yml            # GitHub Pages 自动化静态构建与部署流水线
-│   └── scholar-cron.yml      # 每 3 天定时同步 Google Scholar 引用数的 CI 工作流
+│   └── scholar-cron.yml      # 每天定时同步 Google Scholar 引用数的 CI 工作流
 ├── public/                   # 线上生产部署目录（Git Submodule 指向 Ji-Peng.github.io）
 ├── scripts/
 │   └── fetch_scholar.py     # Google Scholar 学术指标自动化采集脚本
@@ -60,7 +60,7 @@ MyPage/
 ├── tailwind.config.mjs       # Tailwind CSS 调色板与排版插件配置
 ├── tsconfig.json             # TypeScript 编译器配置
 ├── package.json              # 项目依赖及运行脚本配置
-├── deploy.sh                 # 本地一键构建并将静态产物同步到 public/ 的脚本
+├── deploy.sh                 # 本地一键同步学术数据、构建并将静态产物同步到 public/ 的脚本
 └── view.sh                   # 本地一键启动开发预览服务器脚本
 ```
 
@@ -72,7 +72,7 @@ MyPage/
 
 - **Node.js**: `>= 20.0.0`
 - **npm**: `>= 9.0.0`
-- **Python**: `>= 3.10`（仅在手动执行学术引用数据同步脚本时需要）
+- **Python**: `>= 3.10`（用于执行 Google Scholar 学术引用数据同步及 `deploy.sh` 本地发布）
 
 ### 安装依赖与启动服务
 
@@ -165,7 +165,7 @@ export const coauthorLinks: Record<string, string> = {
 
 ### 4. 同步 Google Scholar 引用数据
 
-- **自动同步**：项目已配置 GitHub Actions 定时任务（每周日午夜自动运行并提交最新引用指标）。
+- **自动同步**：项目已配置 GitHub Actions 定时任务（每天午夜自动运行并提交最新引用指标）。
 - **手动立即同步**：在本地终端运行：
   ```bash
   npm run fetch:scholar
@@ -178,7 +178,7 @@ export const coauthorLinks: Record<string, string> = {
 
 ### 方式一：本地一键全自动编译与双仓库推送（极力推荐）
 
-项目根目录提供了全自动一键发布脚本 `deploy.sh`。执行该脚本将自动完成 Astro 静态编译、同步产物到 `public/`、自动提交并推送 `public` 线上仓库（commit 信息固定为 "update"），随后自动提交并推送当前源码主仓库：
+项目根目录提供了全自动一键发布脚本 `deploy.sh`。执行该脚本将自动抓取最新 Google Scholar 数据、完成 Astro 静态编译、同步产物到 `public/`、自动提交并推送 `public` 线上仓库（commit 信息固定为 "update"），随后自动提交并推送当前源码主仓库：
 
 ```bash
 ./deploy.sh

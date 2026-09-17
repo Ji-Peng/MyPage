@@ -5,13 +5,18 @@ set -e
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$ROOT_DIR"
 
-echo "==> 1/4 Building Astro static site..."
+echo "==> 1/5 Syncing Google Scholar data..."
+python3 scripts/fetch_scholar.py || {
+  echo "⚠️ Warning: Failed to fetch latest Google Scholar data. Continuing deployment with cached data..."
+}
+
+echo "==> 2/5 Building Astro static site..."
 npm run build
 
-echo "==> 2/4 Syncing build output into public/ (Ji-Peng.github.io)..."
+echo "==> 3/5 Syncing build output into public/ (Ji-Peng.github.io)..."
 rsync -av --delete --exclude='.git' --exclude='.gitignore' dist/ public/
 
-echo "==> 3/4 Committing and pushing public repository (Ji-Peng.github.io)..."
+echo "==> 4/5 Committing and pushing public repository (Ji-Peng.github.io)..."
 cd "$ROOT_DIR/public"
 git add -A
 if ! git diff --cached --quiet; then
@@ -22,7 +27,7 @@ else
 fi
 git push origin main
 
-echo "==> 4/4 Committing and pushing current repository (MyPage)..."
+echo "==> 5/5 Committing and pushing current repository (MyPage)..."
 cd "$ROOT_DIR"
 git add -A
 if ! git diff --cached --quiet; then
