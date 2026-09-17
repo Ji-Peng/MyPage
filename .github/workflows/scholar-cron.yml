@@ -1,8 +1,8 @@
-name: Google Scholar Sync (Every 3 Days)
+name: Google Scholar Sync (Daily)
 
 on:
   schedule:
-    - cron: '0 0 */3 * *'
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 permissions:

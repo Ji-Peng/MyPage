@@ -1,14 +1,14 @@
 {
   "userId": "dL1IM-M9ltIC",
   "profileUrl": "https://scholar.google.com/citations?user=dL1IM-M9ltIC&hl=en",
-  "updatedAt": "2026-09-12T03:43:53.790422+00:00",
-  "totalCitations": 234,
+  "updatedAt": "2026-09-17T04:00:13.160298+00:00",
+  "totalCitations": 239,
   "hIndex": 7,
   "i10Index": 7,
   "stats": {
     "citations": {
-      "all": 234,
-      "recent": 234
+      "all": 239,
+      "recent": 239
     },
     "hIndex": {
       "all": 7,
@@ -30,30 +30,30 @@
     },
     {
       "year": 2023,
-      "citations": 16
+      "citations": 17
     },
     {
       "year": 2024,
-      "citations": 53
+      "citations": 54
     },
     {
       "year": 2025,
-      "citations": 93
+      "citations": 95
     },
     {
       "year": 2026,
-      "citations": 65
+      "citations": 66
     }
   ],
   "publications": [
     {
       "title": "Improved plantard arithmetic for lattice-based cryptography",
-      "citations": 77,
+      "citations": 79,
       "year": 2022
     },
     {
       "title": "Yet another improvement of Plantard arithmetic for faster Kyber on low-end 32-bit IoT devices",
-      "citations": 41,
+      "citations": 42,
       "year": 2024
     },
     {
@@ -72,14 +72,14 @@
       "year": 2024
     },
     {
+      "title": "Time-memory Trade-offs for Saber+ on Memory-constrained RISC-V Platform",
+      "citations": 18,
+      "year": 2022
+    },
+    {
       "title": "Efficient implementation of kyber on mobile devices",
       "citations": 18,
       "year": 2021
-    },
-    {
-      "title": "Time-memory Trade-offs for Saber+ on Memory-constrained RISC-V Platform",
-      "citations": 17,
-      "year": 2022
     },
     {
       "title": "Multi-way high-throughput implementation of Kyber",
@@ -102,6 +102,11 @@
       "year": 2020
     },
     {
+      "title": "{TensorZKP}: Repurposing {GPU} Tensor Cores for {High-Performance}{Zero-Knowledge} Proofs",
+      "citations": 1,
+      "year": 2026
+    },
+    {
       "title": "Efficient SIMD Implementation of the BLS Signature Scheme Using Intel AVX-512",
       "citations": 0,
       "year": 2026
@@ -117,7 +122,7 @@
       "year": 2026
     },
     {
-      "title": "TensorZKP: Repurposing GPU Tensor Cores for High-Performance Zero-Knowledge Proofs",
+      "title": "VAXEN: A Versatile AVX Extension for Zero-Knowledge Proof and Post-Quantum Cryptography",
       "citations": 0,
       "year": 2026
     },
@@ -125,11 +130,6 @@
       "title": "面向移动设备的国密 SM2 高效实现研究",
       "citations": 0,
       "year": 2023
-    },
-    {
-      "title": "VAXEN: A Versatile AVX Extension for Zero-Knowledge Proof and Post-Quantum Cryptography",
-      "citations": 0,
-      "year": null
     }
   ]
 }
