@@ -130,10 +130,10 @@ const selectedCount = curatedSelected.length;
       if (textSpan) {
         var originalText = textSpan.textContent;
         textSpan.textContent = 'Copied!';
-        btn.classList.add('text-emerald-600', 'dark:text-emerald-400', 'border-emerald-400');
+        btn.classList.add('text-indigo-600', 'dark:text-indigo-400', 'border-indigo-400');
         setTimeout(function () {
           textSpan.textContent = originalText;
-          btn.classList.remove('text-emerald-600', 'dark:text-emerald-400', 'border-emerald-400');
+          btn.classList.remove('text-indigo-600', 'dark:text-indigo-400', 'border-indigo-400');
         }, 2000);
       }
     }
