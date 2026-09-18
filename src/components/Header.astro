@@ -8,14 +8,18 @@ const { totalCitations, hIndex, i10Index, profileUrl } = scholarData;
   <!-- Top Profile Card -->
   <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5 sm:gap-6">
     <div class="relative group flex-shrink-0">
-      <img
-        src="/avatar.jpg"
-        alt="Jipeng Zhang (张吉鹏)"
-        width="128"
-        height="128"
-        class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover ring-2 ring-slate-200 dark:ring-slate-700/80 shadow-xs"
-        loading="eager"
-      />
+      <picture class="block">
+        <source srcset="/avatar.webp" type="image/webp" />
+        <img
+          src="/avatar.jpg"
+          alt="Jipeng Zhang (张吉鹏)"
+          width="128"
+          height="128"
+          class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover ring-2 ring-slate-200 dark:ring-slate-700/80 shadow-xs"
+          loading="eager"
+          decoding="async"
+        />
+      </picture>
       <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-black/5 dark:ring-white/10 pointer-events-none"></div>
     </div>
 
@@ -39,18 +43,14 @@ const { totalCitations, hIndex, i10Index, profileUrl } = scholarData;
             target="_blank"
             rel="noopener noreferrer"
             class="font-medium text-slate-900 dark:text-slate-100 hover:text-indigo-600 dark:hover:text-indigo-400 underline decoration-slate-300 dark:decoration-slate-700 underline-offset-2 transition-colors"
-          >
-            National University of Singapore (NUS)
-          </a>,
+          >National University of Singapore (NUS)</a>,
           working with
           <a
             href="https://zjhzjh123.github.io/"
             target="_blank"
             rel="noopener noreferrer"
             class="font-medium text-indigo-600 dark:text-indigo-400 hover:underline underline-offset-2 transition-colors"
-          >
-            Prof. Jiaheng Zhang
-          </a>.
+          >Prof. Jiaheng Zhang</a>.
         </p>
         <p>
           Ph.D. from
@@ -59,18 +59,14 @@ const { totalCitations, hIndex, i10Index, profileUrl } = scholarData;
             target="_blank"
             rel="noopener noreferrer"
             class="font-medium text-slate-900 dark:text-slate-100 hover:text-indigo-600 dark:hover:text-indigo-400 underline decoration-slate-300 dark:decoration-slate-700 underline-offset-2 transition-colors"
-          >
-            Nanjing University of Aeronautics and Astronautics (NUAA)
-          </a>,
+          >Nanjing University of Aeronautics and Astronautics (NUAA)</a>,
           advised by
           <a
             href="https://koclab.net/koc.html"
             target="_blank"
             rel="noopener noreferrer"
             class="font-medium text-indigo-600 dark:text-indigo-400 hover:underline underline-offset-2 transition-colors"
-          >
-            Prof. Çetin Kaya Koç
-          </a>.
+          >Prof. Çetin Kaya Koç</a>.
         </p>
       </div>
 
@@ -110,17 +106,17 @@ const { totalCitations, hIndex, i10Index, profileUrl } = scholarData;
 
       <!-- High-Density Text Hyperlinks -->
       <nav aria-label="Academic Profiles and Contact Links" class="pt-0.5 flex flex-wrap items-center justify-center sm:justify-start gap-x-2 gap-y-1 text-xs font-mono text-slate-600 dark:text-slate-400">
-        <span>[<a href="https://scholar.google.com/citations?hl=en&user=dL1IM-M9ltIC" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Google Scholar</a>]</span>
+        <a href="https://scholar.google.com/citations?hl=en&user=dL1IM-M9ltIC" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Google Scholar</a>
         <span class="text-slate-300 dark:text-slate-700">·</span>
-        <span>[<a href="https://dblp.org/pid/245/3547-1.html" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">DBLP</a>]</span>
+        <a href="https://dblp.org/pid/245/3547-1.html" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">DBLP</a>
         <span class="text-slate-300 dark:text-slate-700">·</span>
-        <span>[<a href="https://github.com/Ji-Peng" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">GitHub</a>]</span>
+        <a href="https://github.com/Ji-Peng" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">GitHub</a>
         <span class="text-slate-300 dark:text-slate-700">·</span>
-        <span>[<a href="https://orcid.org/0000-0002-0679-7212" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">ORCID</a>]</span>
+        <a href="https://orcid.org/0000-0002-0679-7212" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">ORCID</a>
         <span class="text-slate-300 dark:text-slate-700">·</span>
-        <span>[<a href="mailto:jp-zhang@outlook.com" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Email</a>]</span>
+        <a href="mailto:jp-zhang@outlook.com" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Email</a>
         <span class="text-slate-300 dark:text-slate-700">·</span>
-        <span>[<a href="/uploads/phd/thesis.pdf" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">PhD Thesis</a>]</span>
+        <a href="/uploads/phd/thesis.pdf" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">PhD Thesis</a>
       </nav>
     </div>
   </div>

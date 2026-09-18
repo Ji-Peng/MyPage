@@ -1,14 +1,14 @@
 {
   "userId": "dL1IM-M9ltIC",
   "profileUrl": "https://scholar.google.com/citations?user=dL1IM-M9ltIC&hl=en",
-  "updatedAt": "2026-09-17T04:00:13.160298+00:00",
-  "totalCitations": 239,
+  "updatedAt": "2026-09-18T11:37:05.347218+00:00",
+  "totalCitations": 245,
   "hIndex": 7,
   "i10Index": 7,
   "stats": {
     "citations": {
-      "all": 239,
-      "recent": 239
+      "all": 245,
+      "recent": 245
     },
     "hIndex": {
       "all": 7,
@@ -42,28 +42,28 @@
     },
     {
       "year": 2026,
-      "citations": 66
+      "citations": 72
     }
   ],
   "publications": [
     {
       "title": "Improved plantard arithmetic for lattice-based cryptography",
-      "citations": 79,
+      "citations": 80,
       "year": 2022
     },
     {
       "title": "Yet another improvement of Plantard arithmetic for faster Kyber on low-end 32-bit IoT devices",
-      "citations": 42,
+      "citations": 44,
       "year": 2024
     },
     {
       "title": "Revisiting keccak and dilithium implementations on armv7-m",
-      "citations": 28,
+      "citations": 30,
       "year": 2024
     },
     {
       "title": "Optimized Software Implementation of Keccak, Kyber, and Dilithium on RV{32,64}IM{B}{V}",
-      "citations": 23,
+      "citations": 24,
       "year": 2024
     },
     {

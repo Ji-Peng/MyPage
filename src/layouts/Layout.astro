@@ -35,27 +35,19 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://ji-peng.
       content="Jipeng Zhang, 张吉鹏, Cryptography, Zero-Knowledge Proofs, ZKP, Post-Quantum Cryptography, PQC, Elliptic Curve Cryptography, Hardware Security, RISC-V, AVX-512, NUS, NUAA"
     />
 
-    <!-- Google Scholar Indexing Meta Tags -->
-    <meta name="citation_author" content="Jipeng Zhang" />
-    <meta name="citation_title" content="Dr. Jipeng Zhang - Academic Homepage & Research" />
-    <meta
-      name="citation_keywords"
-      content="Zero-Knowledge Proofs, Post-Quantum Cryptography, Elliptic Curve Cryptography, Cryptographic Engineering, Hardware Security, RISC-V, AVX-512"
-    />
-
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="/avatar.jpg" />
+    <meta property="og:image" content="https://ji-peng.com/avatar.jpg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:url" content={canonicalURL} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="/avatar.jpg" />
+    <meta name="twitter:image" content="https://ji-peng.com/avatar.jpg" />
 
     <!-- Theme Color for Mobile Browsers -->
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
@@ -160,7 +152,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://ji-peng.
         <!-- Site Title / Home Link -->
         <a
           href="#about"
-          class="font-bold text-base tracking-tight text-slate-900 dark:text-slate-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors flex items-center gap-1.5"
+          class="font-bold text-base tracking-tight text-slate-900 dark:text-slate-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors flex items-center gap-1.5 whitespace-nowrap"
         >
           <span class="font-bold">Jipeng Zhang</span>
           <span class="text-xs font-normal text-slate-500 dark:text-slate-400 hidden xs:inline font-serif">张吉鹏</span>
