@@ -11,6 +11,22 @@ interface Props {
 const { pub, prefix = 'pub' } = Astro.props;
 const isAwardWinner = !!pub.award;
 const panelId = `bibtex-${prefix}-${pub.id}`;
+const titleHref = pub.links.pdf || pub.links.venue || pub.links.eprint || pub.links.link;
+const showSelectedBadge = pub.selected && prefix !== 'selected';
+
+const actionLinks: { label: string; url?: string; award?: boolean }[] = [
+  { label: 'PDF', url: pub.links.pdf },
+  { label: 'ePrint', url: pub.links.eprint },
+  { label: 'Code', url: pub.links.code },
+  { label: 'Code (AVX2)', url: pub.links.codeAvx2 },
+  { label: 'Code (AVX-512)', url: pub.links.codeAvx512 },
+  { label: 'Zenodo', url: pub.links.zenodo },
+  { label: 'Slides', url: pub.links.slides },
+  { label: 'Video', url: pub.links.video },
+  { label: 'Award PDF', url: pub.links.award, award: true },
+  { label: 'Official', url: pub.links.venue },
+  { label: 'DOI', url: !pub.links.pdf && !pub.links.eprint ? pub.links.link : undefined },
+];
 ---
 
 <article
@@ -27,49 +43,20 @@ const panelId = `bibtex-${prefix}-${pub.id}`;
     <div class="space-y-1">
       <div class="flex flex-wrap items-baseline gap-2">
         <h3 class="text-sm sm:text-base font-bold tracking-tight text-slate-900 dark:text-slate-100 leading-snug">
-          {pub.links.pdf ? (
+          {titleHref ? (
             <a
-              href={pub.links.pdf}
+              href={titleHref}
               target="_blank"
               rel="noopener noreferrer"
               class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-            >
-              {pub.title}
-            </a>
-          ) : pub.links.venue ? (
-            <a
-              href={pub.links.venue}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-            >
-              {pub.title}
-            </a>
-          ) : pub.links.eprint ? (
-            <a
-              href={pub.links.eprint}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-            >
-              {pub.title}
-            </a>
-          ) : pub.links.link ? (
-            <a
-              href={pub.links.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-            >
-              {pub.title}
-            </a>
+            >{pub.title}</a>
           ) : (
             <span>{pub.title}</span>
           )}
         </h3>
 
-        {pub.selected && (
-          <span class="inline-flex items-center px-1.5 py-0.2 rounded text-[10px] font-mono font-medium bg-indigo-50 text-indigo-700 dark:bg-indigo-950/60 dark:text-indigo-300 border border-indigo-200/70 dark:border-indigo-800/70 leading-none">
+        {showSelectedBadge && (
+          <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-mono font-medium bg-indigo-50 text-indigo-700 dark:bg-indigo-950/60 dark:text-indigo-300 border border-indigo-200/70 dark:border-indigo-800/70 leading-none">
             ★ Selected
           </span>
         )}
@@ -84,26 +71,13 @@ const panelId = `bibtex-${prefix}-${pub.id}`;
             trimmed.includes('张吉鹏') ||
             trimmed === 'Zhang, Jipeng';
           const link = coauthorLinks[trimmed];
-          return (
-            <span>
-              {isMe ? (
-                <strong class="font-bold text-slate-900 dark:text-slate-100 underline decoration-indigo-400 underline-offset-2">
-                  {trimmed}
-                </strong>
-              ) : link ? (
-                <a
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:underline underline-offset-2 transition-colors"
-                >
-                  {trimmed}
-                </a>
-              ) : (
-                <span>{trimmed}</span>
-              )}
-              {index < pub.authors.length - 1 && ', '}
-            </span>
+          const sep = index < pub.authors.length - 1 ? ', ' : '';
+          return isMe ? (
+            <Fragment><strong class="font-bold text-slate-900 dark:text-slate-100 underline decoration-indigo-400 underline-offset-2">{trimmed}</strong>{sep}</Fragment>
+          ) : link ? (
+            <Fragment><a href={link} target="_blank" rel="noopener noreferrer" class="text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:underline underline-offset-2 transition-colors">{trimmed}</a>{sep}</Fragment>
+          ) : (
+            <Fragment>{trimmed}{sep}</Fragment>
           );
         })}
       </p>
@@ -137,7 +111,7 @@ const panelId = `bibtex-${prefix}-${pub.id}`;
               rel="noopener noreferrer"
               class="underline font-medium hover:text-amber-950 dark:hover:text-amber-100"
             >
-              [Stats]
+              Stats
             </a>
           )}
           {pub.links.awardLink && (
@@ -172,138 +146,21 @@ const panelId = `bibtex-${prefix}-${pub.id}`;
 
     <!-- Action Links & BibTeX Button -->
     <div class="flex flex-wrap items-center gap-1.5 pt-1.5">
-      {pub.links.pdf && (
-        <a
-          href={pub.links.pdf}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="action-link inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-mono font-medium bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:text-indigo-600 dark:hover:text-indigo-400 hover:border-indigo-400 transition-colors"
-        >
-          <span>[PDF]</span>
-        </a>
-      )}
-
-      {pub.links.eprint && (
-        <a
-          href={pub.links.eprint}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="action-link inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-mono font-medium bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:text-indigo-600 dark:hover:text-indigo-400 hover:border-indigo-400 transition-colors"
-        >
-          <span>[ePrint]</span>
-        </a>
-      )}
-
-      {pub.links.code && (
-        <a
-          href={pub.links.code}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="action-link inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-mono font-medium bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:text-indigo-600 dark:hover:text-indigo-400 hover:border-indigo-400 transition-colors"
-        >
-          <span>[Code]</span>
-        </a>
-      )}
-
-      {pub.links.codeAvx2 && (
-        <a
-          href={pub.links.codeAvx2}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="action-link inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-mono font-medium bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:text-indigo-600 dark:hover:text-indigo-400 hover:border-indigo-400 transition-colors"
-        >
-          <span>[Code.AVX2]</span>
-        </a>
-      )}
-
-      {pub.links.codeAvx512 && (
-        <a
-          href={pub.links.codeAvx512}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="action-link inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-mono font-medium bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:text-indigo-600 dark:hover:text-indigo-400 hover:border-indigo-400 transition-colors"
-        >
-          <span>[Code.AVX-512]</span>
-        </a>
-      )}
-
-      {pub.links.zenodo && (
-        <a
-          href={pub.links.zenodo}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="action-link inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-mono font-medium bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:text-indigo-600 dark:hover:text-indigo-400 hover:border-indigo-400 transition-colors"
-        >
-          <span>[Zenodo]</span>
-        </a>
-      )}
-
-      {pub.links.slides && (
-        <a
-          href={pub.links.slides}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="action-link inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-mono font-medium bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:text-indigo-600 dark:hover:text-indigo-400 hover:border-indigo-400 transition-colors"
-        >
-          <span>[Slide]</span>
-        </a>
-      )}
-
-      {pub.links.video && (
-        <a
-          href={pub.links.video}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="action-link inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-mono font-medium bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:text-indigo-600 dark:hover:text-indigo-400 hover:border-indigo-400 transition-colors"
-        >
-          <span>[Video]</span>
-        </a>
-      )}
-
-      {pub.links.award && (
-        <a
-          href={pub.links.award}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="action-link inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-mono font-medium bg-amber-50 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-700/80 hover:bg-amber-100 transition-colors"
-        >
-          <span>[Award PDF]</span>
-        </a>
-      )}
-
-      {pub.links.venue && (
-        <a
-          href={pub.links.venue}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="action-link inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-mono font-medium bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:text-indigo-600 dark:hover:text-indigo-400 hover:border-indigo-400 transition-colors"
-        >
-          <span>[Official]</span>
-        </a>
-      )}
-
-      {pub.links.link && !pub.links.pdf && !pub.links.eprint && (
-        <a
-          href={pub.links.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="action-link inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-mono font-medium bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:text-indigo-600 dark:hover:text-indigo-400 hover:border-indigo-400 transition-colors"
-        >
-          <span>[DOI]</span>
-        </a>
-      )}
+      {actionLinks.filter((l) => l.url).map((l) => (
+        <a href={l.url} target="_blank" rel="noopener noreferrer" class={l.award ? 'link-btn link-btn-award' : 'link-btn'}>{l.label}</a>
+      ))}
 
       <!-- BibTeX Toggle Button -->
       <button
         type="button"
-        class="bibtex-toggle-btn inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-mono font-medium bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:text-indigo-600 dark:hover:text-indigo-400 hover:border-indigo-400 transition-colors cursor-pointer"
+        class="bibtex-toggle-btn link-btn cursor-pointer"
         data-target={panelId}
         aria-expanded="false"
       >
         <svg width="12" height="12" class="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
         </svg>
-        <span>[BibTeX]</span>
+        <span>BibTeX</span>
       </button>
     </div>
 

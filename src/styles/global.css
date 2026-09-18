@@ -111,6 +111,15 @@
     @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300;
   }
 
+  /* Unified action link / button (PDF, Code, Slides, BibTeX, ...) */
+  .link-btn {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-mono font-medium bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:text-indigo-600 dark:hover:text-indigo-400 hover:border-indigo-400 transition-colors;
+  }
+
+  .link-btn-award {
+    @apply bg-amber-50 dark:bg-amber-950/40 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-700/80 hover:bg-amber-100 hover:text-amber-900 hover:border-amber-400;
+  }
+
   /* Links with smooth underline accent */
   .academic-link {
     @apply text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 underline underline-offset-4 decoration-indigo-300/60 dark:decoration-indigo-700/60 hover:decoration-indigo-500 transition-colors;
@@ -149,6 +158,20 @@
   .bibtex-panel,
   footer {
     display: none !important;
+  }
+
+  /* Print the full publication list instead of the Selected tab */
+  #selected-publications-container {
+    display: none !important;
+  }
+
+  #all-publications-container {
+    display: block !important;
+  }
+
+  .news-scroll {
+    max-height: none !important;
+    overflow: visible !important;
   }
 
   body {
