@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages (Ji-Peng.github.io)
 
 on:
   push:
@@ -6,22 +6,15 @@ on:
       - main
   workflow_dispatch:
 
-# Permissions required for GitHub Pages deployment
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 concurrency:
-  group: 'pages'
+  group: 'deploy-pages'
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -39,11 +32,30 @@ jobs:
       - name: Build Astro site
         run: npm run build
 
-      - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './dist'
+      - name: Deploy to Ji-Peng.github.io
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$DEPLOY_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          export GIT_SSH_COMMAND="ssh -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes"
+          git clone git@github.com:Ji-Peng/Ji-Peng.github.io.git deploy_repo
+          cd deploy_repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          rsync -av --delete --exclude='.git' --exclude='.gitignore' ../dist/ ./
+          git add -A
+          if ! git diff --cached --quiet; then
+            MSG="${COMMIT_MSG:-update}"
+            FIRST_LINE=$(echo "$MSG" | head -n 1)
+            git commit -m "$FIRST_LINE"
+            git push origin main
+            echo "Successfully deployed to Ji-Peng.github.io! 🚀"
+          else
+            echo "No changes detected in build output. Nothing to deploy."
+          fi
+
