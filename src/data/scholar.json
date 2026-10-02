@@ -1,14 +1,14 @@
 {
   "userId": "dL1IM-M9ltIC",
   "profileUrl": "https://scholar.google.com/citations?user=dL1IM-M9ltIC&hl=en",
-  "updatedAt": "2026-09-21T13:42:48.904038+00:00",
-  "totalCitations": 248,
+  "updatedAt": "2026-10-02T04:45:12.926982+00:00",
+  "totalCitations": 249,
   "hIndex": 7,
   "i10Index": 7,
   "stats": {
     "citations": {
-      "all": 248,
-      "recent": 248
+      "all": 249,
+      "recent": 249
     },
     "hIndex": {
       "all": 7,
@@ -42,13 +42,13 @@
     },
     {
       "year": 2026,
-      "citations": 75
+      "citations": 76
     }
   ],
   "publications": [
     {
       "title": "Improved plantard arithmetic for lattice-based cryptography",
-      "citations": 81,
+      "citations": 82,
       "year": 2022
     },
     {
