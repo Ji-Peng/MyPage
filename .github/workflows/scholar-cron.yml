@@ -2,7 +2,7 @@ name: Google Scholar Sync (Daily)
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 */3 * *'
   workflow_dispatch:
 
 permissions:
