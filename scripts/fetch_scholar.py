@@ -41,13 +41,17 @@ def fetch_scholar_data(user_id: str = USER_ID) -> dict:
     # h-index: all, since_year
     # i10-index: all, since_year
     metrics = re.findall(r'<td class="gsc_rsb_std">(\d+)</td>', html)
-    
-    all_citations = int(metrics[0]) if len(metrics) > 0 else 0
-    recent_citations = int(metrics[1]) if len(metrics) > 1 else 0
-    all_h_index = int(metrics[2]) if len(metrics) > 2 else 0
-    recent_h_index = int(metrics[3]) if len(metrics) > 3 else 0
-    all_i10_index = int(metrics[4]) if len(metrics) > 4 else 0
-    recent_i10_index = int(metrics[5]) if len(metrics) > 5 else 0
+    if len(metrics) < 6:
+        raise ValueError(
+            "Could not parse Google Scholar metrics; the profile response may be a CAPTCHA page."
+        )
+
+    all_citations = int(metrics[0])
+    recent_citations = int(metrics[1])
+    all_h_index = int(metrics[2])
+    recent_h_index = int(metrics[3])
+    all_i10_index = int(metrics[4])
+    recent_i10_index = int(metrics[5])
 
     # Parse citation history by year
     years = re.findall(r'<span class="gsc_g_t"[^>]*>(\d+)</span>', html)
@@ -124,8 +128,8 @@ def main():
 
     output_path = os.path.abspath(args.output)
     if data['stats']['citations']['all'] == 0 and os.path.exists(output_path):
-        print(f"Warning: Parsed 0 citations (likely temporary Google CAPTCHA). Keeping existing data at: {output_path}", file=sys.stderr)
-        sys.exit(0)
+        print(f"Parsed 0 citations. Keeping existing data at: {output_path}", file=sys.stderr)
+        sys.exit(1)
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:

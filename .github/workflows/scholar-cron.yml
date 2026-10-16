@@ -21,8 +21,7 @@ jobs:
           python-version: '3.11'
 
       - name: Run Scholar sync script
-        run: |
-          python scripts/fetch_scholar.py || echo "Warning: Failed to fetch live Google Scholar data. Keeping cached data."
+        run: python scripts/fetch_scholar.py
 
       - name: Check for scholar data changes
         id: check_changes

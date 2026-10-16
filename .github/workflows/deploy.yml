@@ -5,6 +5,11 @@ on:
     branches:
       - main
   workflow_dispatch:
+  workflow_run:
+    workflows:
+      - Google Scholar Sync (Daily)
+    types:
+      - completed
 
 permissions:
   contents: read
@@ -15,6 +20,9 @@ concurrency:
 
 jobs:
   build-and-deploy:
+    if: >-
+      github.event_name != 'workflow_run' ||
+      github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -37,8 +45,14 @@ jobs:
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
           COMMIT_MSG: ${{ github.event.head_commit.message }}
         run: |
+          set -euo pipefail
+          if [ -z "${DEPLOY_KEY:-}" ]; then
+            echo "::error::DEPLOY_KEY is not configured."
+            exit 1
+          fi
+
           mkdir -p ~/.ssh
-          echo "$DEPLOY_KEY" > ~/.ssh/id_ed25519
+          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan github.com >> ~/.ssh/known_hosts
 
@@ -58,4 +72,3 @@ jobs:
           else
             echo "No changes detected in build output. Nothing to deploy."
           fi
-
