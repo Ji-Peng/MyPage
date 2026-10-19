@@ -21,7 +21,10 @@ jobs:
           python-version: '3.11'
 
       - name: Run Scholar sync script
-        run: python scripts/fetch_scholar.py
+        run: |
+          if ! python scripts/fetch_scholar.py; then
+            echo "::warning::Google Scholar sync failed; keeping the checked-in scholar data and continuing."
+          fi
 
       - name: Check for scholar data changes
         id: check_changes
