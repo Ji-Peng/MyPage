@@ -1,14 +1,14 @@
 {
   "userId": "dL1IM-M9ltIC",
   "profileUrl": "https://scholar.google.com/citations?user=dL1IM-M9ltIC&hl=en",
-  "updatedAt": "2026-10-15T03:49:27.791331+00:00",
-  "totalCitations": 263,
+  "updatedAt": "2026-10-26T08:39:14.785112+00:00",
+  "totalCitations": 280,
   "hIndex": 7,
   "i10Index": 7,
   "stats": {
     "citations": {
-      "all": 263,
-      "recent": 263
+      "all": 280,
+      "recent": 280
     },
     "hIndex": {
       "all": 7,
@@ -34,36 +34,36 @@
     },
     {
       "year": 2024,
-      "citations": 54
+      "citations": 50
     },
     {
       "year": 2025,
-      "citations": 95
+      "citations": 98
     },
     {
       "year": 2026,
-      "citations": 90
+      "citations": 108
     }
   ],
   "publications": [
     {
       "title": "Improved plantard arithmetic for lattice-based cryptography",
-      "citations": 84,
+      "citations": 89,
       "year": 2022
     },
     {
       "title": "Yet another improvement of Plantard arithmetic for faster Kyber on low-end 32-bit IoT devices",
-      "citations": 45,
+      "citations": 49,
       "year": 2024
     },
     {
       "title": "Revisiting keccak and dilithium implementations on armv7-m",
-      "citations": 32,
+      "citations": 34,
       "year": 2024
     },
     {
       "title": "Optimized Software Implementation of Keccak, Kyber, and Dilithium on RV{32,64}IM{B}{V}",
-      "citations": 28,
+      "citations": 31,
       "year": 2024
     },
     {
@@ -83,12 +83,12 @@
     },
     {
       "title": "Multi-way high-throughput implementation of Kyber",
-      "citations": 5,
+      "citations": 7,
       "year": 2024
     },
     {
       "title": "Vectorized Falcon-Sign Implementations using SSE2, AVX2, AVX-512F, NEON, and RVV",
-      "citations": 4,
+      "citations": 5,
       "year": 2025
     },
     {
@@ -107,12 +107,12 @@
       "year": 2020
     },
     {
-      "title": "Efficient and Compact High-order Masking Raccoon on Memory Constrained Devices",
+      "title": "Efficient SIMD Implementation of the BLS Signature Scheme Using Intel AVX-512",
       "citations": 0,
       "year": 2026
     },
     {
-      "title": "Efficient SIMD Implementation of the BLS Signature Scheme Using Intel AVX-512",
+      "title": "Efficient and Compact High-order Masking Raccoon on Memory Constrained Devices",
       "citations": 0,
       "year": 2026
     },
