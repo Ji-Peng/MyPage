@@ -30,9 +30,9 @@
     --page-bg: #f4f6fb;
 
     /* Base surface (.glass) */
-    --glass-tint: rgba(255, 255, 255, 0.58);
-    --glass-blur: 16px;
-    --glass-sat: 175%;
+    --glass-tint: rgba(255, 255, 255, 0.3);
+    --glass-blur: 10px;
+    --glass-sat: 190%;
     --glass-border: rgba(255, 255, 255, 0.65);
     --glass-edge-hi: rgba(255, 255, 255, 0.95);
     --glass-edge-lo: rgba(255, 255, 255, 0.18);
@@ -50,13 +50,13 @@
     --award-rim-soft: rgba(251, 191, 36, 0.45);
 
     /* Strong surface (.glass-strong: nav, hero) */
-    --glass-strong-tint: rgba(255, 255, 255, 0.68);
-    --glass-strong-blur: 22px;
+    --glass-strong-tint: rgba(255, 255, 255, 0.36);
+    --glass-strong-blur: 14px;
     --glass-strong-shadow: 0 12px 32px -10px rgba(15, 23, 42, 0.22), 0 3px 8px -2px rgba(15, 23, 42, 0.08);
 
     /* Subtle surface (.glass-subtle: rows inside a glass section, no blur) */
-    --glass-subtle-tint: rgba(255, 255, 255, 0.55);
-    --glass-subtle-tint-hover: rgba(255, 255, 255, 0.82);
+    --glass-subtle-tint: rgba(255, 255, 255, 0.3);
+    --glass-subtle-tint-hover: rgba(255, 255, 255, 0.55);
     --glass-subtle-border: rgba(15, 23, 42, 0.07);
     --glass-subtle-border-hover: rgba(99, 102, 241, 0.28);
 
@@ -74,10 +74,10 @@
     --glass-divider: linear-gradient(90deg, rgba(15, 23, 42, 0), rgba(15, 23, 42, 0.14) 15%, rgba(15, 23, 42, 0.14) 85%, rgba(15, 23, 42, 0));
 
     /* Backdrop blobs (indigo / sky / violet / rose) */
-    --blob-1: rgba(99, 102, 241, 0.4);
-    --blob-2: rgba(56, 189, 248, 0.36);
-    --blob-3: rgba(167, 139, 250, 0.34);
-    --blob-4: rgba(251, 113, 133, 0.26);
+    --blob-1: rgba(99, 102, 241, 0.6);
+    --blob-2: rgba(56, 189, 248, 0.55);
+    --blob-3: rgba(167, 139, 250, 0.55);
+    --blob-4: rgba(251, 113, 133, 0.45);
     --blob-5: rgba(255, 255, 255, 0);
 
     /* Motion */
@@ -95,8 +95,8 @@
 
     --page-bg: #090b15;
 
-    --glass-tint: rgba(22, 26, 38, 0.55);
-    --glass-blur: 20px;
+    --glass-tint: rgba(22, 26, 38, 0.34);
+    --glass-blur: 12px;
     --glass-sat: 150%;
     --glass-border: rgba(255, 255, 255, 0.08);
     --glass-edge-hi: rgba(255, 255, 255, 0.26);
@@ -111,8 +111,8 @@
     --award-rim: rgba(251, 191, 36, 0.75);
     --award-rim-soft: rgba(251, 191, 36, 0.3);
 
-    --glass-strong-tint: rgba(20, 24, 36, 0.66);
-    --glass-strong-blur: 26px;
+    --glass-strong-tint: rgba(20, 24, 36, 0.42);
+    --glass-strong-blur: 16px;
     --glass-strong-shadow: 0 14px 36px -12px rgba(0, 0, 0, 0.75), 0 3px 10px -2px rgba(0, 0, 0, 0.45);
 
     --glass-subtle-tint: rgba(255, 255, 255, 0.035);
@@ -132,10 +132,10 @@
     --glass-divider: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.12) 15%, rgba(255, 255, 255, 0.12) 85%, rgba(255, 255, 255, 0));
 
     /* Deep indigo / teal / violet / rose glows so dark glass has colour to refract */
-    --blob-1: rgba(79, 70, 229, 0.34);
-    --blob-2: rgba(20, 184, 166, 0.18);
-    --blob-3: rgba(139, 92, 246, 0.28);
-    --blob-4: rgba(225, 29, 72, 0.17);
+    --blob-1: rgba(79, 70, 229, 0.55);
+    --blob-2: rgba(20, 184, 166, 0.34);
+    --blob-3: rgba(139, 92, 246, 0.45);
+    --blob-4: rgba(225, 29, 72, 0.3);
     --blob-5: rgba(49, 46, 129, 0.38);
   }
 
@@ -235,8 +235,8 @@
     overflow: hidden;
     pointer-events: none;
     background:
-      radial-gradient(closest-side, var(--blob-1), transparent) -12vmax -14vmax / 70vmax 70vmax no-repeat,
-      radial-gradient(closest-side, var(--blob-2), transparent) calc(100% + 14vmax) -10vmax / 62vmax 62vmax no-repeat,
+      radial-gradient(closest-side, var(--blob-1) 30%, transparent 75%) -12vmax -14vmax / 70vmax 70vmax no-repeat,
+      radial-gradient(closest-side, var(--blob-2) 30%, transparent 75%) calc(100% + 14vmax) -10vmax / 62vmax 62vmax no-repeat,
       radial-gradient(closest-side, var(--blob-5), transparent) 50% 60% / 120vmax 90vmax no-repeat;
     transform: translateZ(0);
   }
@@ -254,7 +254,7 @@
     height: 64vmax;
     right: -18vmax;
     bottom: -22vmax;
-    background: radial-gradient(closest-side, var(--blob-3), transparent);
+    background: radial-gradient(closest-side, var(--blob-3) 30%, transparent 75%);
     animation: liquid-drift-a 48s ease-in-out infinite alternate;
   }
 
@@ -263,7 +263,7 @@
     height: 52vmax;
     left: -14vmax;
     bottom: -18vmax;
-    background: radial-gradient(closest-side, var(--blob-4), transparent);
+    background: radial-gradient(closest-side, var(--blob-4) 30%, transparent 75%);
     animation: liquid-drift-b 60s ease-in-out infinite alternate;
   }
 
