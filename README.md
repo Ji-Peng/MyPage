@@ -1,12 +1,12 @@
 # Dr. Jipeng Zhang (张吉鹏) - Academic Homepage
 
-[![Astro](https://img.shields.io/badge/Astro-5.x-BC52EE?style=flat&logo=astro&logoColor=white)](https://astro.build)
+[![Astro](https://img.shields.io/badge/Astro-7.x-BC52EE?style=flat&logo=astro&logoColor=white)](https://astro.build)
 [![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.x-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Website](https://img.shields.io/badge/Live-ji--peng.com-4F46E5?style=flat)](https://ji-peng.com)
 
-本仓库是 [张吉鹏（Jipeng Zhang）博士](https://ji-peng.com) 的个人学术主页源码仓库。该网站已由历史遗留的 Hugo / Wowchemy 架构彻底重构为现代化的 **Astro v5 + Tailwind CSS + TypeScript** 全新工程体系，专为密码学与计算机系统安全领域打造，具有极致轻量、信息高密度（High Information Density）、优雅排版与全自动化运维特性。
+本仓库是 [张吉鹏（Jipeng Zhang）博士](https://ji-peng.com) 的个人学术主页源码仓库。该网站已由历史遗留的 Hugo / Wowchemy 架构彻底重构为现代化的 **Astro v7 + Tailwind CSS + TypeScript** 全新工程体系，专为密码学与计算机系统安全领域打造，具有极致轻量、信息高密度（High Information Density）、优雅排版与全自动化运维特性。
 
 ---
 
@@ -70,7 +70,7 @@ MyPage/
 
 ### 环境要求
 
-- **Node.js**: `>= 20.0.0`
+- **Node.js**: `>= 22.23.4`
 - **npm**: `>= 9.0.0`
 - **Python**: `>= 3.10`（用于执行 Google Scholar 学术引用数据同步及 `deploy.sh` 本地发布）
 

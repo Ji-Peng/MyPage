@@ -1,6 +1,5 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,9 +12,5 @@ export default defineConfig({
   build: {
     assets: 'assets',
   },
-  integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
-  ],
+  // Tailwind 3 runs through PostCSS (postcss.config.mjs); @astrojs/tailwind does not support Astro 6+.
 });
