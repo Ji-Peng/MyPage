@@ -16,40 +16,52 @@ const totalCount = publications.length;
 const selectedCount = curatedSelected.length;
 ---
 
-<section id="publications" class="scroll-mt-20 space-y-5">
+<section id="publications" class="glass scroll-mt-20 rounded-2xl p-4 sm:p-5 space-y-4">
   <!-- Section Header & Filter Tabs -->
-  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-200 dark:border-slate-800">
-    <div class="space-y-0.5">
-      <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100 flex items-center gap-2">
-        <svg width="20" height="20" class="w-5 h-5 text-indigo-600 dark:text-indigo-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
-        </svg>
-        Publications
-      </h2>
-      <p class="text-xs text-slate-500 dark:text-slate-400">
-        Top-tier security & architecture venues (USENIX Security, MICRO, ACM CCS, CHES/TCHES, ASIACRYPT)
-      </p>
-    </div>
+  <div class="space-y-3">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+      <div class="space-y-0.5">
+        <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100 flex items-center gap-2">
+          <span class="glass-pill glass-tint-indigo p-0 w-7 h-7 justify-center flex-shrink-0" aria-hidden="true">
+            <svg width="16" height="16" class="w-4 h-4 text-indigo-600 dark:text-indigo-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+            </svg>
+          </span>
+          Publications
+        </h2>
+        <p class="text-xs text-slate-600 dark:text-slate-400">
+          Top-tier security & architecture venues (USENIX Security, MICRO, ACM CCS, CHES/TCHES, ASIACRYPT)
+        </p>
+      </div>
 
-    <!-- Filter Buttons (Tabs) -->
-    <div class="inline-flex p-1 rounded-lg bg-slate-100 dark:bg-slate-800/90 border border-slate-200/80 dark:border-slate-700/80 self-start sm:self-auto text-xs font-mono">
-      <button
-        type="button"
-        id="tab-selected"
-        class="tab-btn px-3 py-1 rounded-md transition-all font-semibold bg-white dark:bg-slate-900 text-indigo-600 dark:text-indigo-400 shadow-2xs"
-        data-filter="selected"
-      >
-        Selected ({selectedCount})
-      </button>
-      <button
-        type="button"
-        id="tab-all"
-        class="tab-btn px-3 py-1 rounded-md transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200"
-        data-filter="all"
-      >
-        All ({totalCount})
-      </button>
+      <!-- Filter Buttons (iOS-style segmented control with a sliding glass thumb) -->
+      <div class="pub-segment glass-segment relative self-start sm:self-auto text-xs font-mono" role="tablist" aria-label="Publication filter">
+        <span class="pub-seg-thumb" aria-hidden="true"></span>
+        <button
+          type="button"
+          id="tab-selected"
+          class="tab-btn glass-segment-item is-active relative z-[1] cursor-pointer"
+          role="tab"
+          aria-selected="true"
+          aria-controls="selected-publications-container"
+          data-filter="selected"
+        >
+          Selected ({selectedCount})
+        </button>
+        <button
+          type="button"
+          id="tab-all"
+          class="tab-btn glass-segment-item relative z-[1] cursor-pointer"
+          role="tab"
+          aria-selected="false"
+          aria-controls="all-publications-container"
+          data-filter="all"
+        >
+          All ({totalCount})
+        </button>
+      </div>
     </div>
+    <div class="glass-divider"></div>
   </div>
 
   <!-- 1. Selected Publications View (Default active view, USENIX Distinguished Paper #1) -->
@@ -60,7 +72,7 @@ const selectedCount = curatedSelected.length;
   </div>
 
   <!-- 2. All Publications View (Grouped chronologically by Year) -->
-  <div id="all-publications-container" class="space-y-8" style="display: none;">
+  <div id="all-publications-container" class="space-y-6" style="display: none;">
     {
       years.map((year) => {
         const yearPubs = publications.filter((p) => p.year === year);
@@ -68,10 +80,10 @@ const selectedCount = curatedSelected.length;
           <div class="year-group space-y-3" data-year={year}>
             <!-- Year Header Marker -->
             <div class="flex items-center gap-3">
-              <span class="font-mono text-sm font-bold text-slate-900 dark:text-slate-100 px-2.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/70">
+              <span class="glass-pill font-mono text-sm font-bold text-slate-900 dark:text-slate-100 px-2.5 py-0.5">
                 {year}
               </span>
-              <div class="h-px flex-1 bg-slate-200 dark:bg-slate-800"></div>
+              <div class="glass-divider flex-1"></div>
             </div>
 
             <!-- Paper Cards for this Year -->
@@ -92,38 +104,53 @@ const selectedCount = curatedSelected.length;
     if (window.__publicationsInteractivityInitialized) return;
     window.__publicationsInteractivityInitialized = true;
 
+    function positionThumb() {
+      var segment = document.querySelector('.pub-segment');
+      if (!segment) return;
+      var thumb = segment.querySelector('.pub-seg-thumb');
+      var active = segment.querySelector('.tab-btn.is-active');
+      if (!thumb || !active || !active.offsetWidth) return;
+      thumb.style.width = active.offsetWidth + 'px';
+      thumb.style.transform = 'translateX(' + active.offsetLeft + 'px)';
+      if (!segment.classList.contains('has-thumb')) {
+        segment.classList.add('has-thumb');
+        // Enable the slide transition only after the first placement
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () { segment.classList.add('thumb-ready'); });
+        });
+      }
+    }
+
+    function setTabState(tab, active) {
+      if (!tab) return;
+      tab.classList.toggle('is-active', active);
+      tab.setAttribute('aria-selected', active ? 'true' : 'false');
+    }
+
     function applyFilter(filter) {
       var tabAll = document.getElementById('tab-all');
       var tabSelected = document.getElementById('tab-selected');
       var selectedContainer = document.getElementById('selected-publications-container');
       var allContainer = document.getElementById('all-publications-container');
+      var showAll = filter === 'all';
 
-      if (filter === 'all') {
-        if (tabAll) {
-          tabAll.classList.add('bg-white', 'dark:bg-slate-900', 'text-indigo-600', 'dark:text-indigo-400', 'font-semibold', 'shadow-2xs');
-          tabAll.classList.remove('text-slate-600', 'dark:text-slate-400');
-        }
-        if (tabSelected) {
-          tabSelected.classList.remove('bg-white', 'dark:bg-slate-900', 'text-indigo-600', 'dark:text-indigo-400', 'font-semibold', 'shadow-2xs');
-          tabSelected.classList.add('text-slate-600', 'dark:text-slate-400');
-        }
+      setTabState(tabAll, showAll);
+      setTabState(tabSelected, !showAll);
 
-        if (selectedContainer) selectedContainer.style.display = 'none';
-        if (allContainer) allContainer.style.display = '';
-      } else {
-        if (tabSelected) {
-          tabSelected.classList.add('bg-white', 'dark:bg-slate-900', 'text-indigo-600', 'dark:text-indigo-400', 'font-semibold', 'shadow-2xs');
-          tabSelected.classList.remove('text-slate-600', 'dark:text-slate-400');
-        }
-        if (tabAll) {
-          tabAll.classList.remove('bg-white', 'dark:bg-slate-900', 'text-indigo-600', 'dark:text-indigo-400', 'font-semibold', 'shadow-2xs');
-          tabAll.classList.add('text-slate-600', 'dark:text-slate-400');
-        }
+      if (selectedContainer) selectedContainer.style.display = showAll ? 'none' : '';
+      if (allContainer) allContainer.style.display = showAll ? '' : 'none';
 
-        if (selectedContainer) selectedContainer.style.display = '';
-        if (allContainer) allContainer.style.display = 'none';
-      }
+      positionThumb();
     }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', positionThumb);
+    } else {
+      positionThumb();
+    }
+    window.addEventListener('load', positionThumb);
+    window.addEventListener('resize', positionThumb);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(positionThumb);
 
     function showCopiedUI(btn) {
       var textSpan = btn.querySelector('.copy-text');
@@ -215,3 +242,49 @@ const selectedCount = curatedSelected.length;
     });
   })();
 </script>
+
+<style>
+  /* Sliding glass thumb for the segmented control. Without JS the
+     .is-active item keeps its own glass fill from global.css. */
+  .pub-seg-thumb {
+    position: absolute;
+    top: 0.1875rem;
+    bottom: 0.1875rem;
+    left: 0;
+    width: 0;
+    border-radius: 9999px;
+    background: var(--glass-chip-bg-hover);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 1px 3px rgba(15, 23, 42, 0.12), 0 0 0 1px rgba(15, 23, 42, 0.05);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  :global(html.dark) .pub-seg-thumb {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14), 0 1px 4px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  }
+
+  .pub-segment.has-thumb .pub-seg-thumb {
+    opacity: 1;
+  }
+
+  .pub-segment.thumb-ready .pub-seg-thumb {
+    transition: transform 0.35s var(--glass-spring), width 0.35s var(--glass-spring);
+  }
+
+  .pub-segment.has-thumb .tab-btn.is-active {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pub-segment.thumb-ready .pub-seg-thumb {
+      transition: none;
+    }
+  }
+
+  @media print {
+    .pub-seg-thumb {
+      display: none !important;
+    }
+  }
+</style>

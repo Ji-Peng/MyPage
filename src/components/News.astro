@@ -12,26 +12,27 @@ const sortedNews = [...news].sort((a, b) => {
 });
 ---
 
-<section id="news" class="scroll-mt-20 space-y-3">
-  <div class="flex items-center justify-between pb-2 border-b border-slate-200 dark:border-slate-800">
+<section id="news" class="glass rounded-2xl p-4 sm:p-5 scroll-mt-20 space-y-3">
+  <div class="flex items-center justify-between gap-3">
     <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100 flex items-center gap-2">
-      <svg width="20" height="20" class="w-5 h-5 text-indigo-600 dark:text-indigo-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+      <span class="glass-pill glass-tint-indigo !p-0 w-7 h-7 justify-center flex-shrink-0" aria-hidden="true">
+      <svg width="16" height="16" class="w-4 h-4 text-indigo-600 dark:text-indigo-300 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
       </svg>
+      </span>
       Recent News & Milestones
     </h2>
-    <span class="text-xs font-mono text-slate-500 dark:text-slate-400">2024 – 2027</span>
+    <span class="hidden sm:inline whitespace-nowrap text-xs font-mono text-slate-600 dark:text-slate-400">2024 – 2027</span>
   </div>
+  <div class="glass-divider"></div>
 
   <!-- Scrollable container sized for 5 items capacity -->
   <div class="news-scroll max-h-[460px] sm:max-h-[450px] overflow-y-auto space-y-2 pr-1 sm:pr-1.5 overscroll-y-auto">
     {
       sortedNews.map((item) => (
         <div
-          class={`relative flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-3 p-2.5 sm:p-3 rounded-lg border text-xs sm:text-sm transition-all ${
-            item.award
-              ? 'bg-gradient-to-r from-amber-50/90 via-amber-50/50 to-white dark:from-amber-950/30 dark:via-amber-950/15 dark:to-slate-900/60 border-amber-300/90 dark:border-amber-800/80 shadow-2xs ring-1 ring-amber-400/20'
-              : 'bg-white dark:bg-slate-900/70 border-slate-200/80 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700'
+          class={`relative flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-3 p-2.5 sm:p-3 rounded-xl text-xs sm:text-sm ${
+            item.award ? 'glass-subtle news-award' : 'glass-subtle glass-subtle-hover'
           }`}
         >
           <!-- Date / Category column -->
@@ -39,14 +40,14 @@ const sortedNews = [...news].sort((a, b) => {
             <span
               class={`font-mono text-xs px-2 py-0.5 rounded font-medium ${
                 item.award
-                  ? 'bg-amber-200/90 text-amber-950 dark:bg-amber-900/70 dark:text-amber-200 font-semibold'
-                  : 'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300'
+                  ? 'bg-amber-200/70 text-amber-950 dark:bg-amber-400/15 dark:text-amber-200 border border-amber-400/40 dark:border-amber-300/25 font-semibold'
+                  : 'bg-white/60 text-slate-700 dark:bg-white/5 dark:text-slate-300 border border-slate-900/10 dark:border-white/10'
               }`}
             >
               {item.year}
             </span>
             {item.pinned && (
-              <span class="inline-flex items-center gap-0.5 text-[10px] font-mono font-semibold uppercase px-1.5 py-0.5 rounded bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700 leading-none">
+              <span class="inline-flex items-center gap-0.5 text-[10px] font-mono font-semibold uppercase px-1.5 py-0.5 rounded-full bg-white/60 text-amber-800 dark:bg-white/5 dark:text-amber-200 border border-amber-500/30 dark:border-amber-300/25 leading-none">
                 Pinned
               </span>
             )}
@@ -71,17 +72,17 @@ const sortedNews = [...news].sort((a, b) => {
                 {item.title}
               </span>
               {item.category === 'paper' && (
-                <span class="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-700 dark:bg-indigo-950/60 dark:text-indigo-300 border border-indigo-200/70 dark:border-indigo-800/60 leading-none">
+                <span class="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded-full bg-indigo-500/10 text-indigo-700 dark:bg-indigo-400/15 dark:text-indigo-200 border border-indigo-500/25 dark:border-indigo-300/25 leading-none">
                   Paper
                 </span>
               )}
               {item.category === 'service' && (
-                <span class="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-teal-50 text-teal-700 dark:bg-teal-950/60 dark:text-teal-300 border border-teal-200/70 dark:border-teal-800/60 leading-none">
+                <span class="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded-full bg-teal-500/10 text-teal-800 dark:bg-teal-400/15 dark:text-teal-200 border border-teal-600/25 dark:border-teal-300/25 leading-none">
                   Service
                 </span>
               )}
               {item.category === 'award' && (
-                <span class="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-amber-100 text-amber-900 dark:bg-amber-900/60 dark:text-amber-200 border border-amber-300 dark:border-amber-700 leading-none">
+                <span class="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded-full bg-amber-400/20 text-amber-900 dark:bg-amber-400/15 dark:text-amber-200 border border-amber-500/35 dark:border-amber-300/30 leading-none">
                   Distinguished Award
                 </span>
               )}
@@ -104,3 +105,34 @@ const sortedNews = [...news].sort((a, b) => {
     }
   </div>
 </section>
+
+<style>
+  /* Warm amber glass for award / pinned rows (no backdrop-filter: rows sit inside the .glass section) */
+  .news-award {
+    background: linear-gradient(100deg, rgba(254, 243, 199, 0.78), rgba(255, 251, 235, 0.55) 55%, rgba(255, 255, 255, 0.45));
+    border-color: rgba(217, 119, 6, 0.32);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75), 0 4px 14px -6px rgba(217, 119, 6, 0.28);
+  }
+  .news-award:hover {
+    border-color: rgba(217, 119, 6, 0.5);
+  }
+  :global(html.dark) .news-award {
+    background: linear-gradient(100deg, rgba(245, 158, 11, 0.16), rgba(245, 158, 11, 0.06) 55%, rgba(255, 255, 255, 0.03));
+    border-color: rgba(251, 191, 36, 0.28);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 4px 16px -6px rgba(245, 158, 11, 0.25);
+  }
+  :global(html.dark) .news-award:hover {
+    border-color: rgba(251, 191, 36, 0.45);
+  }
+  @media (prefers-reduced-transparency: reduce) {
+    .news-award { background: #fffbeb; }
+    :global(html.dark) .news-award { background: #2a2214; }
+  }
+  @media print {
+    .news-award {
+      background: none !important;
+      box-shadow: none !important;
+      border-color: #d4d4d4 !important;
+    }
+  }
+</style>

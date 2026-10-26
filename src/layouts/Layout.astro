@@ -50,8 +50,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://ji-peng.
     <meta name="twitter:image" content="https://ji-peng.com/avatar.jpg" />
 
     <!-- Theme Color for Mobile Browsers -->
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#0b0f19" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f4f6fb" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b0d14" media="(prefers-color-scheme: dark)" />
 
     <!-- Schema.org JSON-LD Structured Data for Academic Indexing -->
     <script type="application/ld+json" is:inline>
@@ -145,52 +145,48 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://ji-peng.
       })();
     </script>
   </head>
-  <body class="font-sans bg-slate-50 text-slate-800 antialiased dark:bg-[#0b0f19] dark:text-slate-100 min-h-screen transition-colors duration-200">
-    <!-- Top Sleek Navigation Bar -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/85 dark:bg-slate-900/85 border-b border-slate-200/80 dark:border-slate-800/80 transition-colors">
-      <div class="max-w-4xl sm:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between gap-4">
+  <body class="font-sans text-slate-800 antialiased dark:text-slate-100 min-h-screen">
+    <!-- Liquid glass: soft colourful backdrop behind every glass surface -->
+    <div class="liquid-backdrop" aria-hidden="true"></div>
+
+    <!-- SVG refraction filter (used only by .glass-refract on Chromium) -->
+    <svg width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
+      <filter id="liquid-glass-refract" x="0" y="0" width="100%" height="100%" filterUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.03" numOctaves="1" seed="7" result="noise" />
+        <feGaussianBlur in="noise" stdDeviation="2.5" result="map" />
+        <feDisplacementMap in="SourceGraphic" in2="map" scale="28" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </svg>
+
+    <!-- Floating glass capsule navigation -->
+    <header class="site-nav sticky top-0 z-50 max-w-5xl mx-auto px-2.5 sm:px-6 lg:px-8 pt-2 sm:pt-3">
+      <div class="glass-strong glass-refract h-12 pl-3.5 pr-1.5 sm:pl-5 sm:pr-2 rounded-full flex items-center justify-between gap-2 sm:gap-4">
         <!-- Site Title / Home Link -->
         <a
           href="#about"
-          class="font-bold text-base tracking-tight text-slate-900 dark:text-slate-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors flex items-center gap-1.5 whitespace-nowrap"
+          class="font-bold text-sm sm:text-base tracking-tight text-slate-900 dark:text-slate-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors max-[359px]:hidden flex items-center gap-1.5 whitespace-nowrap min-w-0 overflow-hidden"
         >
-          <span class="font-bold">Jipeng Zhang</span>
+          <span class="font-bold truncate">Jipeng Zhang</span>
           <span class="text-xs font-normal text-slate-500 dark:text-slate-400 hidden xs:inline font-serif">张吉鹏</span>
         </a>
 
         <!-- Navigation Links & Theme Toggle -->
-        <div class="flex items-center gap-1 sm:gap-2">
-          <nav aria-label="Main Navigation" class="flex items-center gap-0.5 sm:gap-1 text-xs sm:text-sm font-medium">
-            <a
-              href="#about"
-              class="px-2 sm:px-2.5 py-1.5 rounded-md text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-slate-800/80 transition-all"
-            >
-              About
-            </a>
-            <a
-              href="#news"
-              class="px-2 sm:px-2.5 py-1.5 rounded-md text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-slate-800/80 transition-all"
-            >
-              News
-            </a>
-            <a
-              href="#publications"
-              class="px-2 sm:px-2.5 py-1.5 rounded-md text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-slate-800/80 transition-all"
-            >
+        <div class="flex items-center gap-1 sm:gap-1.5">
+          <nav aria-label="Main Navigation" class="flex items-center gap-0 sm:gap-0.5 text-xs sm:text-sm font-medium">
+            <a href="#about" data-nav-link class="glass-nav-link px-2 sm:px-2.5">About</a>
+            <a href="#news" data-nav-link class="glass-nav-link px-2 sm:px-2.5">News</a>
+            <a href="#publications" data-nav-link class="glass-nav-link px-2 sm:px-2.5">
               <span class="hidden xs:inline">Publications</span>
               <span class="xs:hidden">Pubs</span>
             </a>
-            <a
-              href="#activities"
-              class="px-2 sm:px-2.5 py-1.5 rounded-md text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/80 dark:hover:bg-slate-800/80 transition-all"
-            >
+            <a href="#activities" data-nav-link class="glass-nav-link px-2 sm:px-2.5">
               <span class="hidden xs:inline">Activities</span>
               <span class="xs:hidden">Service</span>
             </a>
           </nav>
 
           <!-- Divider -->
-          <div class="h-4 w-px bg-slate-200 dark:bg-slate-700 mx-1"></div>
+          <div class="glass-divider-v h-5 mx-0.5 sm:mx-1" aria-hidden="true"></div>
 
           <!-- Theme Toggle Button -->
           <button
@@ -198,7 +194,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://ji-peng.
             id="theme-toggle-btn"
             onclick="window.__toggleTheme && window.__toggleTheme()"
             aria-label="Toggle light and dark theme"
-            class="p-1.5 rounded-md text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer"
+            class="glass-icon-btn flex-shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
             title="Toggle theme"
           >
             <!-- Sun icon (shown in dark mode) -->
@@ -241,16 +237,43 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://ji-peng.
       <slot />
     </main>
 
-    <!-- Minimalist Academic Footer -->
-    <footer class="max-w-4xl sm:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12 mt-16 border-t border-slate-200/80 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+    <!-- Minimalist Academic Footer (glass) -->
+    <footer class="max-w-4xl sm:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pb-8 text-xs text-slate-600 dark:text-slate-400">
+      <div class="glass rounded-2xl px-4 sm:px-5 py-3.5 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3 text-center sm:text-left">
         <p>
           &copy; {new Date().getFullYear()} Jipeng Zhang (张吉鹏). All rights reserved.
         </p>
-        <p class="font-mono text-[11px] text-slate-400 dark:text-slate-500">
-          Last updated: September 2026 · Built with <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="hover:underline text-slate-600 dark:text-slate-300">Astro</a> &amp; <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" class="hover:underline text-slate-600 dark:text-slate-300">Tailwind CSS</a> · <a href="https://github.com/Ji-Peng/MyPage" target="_blank" rel="noopener noreferrer" class="hover:underline text-indigo-600 dark:text-indigo-400">GitHub Source</a>
+        <p class="font-mono text-[11px] text-slate-500 dark:text-slate-400">
+          Last updated: September 2026 · Built with <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="hover:underline text-slate-700 dark:text-slate-300">Astro</a> &amp; <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" class="hover:underline text-slate-700 dark:text-slate-300">Tailwind CSS</a> · <a href="https://github.com/Ji-Peng/MyPage" target="_blank" rel="noopener noreferrer" class="hover:underline text-indigo-600 dark:text-indigo-400">GitHub Source</a>
         </p>
       </div>
     </footer>
+
+    <!-- Liquid glass enhancements: Chromium-only refraction flag and nav scroll-spy -->
+    <script is:inline>
+      (function () {
+        try {
+          if (navigator.userAgentData && window.CSS && CSS.supports('backdrop-filter', 'url(#liquid-glass-refract)')) {
+            document.documentElement.classList.add('lg-refract');
+          }
+        } catch (e) {}
+
+        if (!('IntersectionObserver' in window)) return;
+        var links = document.querySelectorAll('[data-nav-link]');
+        var map = {};
+        links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (!e.isIntersecting || !map[e.target.id]) return;
+            links.forEach(function (a) { a.removeAttribute('aria-current'); });
+            map[e.target.id].setAttribute('aria-current', 'true');
+          });
+        }, { rootMargin: '-35% 0px -60% 0px' });
+        Object.keys(map).forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el) io.observe(el);
+        });
+      })();
+    </script>
   </body>
 </html>

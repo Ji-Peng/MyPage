@@ -9,36 +9,16 @@ interface Props {
 
 const { type, label, url } = Astro.props;
 
-const configMap: Record<string, { defaultLabel: string; bgClass: string; hoverClass: string; icon: string }> = {
-  available: {
-    defaultLabel: 'Artifacts Available',
-    bgClass: 'bg-white text-emerald-700 border-emerald-200 dark:bg-slate-900/60 dark:text-emerald-300 dark:border-emerald-800/70',
-    hoverClass: 'hover:bg-emerald-50 hover:border-emerald-300 dark:hover:bg-emerald-950/40 dark:hover:border-emerald-700',
-    icon: 'box',
-  },
-  functional: {
-    defaultLabel: 'Artifacts Functional',
-    bgClass: 'bg-white text-sky-700 border-sky-200 dark:bg-slate-900/60 dark:text-sky-300 dark:border-sky-800/70',
-    hoverClass: 'hover:bg-sky-50 hover:border-sky-300 dark:hover:bg-sky-950/40 dark:hover:border-sky-700',
-    icon: 'check',
-  },
-  reproduced: {
-    defaultLabel: 'Results Reproduced',
-    bgClass: 'bg-white text-violet-700 border-violet-200 dark:bg-slate-900/60 dark:text-violet-300 dark:border-violet-800/70',
-    hoverClass: 'hover:bg-violet-50 hover:border-violet-300 dark:hover:bg-violet-950/40 dark:hover:border-violet-700',
-    icon: 'refresh',
-  },
-  evaluated: {
-    defaultLabel: 'Artifact Evaluated',
-    bgClass: 'bg-white text-amber-700 border-amber-200 dark:bg-slate-900/60 dark:text-amber-300 dark:border-amber-800/70',
-    hoverClass: 'hover:bg-amber-50 hover:border-amber-300 dark:hover:bg-amber-950/40 dark:hover:border-amber-700',
-    icon: 'award',
-  },
+const configMap: Record<string, { defaultLabel: string; tintClass: string; icon: string }> = {
+  available: { defaultLabel: 'Artifacts Available', tintClass: 'ab-emerald', icon: 'box' },
+  functional: { defaultLabel: 'Artifacts Functional', tintClass: 'ab-sky', icon: 'check' },
+  reproduced: { defaultLabel: 'Results Reproduced', tintClass: 'ab-violet', icon: 'refresh' },
+  evaluated: { defaultLabel: 'Artifact Evaluated', tintClass: 'ab-amber', icon: 'award' },
 };
 
 const badgeConfig = configMap[type] || configMap.available;
 const displayLabel = label || badgeConfig.defaultLabel;
-const baseClasses = `inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-medium border leading-none transition-colors ${badgeConfig.bgClass}`;
+const baseClasses = `glass-pill ${badgeConfig.tintClass} gap-1 px-2 py-0.5 text-[11px] leading-none`;
 ---
 
 {
@@ -47,7 +27,7 @@ const baseClasses = `inline-flex items-center gap-1 px-2 py-0.5 rounded-full tex
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      class={`${baseClasses} ${badgeConfig.hoverClass} group focus:outline-none focus:ring-1 focus:ring-indigo-500`}
+      class={`${baseClasses} group focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/60`}
       title={`${displayLabel} (opens in new tab)`}
     >
       {badgeConfig.icon === 'box' && (
@@ -101,3 +81,86 @@ const baseClasses = `inline-flex items-center gap-1 px-2 py-0.5 rounded-full tex
     </span>
   )
 }
+
+<style>
+  /* Per-badge tints: rebind the shared glass chip tokens (see global.css) */
+  .ab-emerald {
+    --glass-chip-bg: linear-gradient(180deg, rgba(236, 253, 245, 0.95), rgba(209, 250, 229, 0.65));
+    --glass-chip-bg-hover: linear-gradient(180deg, #ecfdf5, rgba(167, 243, 208, 0.75));
+    --glass-chip-border: rgba(5, 150, 105, 0.3);
+    --glass-chip-border-hover: rgba(5, 150, 105, 0.55);
+    --glass-chip-text: #047857;
+    --glass-chip-text-hover: #065f46;
+    --glass-chip-shadow-hover: inset 0 1px 0 #ffffff, 0 4px 10px -3px rgba(5, 150, 105, 0.3);
+  }
+
+  .ab-sky {
+    --glass-chip-bg: linear-gradient(180deg, rgba(240, 249, 255, 0.95), rgba(224, 242, 254, 0.65));
+    --glass-chip-bg-hover: linear-gradient(180deg, #f0f9ff, rgba(186, 230, 253, 0.75));
+    --glass-chip-border: rgba(2, 132, 199, 0.3);
+    --glass-chip-border-hover: rgba(2, 132, 199, 0.55);
+    --glass-chip-text: #0369a1;
+    --glass-chip-text-hover: #075985;
+    --glass-chip-shadow-hover: inset 0 1px 0 #ffffff, 0 4px 10px -3px rgba(2, 132, 199, 0.3);
+  }
+
+  .ab-violet {
+    --glass-chip-bg: linear-gradient(180deg, rgba(245, 243, 255, 0.95), rgba(237, 233, 254, 0.65));
+    --glass-chip-bg-hover: linear-gradient(180deg, #f5f3ff, rgba(221, 214, 254, 0.75));
+    --glass-chip-border: rgba(124, 58, 237, 0.28);
+    --glass-chip-border-hover: rgba(124, 58, 237, 0.5);
+    --glass-chip-text: #6d28d9;
+    --glass-chip-text-hover: #5b21b6;
+    --glass-chip-shadow-hover: inset 0 1px 0 #ffffff, 0 4px 10px -3px rgba(124, 58, 237, 0.3);
+  }
+
+  .ab-amber {
+    --glass-chip-bg: linear-gradient(180deg, rgba(255, 251, 235, 0.95), rgba(254, 243, 199, 0.7));
+    --glass-chip-bg-hover: linear-gradient(180deg, #fffbeb, rgba(253, 230, 138, 0.8));
+    --glass-chip-border: rgba(217, 119, 6, 0.35);
+    --glass-chip-border-hover: rgba(217, 119, 6, 0.6);
+    --glass-chip-text: #92400e;
+    --glass-chip-text-hover: #78350f;
+    --glass-chip-shadow-hover: inset 0 1px 0 #ffffff, 0 4px 10px -3px rgba(217, 119, 6, 0.3);
+  }
+
+  :global(html.dark) .ab-emerald {
+    --glass-chip-bg: linear-gradient(180deg, rgba(16, 185, 129, 0.2), rgba(16, 185, 129, 0.07));
+    --glass-chip-bg-hover: linear-gradient(180deg, rgba(16, 185, 129, 0.3), rgba(16, 185, 129, 0.12));
+    --glass-chip-border: rgba(52, 211, 153, 0.32);
+    --glass-chip-border-hover: rgba(52, 211, 153, 0.6);
+    --glass-chip-text: #6ee7b7;
+    --glass-chip-text-hover: #a7f3d0;
+    --glass-chip-shadow-hover: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 4px 12px -3px rgba(16, 185, 129, 0.4);
+  }
+
+  :global(html.dark) .ab-sky {
+    --glass-chip-bg: linear-gradient(180deg, rgba(14, 165, 233, 0.2), rgba(14, 165, 233, 0.07));
+    --glass-chip-bg-hover: linear-gradient(180deg, rgba(14, 165, 233, 0.3), rgba(14, 165, 233, 0.12));
+    --glass-chip-border: rgba(56, 189, 248, 0.32);
+    --glass-chip-border-hover: rgba(56, 189, 248, 0.6);
+    --glass-chip-text: #7dd3fc;
+    --glass-chip-text-hover: #bae6fd;
+    --glass-chip-shadow-hover: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 4px 12px -3px rgba(14, 165, 233, 0.4);
+  }
+
+  :global(html.dark) .ab-violet {
+    --glass-chip-bg: linear-gradient(180deg, rgba(139, 92, 246, 0.22), rgba(139, 92, 246, 0.08));
+    --glass-chip-bg-hover: linear-gradient(180deg, rgba(139, 92, 246, 0.32), rgba(139, 92, 246, 0.13));
+    --glass-chip-border: rgba(167, 139, 250, 0.34);
+    --glass-chip-border-hover: rgba(167, 139, 250, 0.6);
+    --glass-chip-text: #c4b5fd;
+    --glass-chip-text-hover: #ddd6fe;
+    --glass-chip-shadow-hover: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 4px 12px -3px rgba(139, 92, 246, 0.4);
+  }
+
+  :global(html.dark) .ab-amber {
+    --glass-chip-bg: linear-gradient(180deg, rgba(245, 158, 11, 0.2), rgba(245, 158, 11, 0.08));
+    --glass-chip-bg-hover: linear-gradient(180deg, rgba(245, 158, 11, 0.28), rgba(245, 158, 11, 0.12));
+    --glass-chip-border: rgba(251, 191, 36, 0.35);
+    --glass-chip-border-hover: rgba(251, 191, 36, 0.6);
+    --glass-chip-text: #fcd34d;
+    --glass-chip-text-hover: #fde68a;
+    --glass-chip-shadow-hover: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 4px 12px -3px rgba(245, 158, 11, 0.35);
+  }
+</style>
