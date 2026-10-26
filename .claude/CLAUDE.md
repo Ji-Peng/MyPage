@@ -12,6 +12,7 @@ Astro 5 static site + Tailwind CSS 3 + TypeScript, served at https://ji-peng.com
 - `src/styles/global.css` — fonts, Tailwind layers, design tokens, shared component classes, print stylesheet.
 - `static/` — Astro `publicDir` (PDFs, avatar, CNAME). `public/` is a **git submodule** (Ji-Peng.github.io deploy target) — never edit it by hand.
 - `scripts/fetch_scholar.py` — Google Scholar metrics sync (run by CI every 3 days).
+- `scripts/gen-glass-map.mjs` — dependency-free generator for the edge-refraction displacement maps in `static/glass/` (`npm run gen:glass`).
 
 ## Commands
 
@@ -29,4 +30,6 @@ Pushing to `main` triggers `.github/workflows/deploy.yml`, which publishes the l
 - Every style must work in light and dark (`darkMode: 'class'`, toggled on `<html>`).
 - Respect `prefers-reduced-motion` and `prefers-reduced-transparency`; provide solid fallbacks where `backdrop-filter` is unsupported.
 - The `@media print` stylesheet must keep producing a clean, plain CV (no blur, no backgrounds).
+- Glass add-ons: `.glass-glow` (cursor highlight; hero, sections, publication cards), `.glass-award-rim` (slow gold conic rim; award rows only), `.glass-refract` (Chromium-only edge refraction; nav capsule and Publications segmented control only). `.glass`/`.glass-strong` use `::before` (rim) and `::after` (glow + sheen + reflect layers); do not add more pseudo-elements to them.
+- Refraction maps are precomputed: change sizes in `scripts/gen-glass-map.mjs`, run `npm run gen:glass`, and keep the SVG filters in `Layout.astro` in sync. The `url()` backdrop filter must stay in its own gated rule so other engines keep the plain blur.
 - No new runtime JS frameworks or heavy dependencies; the page ships near-zero JS.

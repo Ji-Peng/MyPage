@@ -8,6 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
+    "gen:glass": "node scripts/gen-glass-map.mjs",
     "fetch:scholar": "python3 scripts/fetch_scholar.py",
     "sync:public": "./deploy.sh",
     "astro": "astro"

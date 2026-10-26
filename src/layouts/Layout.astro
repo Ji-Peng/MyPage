@@ -149,12 +149,17 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://ji-peng.
     <!-- Liquid glass: soft colourful backdrop behind every glass surface -->
     <div class="liquid-backdrop" aria-hidden="true"></div>
 
-    <!-- SVG refraction filter (used only by .glass-refract on Chromium) -->
+    <!-- Edge-only refraction filters (Chromium only, via .glass-refract). The maps are
+         rounded-rect SDF displacement maps from scripts/gen-glass-map.mjs: neutral grey
+         centre, R/G = x/y shift on the rim. feImage fills the element box (stretched). -->
     <svg width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
-      <filter id="liquid-glass-refract" x="0" y="0" width="100%" height="100%" filterUnits="objectBoundingBox" color-interpolation-filters="sRGB">
-        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.03" numOctaves="1" seed="7" result="noise" />
-        <feGaussianBlur in="noise" stdDeviation="2.5" result="map" />
-        <feDisplacementMap in="SourceGraphic" in2="map" scale="28" xChannelSelector="R" yChannelSelector="G" />
+      <filter id="lg-edge-nav" x="0" y="0" width="1" height="1" filterUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+        <feImage href="/glass/edge-nav.png" preserveAspectRatio="none" result="map" />
+        <feDisplacementMap in="SourceGraphic" in2="map" scale="18" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+      <filter id="lg-edge-seg" x="0" y="0" width="1" height="1" filterUnits="objectBoundingBox" color-interpolation-filters="sRGB">
+        <feImage href="/glass/edge-seg.png" preserveAspectRatio="none" result="map" />
+        <feDisplacementMap in="SourceGraphic" in2="map" scale="8" xChannelSelector="R" yChannelSelector="G" />
       </filter>
     </svg>
 
@@ -166,7 +171,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://ji-peng.
           href="#about"
           class="font-bold text-sm sm:text-base tracking-tight text-slate-900 dark:text-slate-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors max-[359px]:hidden flex items-center gap-1.5 whitespace-nowrap min-w-0 overflow-hidden"
         >
-          <span class="font-bold truncate">Jipeng Zhang</span>
+          <span class="font-bold truncate hidden xs:inline">Jipeng Zhang</span>
+          <span class="font-bold xs:hidden">J. Zhang</span>
           <span class="text-xs font-normal text-slate-500 dark:text-slate-400 hidden xs:inline font-serif">张吉鹏</span>
         </a>
 
@@ -249,12 +255,34 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://ji-peng.
       </div>
     </footer>
 
-    <!-- Liquid glass enhancements: Chromium-only refraction flag and nav scroll-spy -->
+    <!-- Liquid glass enhancements: Chromium-only refraction flag, cursor glow, nav scroll-spy -->
     <script is:inline>
       (function () {
         try {
-          if (navigator.userAgentData && window.CSS && CSS.supports('backdrop-filter', 'url(#liquid-glass-refract)')) {
+          if (navigator.userAgentData && window.CSS && CSS.supports('backdrop-filter', 'url(#lg-edge-nav)')) {
             document.documentElement.classList.add('lg-refract');
+          }
+        } catch (e) {}
+
+        // Cursor glow: set --mx/--my (px) on every .glass-glow under a fine pointer.
+        // One delegated listener, one rAF per frame; off for touch and reduced motion.
+        try {
+          if (matchMedia('(hover: hover) and (pointer: fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.documentElement.classList.add('lg-glow');
+            var gx = 0, gy = 0, gt = null, gq = 0;
+            var paint = function () {
+              gq = 0;
+              for (var n = gt && gt.closest('.glass-glow'); n; n = n.parentElement && n.parentElement.closest('.glass-glow')) {
+                var r = n.getBoundingClientRect();
+                n.style.setProperty('--mx', Math.round(gx - r.left) + 'px');
+                n.style.setProperty('--my', Math.round(gy - r.top) + 'px');
+              }
+            };
+            document.addEventListener('pointermove', function (e) {
+              if (e.pointerType !== 'mouse' || !e.target.closest) return;
+              gx = e.clientX; gy = e.clientY; gt = e.target;
+              if (!gq) gq = requestAnimationFrame(paint);
+            }, { passive: true });
           }
         } catch (e) {}
 

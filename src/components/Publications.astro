@@ -16,7 +16,7 @@ const totalCount = publications.length;
 const selectedCount = curatedSelected.length;
 ---
 
-<section id="publications" class="glass scroll-mt-20 rounded-2xl p-4 sm:p-5 space-y-4">
+<section id="publications" class="glass glass-glow scroll-mt-20 rounded-2xl p-4 sm:p-5 space-y-4">
   <!-- Section Header & Filter Tabs -->
   <div class="space-y-3">
     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
@@ -35,7 +35,7 @@ const selectedCount = curatedSelected.length;
       </div>
 
       <!-- Filter Buttons (iOS-style segmented control with a sliding glass thumb) -->
-      <div class="pub-segment glass-segment relative self-start sm:self-auto text-xs font-mono" role="tablist" aria-label="Publication filter">
+      <div class="pub-segment glass-segment glass-refract relative self-start sm:self-auto text-xs font-mono" role="tablist" aria-label="Publication filter">
         <span class="pub-seg-thumb" aria-hidden="true"></span>
         <button
           type="button"

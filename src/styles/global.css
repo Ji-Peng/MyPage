@@ -38,7 +38,16 @@
     --glass-edge-lo: rgba(255, 255, 255, 0.18);
     --glass-sheen: rgba(255, 255, 255, 0.42);
     --glass-shadow: 0 8px 24px -8px rgba(15, 23, 42, 0.16), 0 2px 6px -1px rgba(15, 23, 42, 0.07);
-    --glass-inner: inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 -1px 0 rgba(255, 255, 255, 0.25);
+    /* "Sharp" layer: 1px top + 1px left inner highlights, faint bottom return */
+    --glass-inner: inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 1px 0 0 rgba(255, 255, 255, 0.5), inset 0 -1px 0 rgba(255, 255, 255, 0.25);
+    /* "Reflect" layer: 135deg white sweep from the top-left corner */
+    --glass-reflect: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 50%);
+
+    /* Cursor glow (.glass-glow) and award rim (.glass-award-rim) */
+    --glow-rgb: 255 255 255;
+    --glow-alpha: 0.14;
+    --award-rim: rgba(217, 119, 6, 0.85);
+    --award-rim-soft: rgba(251, 191, 36, 0.45);
 
     /* Strong surface (.glass-strong: nav, hero) */
     --glass-strong-tint: rgba(255, 255, 255, 0.68);
@@ -69,6 +78,7 @@
     --blob-2: rgba(56, 189, 248, 0.36);
     --blob-3: rgba(167, 139, 250, 0.34);
     --blob-4: rgba(251, 113, 133, 0.26);
+    --blob-5: rgba(255, 255, 255, 0);
 
     /* Motion */
     --glass-spring: cubic-bezier(0.2, 0.9, 0.3, 1.25);
@@ -83,7 +93,7 @@
     --color-border: #1e293b;
     --color-accent: #6366f1;
 
-    --page-bg: #0b0d14;
+    --page-bg: #090b15;
 
     --glass-tint: rgba(22, 26, 38, 0.55);
     --glass-blur: 20px;
@@ -93,7 +103,13 @@
     --glass-edge-lo: rgba(255, 255, 255, 0.03);
     --glass-sheen: rgba(255, 255, 255, 0.06);
     --glass-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.65), 0 2px 8px -2px rgba(0, 0, 0, 0.4);
-    --glass-inner: inset 0 1px 0 rgba(255, 255, 255, 0.12), inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+    --glass-inner: inset 0 1px 0 rgba(255, 255, 255, 0.12), inset 1px 0 0 rgba(255, 255, 255, 0.05), inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+    --glass-reflect: linear-gradient(135deg, rgba(255, 255, 255, 0.055) 0%, rgba(255, 255, 255, 0) 45%);
+
+    --glow-rgb: 199 210 254;
+    --glow-alpha: 0.06;
+    --award-rim: rgba(251, 191, 36, 0.75);
+    --award-rim-soft: rgba(251, 191, 36, 0.3);
 
     --glass-strong-tint: rgba(20, 24, 36, 0.66);
     --glass-strong-blur: 26px;
@@ -115,10 +131,12 @@
 
     --glass-divider: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.12) 15%, rgba(255, 255, 255, 0.12) 85%, rgba(255, 255, 255, 0));
 
-    --blob-1: rgba(99, 102, 241, 0.22);
-    --blob-2: rgba(14, 165, 233, 0.14);
-    --blob-3: rgba(139, 92, 246, 0.18);
-    --blob-4: rgba(244, 63, 94, 0.1);
+    /* Deep indigo / teal / violet / rose glows so dark glass has colour to refract */
+    --blob-1: rgba(79, 70, 229, 0.34);
+    --blob-2: rgba(20, 184, 166, 0.18);
+    --blob-3: rgba(139, 92, 246, 0.28);
+    --blob-4: rgba(225, 29, 72, 0.17);
+    --blob-5: rgba(49, 46, 129, 0.38);
   }
 
   html {
@@ -218,7 +236,8 @@
     pointer-events: none;
     background:
       radial-gradient(closest-side, var(--blob-1), transparent) -12vmax -14vmax / 70vmax 70vmax no-repeat,
-      radial-gradient(closest-side, var(--blob-2), transparent) calc(100% + 14vmax) -10vmax / 62vmax 62vmax no-repeat;
+      radial-gradient(closest-side, var(--blob-2), transparent) calc(100% + 14vmax) -10vmax / 62vmax 62vmax no-repeat,
+      radial-gradient(closest-side, var(--blob-5), transparent) 50% 60% / 120vmax 90vmax no-repeat;
     transform: translateZ(0);
   }
 
@@ -286,18 +305,81 @@
     z-index: 1;
   }
 
+  /* ::after stacks three background layers under the content (z-index -1
+     inside the isolated surface): cursor glow, top sheen, 135deg reflect. */
   .glass::after,
   .glass-strong::after {
     content: "";
     position: absolute;
-    inset: 0 0 auto 0;
-    height: min(55%, 9rem);
+    inset: 0;
     border-radius: inherit;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    background: linear-gradient(180deg, var(--glass-sheen), transparent);
+    background:
+      var(--glow-layer, none),
+      linear-gradient(180deg, var(--glass-sheen), transparent) top / 100% min(55%, 9rem) no-repeat,
+      var(--glass-reflect);
     pointer-events: none;
     z-index: -1;
+  }
+
+  /* ---- Cursor glow: Layout's script sets --mx/--my and html.lg-glow ---- */
+  html.lg-glow .glass-glow {
+    --glow-o: 0;
+    --glow-layer: radial-gradient(circle var(--glow-r, 340px) at var(--mx, 50%) var(--my, 0px), rgb(var(--glow-rgb) / calc(var(--glow-o) * var(--glow-alpha))), rgb(var(--glow-rgb) / 0) 70%);
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      box-shadow 0.25s ease,
+      transform 0.25s var(--glass-spring),
+      --glow-o 0.35s ease;
+  }
+
+  html.lg-glow .glass-glow:hover {
+    --glow-o: 1;
+  }
+
+  /* Only the innermost hovered surface glows (a card, not also its section) */
+  html.lg-glow .glass-glow:has(.glass-glow:hover) {
+    --glow-o: 0;
+  }
+
+  .glass-subtle:where(.glass-glow) {
+    --glow-r: 220px;
+    background-image: var(--glow-layer, none);
+  }
+
+  /* Light cards are already near-white on hover, so a white glow is invisible:
+     tint it (indigo, matching the hover border; amber on award cards). */
+  html:not(.dark) .glass-subtle:where(.glass-glow) {
+    --glow-rgb: 99 102 241;
+    --glow-alpha: 0.07;
+  }
+
+  html:not(.dark) .glass-subtle:where(.glass-glow.glass-award-rim) {
+    --glow-rgb: 217 119 6;
+    --glow-alpha: 0.08;
+  }
+
+  /* ---- Award rim: slow warm conic sheen on the 1px border ring only ---- */
+  .glass-award-rim::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: conic-gradient(
+      from var(--lg-angle, 0deg),
+      transparent 0deg,
+      var(--award-rim-soft) 40deg,
+      var(--award-rim) 70deg,
+      var(--award-rim-soft) 100deg,
+      transparent 150deg,
+      transparent 360deg
+    );
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    animation: lg-rim-spin 9s linear infinite;
   }
 
   /* Optional hover lift for a glass card that is itself a link */
@@ -372,12 +454,6 @@
     border-color: var(--glass-chip-border-hover);
     box-shadow: var(--glass-chip-shadow-hover);
     transform: translateY(-1px);
-  }
-
-  a.glass-pill:active,
-  button.glass-pill:active,
-  .glass-btn:active {
-    transform: translateY(0) scale(0.97);
   }
 
   /* Round icon button (theme toggle, icon-only actions) */
@@ -499,6 +575,39 @@
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14), 0 1px 4px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.08);
   }
 
+  /* iOS-like press: quick scale-down and slight brightening (CSS only) */
+  .glass-segment-item,
+  .glass-nav-link {
+    transition-property: background, color, box-shadow, border-color, transform, filter;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+  }
+
+  .glass-btn:active,
+  .link-btn:active,
+  a.glass-pill:active,
+  button.glass-pill:active,
+  .glass-segment-item:active,
+  .glass-nav-link:active {
+    transform: scale(0.97);
+    filter: brightness(1.06);
+    transition-duration: 0.08s;
+  }
+
+  .glass-icon-btn:active {
+    filter: brightness(1.06);
+  }
+
+  html.dark .glass-btn:active,
+  html.dark .link-btn:active,
+  html.dark a.glass-pill:active,
+  html.dark button.glass-pill:active,
+  html.dark .glass-segment-item:active,
+  html.dark .glass-nav-link:active,
+  html.dark .glass-icon-btn:active {
+    filter: brightness(1.2);
+  }
+
   /* Hairline divider that fades at both ends */
   .glass-divider {
     height: 1px;
@@ -611,10 +720,6 @@
     transform: translateY(-1px);
   }
 
-  .link-btn:active {
-    transform: translateY(0) scale(0.97);
-  }
-
   .link-btn-award {
     --glass-chip-bg: linear-gradient(180deg, rgba(255, 251, 235, 0.95), rgba(254, 243, 199, 0.75));
     --glass-chip-bg-hover: linear-gradient(180deg, #fffbeb, rgba(253, 230, 138, 0.8));
@@ -704,12 +809,35 @@
   to { transform: translate3d(9vmax, -5vmax, 0) scale(0.94); }
 }
 
-/* Refraction (progressive enhancement, Chromium only).
-   html.lg-refract is set by a feature check in Layout.astro; every other
-   engine keeps the plain blur declared by .glass / .glass-strong. */
-@supports (backdrop-filter: url(#liquid-glass-refract)) {
+/* Registered properties: lets the glow fade and the award rim rotate.
+   Without @property the glow switches instantly and the rim stays still. */
+@property --glow-o {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --lg-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes lg-rim-spin {
+  to { --lg-angle: 360deg; }
+}
+
+/* Edge-only refraction (progressive enhancement, Chromium only).
+   The plain blur stays declared on .glass-strong; this separate rule only
+   adds url() where html.lg-refract is set (Layout.astro feature check), so
+   engines that drop it keep the blur. Maps: scripts/gen-glass-map.mjs. */
+@supports (backdrop-filter: url(#lg-edge-nav)) {
   html.lg-refract .glass-refract {
-    backdrop-filter: blur(var(--glass-strong-blur)) saturate(var(--glass-sat)) url(#liquid-glass-refract);
+    backdrop-filter: blur(var(--glass-strong-blur)) saturate(var(--glass-sat)) url(#lg-edge-nav);
+  }
+
+  html.lg-refract .glass-segment.glass-refract {
+    backdrop-filter: url(#lg-edge-seg);
   }
 }
 
@@ -799,8 +927,19 @@
   .glass-pill:hover,
   .glass-btn:hover,
   .glass-icon-btn:hover,
-  .link-btn:hover {
+  .link-btn:hover,
+  .glass-btn:active,
+  .link-btn:active,
+  .glass-pill:active,
+  .glass-icon-btn:active,
+  .glass-segment-item:active,
+  .glass-nav-link:active {
     transform: none;
+  }
+
+  .glass-award-rim::before {
+    animation: none;
+    --lg-angle: 300deg;
   }
 }
 
@@ -893,8 +1032,14 @@
   .glass::before,
   .glass::after,
   .glass-strong::before,
-  .glass-strong::after {
+  .glass-strong::after,
+  .glass-award-rim::before {
     display: none !important;
+    animation: none !important;
+  }
+
+  .glass-glow {
+    background-image: none !important;
   }
 
   .pub-item,

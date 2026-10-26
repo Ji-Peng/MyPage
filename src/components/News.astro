@@ -12,7 +12,7 @@ const sortedNews = [...news].sort((a, b) => {
 });
 ---
 
-<section id="news" class="glass rounded-2xl p-4 sm:p-5 scroll-mt-20 space-y-3">
+<section id="news" class="glass glass-glow rounded-2xl p-4 sm:p-5 scroll-mt-20 space-y-3">
   <div class="flex items-center justify-between gap-3">
     <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100 flex items-center gap-2">
       <span class="glass-pill glass-tint-indigo !p-0 w-7 h-7 justify-center flex-shrink-0" aria-hidden="true">
@@ -32,7 +32,7 @@ const sortedNews = [...news].sort((a, b) => {
       sortedNews.map((item) => (
         <div
           class={`relative flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-3 p-2.5 sm:p-3 rounded-xl text-xs sm:text-sm ${
-            item.award ? 'glass-subtle news-award' : 'glass-subtle glass-subtle-hover'
+            item.award ? 'glass-subtle news-award glass-award-rim' : 'glass-subtle glass-subtle-hover'
           }`}
         >
           <!-- Date / Category column -->
