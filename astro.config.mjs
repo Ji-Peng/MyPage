@@ -7,6 +7,9 @@ export default defineConfig({
   site: 'https://ji-peng.com',
   publicDir: './static',
   outDir: './dist',
+  devToolbar: {
+    enabled: false,
+  },
   build: {
     assets: 'assets',
   },
