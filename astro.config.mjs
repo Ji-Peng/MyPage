@@ -6,6 +6,8 @@ export default defineConfig({
   site: 'https://ji-peng.com',
   publicDir: './static',
   outDir: './dist',
+  // Astro 7 defaults to 'jsx', which drops line-break whitespace before inline tags.
+  compressHTML: true,
   devToolbar: {
     enabled: false,
   },
