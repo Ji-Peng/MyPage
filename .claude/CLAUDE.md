@@ -11,7 +11,7 @@ Astro 5 static site + Tailwind CSS 3 + TypeScript, served at https://ji-peng.com
 - `src/data/*.json` — all content (publications, news, activities, profile, scholar metrics). Edit data here, not in templates.
 - `src/styles/global.css` — fonts, Tailwind layers, design tokens, shared component classes, print stylesheet.
 - `static/` — Astro `publicDir` (PDFs, avatar, CNAME). `public/` is a **git submodule** (Ji-Peng.github.io deploy target) — never edit it by hand.
-- `scripts/fetch_scholar.py` — Google Scholar metrics sync (run by CI every 3 days).
+- `scripts/fetch_scholar.py` — Google Scholar metrics fetch. `scripts/sync-scholar.sh` runs it weekly from local cron (Mon 10:00, log `~/.local/state/mypage-scholar-sync.log`) and pushes only real metric changes; GitHub-hosted runs are blocked by Scholar, so the CI workflow is manual-only.
 - `scripts/gen-glass-map.mjs` — dependency-free generator for the edge-refraction displacement maps in `static/glass/` (`npm run gen:glass`).
 
 ## Commands

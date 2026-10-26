@@ -165,7 +165,7 @@ export const coauthorLinks: Record<string, string> = {
 
 ### 4. 同步 Google Scholar 引用数据
 
-- **自动同步与发布**：项目已配置 GitHub Actions 定时任务（每 3 天午夜自动运行并提交最新引用指标）；同步成功后会自动构建并发布到 `Ji-Peng.github.io`。
+- **自动同步与发布**：Google Scholar 会屏蔽 GitHub Actions 的 IP，因此改由本机 cron 每周一 10:00 运行 `scripts/sync-scholar.sh`（日志位于 `~/.local/state/mypage-scholar-sync.log`）。仅当指标确有变化时才提交并推送 `scholar.json`，推送后 CI 自动构建并发布到 `Ji-Peng.github.io`。
 - **手动立即同步**：在本地终端运行：
   ```bash
   npm run fetch:scholar

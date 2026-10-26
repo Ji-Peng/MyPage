@@ -1,8 +1,8 @@
 name: Google Scholar Sync (Daily)
 
+# Scheduled runs are disabled: Google Scholar blocks GitHub runner IPs.
+# The weekly sync runs locally via scripts/sync-scholar.sh (cron); this stays for manual dispatch.
 on:
-  schedule:
-    - cron: '0 0 */3 * *'
   workflow_dispatch:
 
 permissions:
