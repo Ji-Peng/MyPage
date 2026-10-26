@@ -18,6 +18,10 @@ export default {
         '2xs': '0 1px 0 0 rgb(0 0 0 / 0.05)',
         xs: '0 1px 2px 0 rgb(0 0 0 / 0.05)',
       },
+      maxWidth: {
+        // Fluid page column: grows with the window, capped for line length.
+        page: 'clamp(64rem, 88vw, 96rem)',
+      },
       scale: {
         102: '1.02',
       },
