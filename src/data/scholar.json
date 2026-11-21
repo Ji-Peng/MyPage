@@ -1,14 +1,14 @@
 {
   "userId": "dL1IM-M9ltIC",
   "profileUrl": "https://scholar.google.com/citations?user=dL1IM-M9ltIC&hl=en",
-  "updatedAt": "2026-11-16T02:00:04.493785+00:00",
-  "totalCitations": 293,
+  "updatedAt": "2026-11-21T03:09:57.191461+00:00",
+  "totalCitations": 296,
   "hIndex": 8,
   "i10Index": 7,
   "stats": {
     "citations": {
-      "all": 293,
-      "recent": 293
+      "all": 296,
+      "recent": 296
     },
     "hIndex": {
       "all": 8,
@@ -34,15 +34,15 @@
     },
     {
       "year": 2024,
-      "citations": 53
+      "citations": 54
     },
     {
       "year": 2025,
-      "citations": 95
+      "citations": 93
     },
     {
       "year": 2026,
-      "citations": 121
+      "citations": 125
     }
   ],
   "publications": [
@@ -63,7 +63,7 @@
     },
     {
       "title": "Optimized Software Implementation of Keccak, Kyber, and Dilithium on RV{32,64}IM{B}{V}",
-      "citations": 33,
+      "citations": 34,
       "year": 2024
     },
     {
@@ -83,7 +83,7 @@
     },
     {
       "title": "Multi-way high-throughput implementation of Kyber",
-      "citations": 8,
+      "citations": 9,
       "year": 2024
     },
     {
@@ -92,14 +92,14 @@
       "year": 2025
     },
     {
+      "title": "{TensorZKP}: Repurposing {GPU} Tensor Cores for {High-Performance}{Zero-Knowledge} Proofs",
+      "citations": 3,
+      "year": 2026
+    },
+    {
       "title": "后量子密码算法的侧信道攻击与防御综述",
       "citations": 3,
       "year": 2021
-    },
-    {
-      "title": "{TensorZKP}: Repurposing {GPU} Tensor Cores for {High-Performance}{Zero-Knowledge} Proofs",
-      "citations": 2,
-      "year": 2026
     },
     {
       "title": "An Efficient and Scalable Sparse Polynomial Multiplication Accelerator for LAC on FPGA",

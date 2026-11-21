@@ -10,6 +10,7 @@
     "selected": true,
     "links": {
       "pdf": "/uploads/micro2026/paper.pdf",
+      "slides": "/uploads/micro2026/VAXEN-slides.pdf",
       "zenodo": "https://doi.org/10.5281/zenodo.21543181",
       "code": "https://github.com/Ji-Peng/VAXEN_Artifact",
       "venue": "https://microarch.org/micro59/"
@@ -45,6 +46,7 @@
     "selected": true,
     "links": {
       "eprint": "https://eprint.iacr.org/2026/1698",
+      "slides": "/uploads/ccs2026/MamaBearZKP-slides.pdf",
       "zenodo": "https://zenodo.org/records/21731753",
       "code": "https://github.com/Ji-Peng/MamaBearZKP-Artifact",
       "venue": "https://www.sigsac.org/ccs/CCS2026/"
@@ -53,6 +55,16 @@
       {
         "type": "available",
         "label": "Artifact Available",
+        "url": "https://zenodo.org/records/21731753"
+      },
+      {
+        "type": "functional",
+        "label": "Artifact Functional",
+        "url": "https://zenodo.org/records/21731753"
+      },
+      {
+        "type": "reproduced",
+        "label": "Results Reproduced",
         "url": "https://zenodo.org/records/21731753"
       }
     ],
